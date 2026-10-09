@@ -19,6 +19,21 @@ from validate_runtime import validate_runtime
 ROOT = Path(__file__).resolve().parent
 REPOSITORY = os.environ.get("GITHUB_REPOSITORY", "martinwxxl/my-mihomo-rules")
 CHECK_URL = "https://www.gstatic.com/generate_204"
+REGIONS = {
+    "香港": r"(?i)(香港|港|Hong[ _-]?Kong|\bHK\b|\bHKG\b|🇭🇰)",
+    "台湾": r"(?i)(台湾|台灣|台北|Taiwan|Taipei|\bTW\b|\bTPE\b|🇹🇼)",
+    "日本": r"(?i)(日本|东京|大阪|Japan|Tokyo|Osaka|\bJP\b|\bNRT\b|🇯🇵)",
+    "狮城": r"(?i)(新加坡|狮城|Singapore|\bSG\b|\bSIN\b|🇸🇬)",
+    "韩国": r"(?i)(韩国|韓國|首尔|首爾|Korea|Seoul|\bKR\b|\bICN\b|🇰🇷)",
+    "美国": r"(?i)(美国|美國|美东|美西|United[ _-]?States|America|\bUSA?\b|🇺🇸)",
+}
+POLICIES = {
+    "ads": "广告拦截", "speedtest": "网络测试", "im": "即时通讯", "social": "社交平台",
+    "ai": "人工智能", "development": "开发服务", "emby": "EMBY", "streaming": "国际媒体",
+    "games": "游戏平台", "crypto": "货币平台", "google": "谷歌服务", "facebook": "脸书服务",
+    "microsoft": "微软服务", "apple": "苹果服务", "domesticmedia": "国内媒体",
+    "global": "国外流量", "domestic": "国内流量",
+}
 
 
 def download(url):
@@ -159,20 +174,46 @@ def make_config(index, priority, fmt, local=False):
     for name, provider in (("主机场", "primary"), ("备机场", "backup")):
         groups.append({"name": name, "type": "url-test", "use": [provider], "url": CHECK_URL,
                        "interval": 60, "timeout": 5000, "tolerance": 50, "lazy": False,
-                       "expected-status": 204})
+                       "expected-status": 204, "empty-fallback": "REJECT"})
     groups += [{"name": "机场故障转移", "type": "fallback", "proxies": ["主机场", "备机场"],
                 "url": CHECK_URL, "interval": 60, "timeout": 5000, "lazy": False,
-                "expected-status": 204},
-               {"name": "默认代理", "type": "select", "proxies": ["机场故障转移", "主机场", "备机场"]}]
-    policy = {"ads": "广告拦截", "ai": "AI", "emby": "Emby", "streaming": "流媒体",
-              "apple": "Apple", "social": "社交", "development": "开发",
-              "domesticmedia": "国内媒体", "domestic": "国内流量"}
-    groups.append({"name": "广告拦截", "type": "select", "proxies": ["REJECT", "DIRECT"]})
-    for name in ("AI", "Emby", "流媒体", "Apple", "社交", "开发"):
-        choices = ["DIRECT", "机场故障转移", "主机场", "备机场"] if name == "Apple" else ["机场故障转移", "主机场", "备机场", "DIRECT"]
-        groups.append({"name": name, "type": "select", "proxies": choices})
-    for name in ("国内媒体", "国内流量"):
-        groups.append({"name": name, "type": "select", "proxies": ["DIRECT", "机场故障转移", "主机场", "备机场"]})
+                "expected-status": 204, "empty-fallback": "REJECT"},
+               {"name": "全球手动", "type": "select", "proxies": ["机场故障转移"],
+                "use": ["primary", "backup"]}]
+    health = {"url": CHECK_URL, "interval": 60, "timeout": 5000,
+              "lazy": False, "expected-status": 204, "empty-fallback": "REJECT"}
+    for region, pattern in REGIONS.items():
+        for airport, provider in (("主机场", "primary"), ("备机场", "backup")):
+            groups.append({"name": region + airport, "type": "url-test", "use": [provider],
+                           "filter": pattern, "tolerance": 50, "hidden": True, **health})
+        groups.append({"name": region + "故障转移", "type": "fallback",
+                       "proxies": [region + "主机场", region + "备机场"], **health})
+        groups.append({"name": region + "自动", "type": "url-test", "use": ["primary", "backup"],
+                       "filter": pattern, "tolerance": 50, "hidden": True, **health})
+        groups.append({"name": region + "均衡", "type": "load-balance", "use": ["primary", "backup"],
+                       "filter": pattern, "strategy": "consistent-hashing", "hidden": True, **health})
+        groups.append({"name": region + "策略", "type": "select", "use": ["primary", "backup"],
+                       "filter": pattern, "proxies": [region + "故障转移", region + "自动", region + "均衡"]})
+    region_choices = [region + "策略" for region in REGIONS]
+    general = ["机场故障转移", "全球手动", *region_choices, "主机场", "备机场", "DIRECT"]
+    preferred = {"im": "狮城", "social": "美国", "ai": "美国", "development": "美国",
+                 "emby": "美国", "streaming": "美国", "games": "美国", "crypto": "日本",
+                 "google": "美国", "facebook": "美国", "microsoft": "美国"}
+    for category, name in POLICIES.items():
+        if category == "ads":
+            choices = ["REJECT-DROP", "REJECT", "DIRECT"]
+        elif category in ("apple", "domesticmedia", "domestic"):
+            choices = ["DIRECT", *general[:-1]]
+        elif category in preferred:
+            # A region preference falls back to other healthy airport nodes when absent.
+            route = name + "优先路由"
+            groups.append({"name": route, "type": "fallback", "hidden": True,
+                           "proxies": [preferred[category] + "故障转移", "机场故障转移"], **health})
+            choices = [route, preferred[category] + "策略", *general]
+        else:
+            choices = general
+        groups.append({"name": name, "type": "select", "proxies": list(dict.fromkeys(choices))})
+    groups.append({"name": "漏网之鱼", "type": "select", "proxies": general})
     cfg["proxy-groups"] = groups
     cfg["rule-providers"] = {}
     rules = ["IP-CIDR,127.0.0.0/8,DIRECT,no-resolve", "IP-CIDR,10.0.0.0/8,DIRECT,no-resolve",
@@ -189,11 +230,11 @@ def make_config(index, priority, fmt, local=False):
                 provider.update({"url": f"https://raw.githubusercontent.com/{REPOSITORY}/release/{path}",
                                  "interval": 86400})
             cfg["rule-providers"][key] = provider
-            rule = f"RULE-SET,{key},{policy[category]}"
+            rule = f"RULE-SET,{key},{POLICIES[category]}"
             if behavior == "ipcidr":
                 rule += ",no-resolve"
             rules.append(rule)
-    rules.append("MATCH,默认代理")
+    rules.append("MATCH,漏网之鱼")
     cfg["rules"] = rules
     return cfg
 

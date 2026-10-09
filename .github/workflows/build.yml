@@ -36,7 +36,9 @@ jobs:
       - name: Test normalization, conflicts, MRS semantics and failover
         run: python -m unittest -v test_build
       - name: Test primary failure and recovery with offline mock airports
-        run: python test_failover.py --mihomo runtime/mihomo
+        run: |
+          python test_failover.py --mihomo runtime/mihomo
+          python test_failover.py --mihomo runtime/mihomo --region 香港
       - name: Read last successful release
         env:
           GITHUB_TOKEN: ${{ github.token }}

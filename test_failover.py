@@ -11,6 +11,7 @@ import time
 import urllib.parse
 import urllib.request
 import yaml
+from build import make_config
 
 
 def free_port():
@@ -19,7 +20,7 @@ def free_port():
         return s.getsockname()[1]
 
 
-def run(core):
+def run(core, region="美国"):
     states = {"primary": True, "backup": True}
     servers = []
     for airport in states:
@@ -62,22 +63,22 @@ def run(core):
         servers.append((airport, server))
     control, mixed = free_port(), free_port()
     url = "http://health.invalid/health"
-    cfg = {"mixed-port": mixed, "allow-lan": False, "external-controller": f"127.0.0.1:{control}",
+    cfg = make_config({}, ["ai"], "yaml")
+    cfg.update({"mixed-port": mixed, "allow-lan": False, "external-controller": f"127.0.0.1:{control}",
            "hosts": {"health.invalid": "198.51.100.1", "content.invalid": "198.51.100.1"},
            "secret": "offline-test", "log-level": "warning", "dns": {"enable": False},
-           "proxy-providers": {}, "proxy-groups": [], "rules": ["MATCH,failover"]}
+           "rule-providers": {}, "rules": ["MATCH,人工智能"]})
+    for group in cfg["proxy-groups"]:
+        if group["type"] in ("url-test", "fallback", "load-balance"):
+            group.update({"url": url, "interval": 1, "timeout": 500})
     with tempfile.TemporaryDirectory(prefix="mihomo-failover-") as temporary:
         path = Path(temporary)
         for airport, server in servers:
             file = path / (airport + ".yaml")
-            file.write_text(yaml.safe_dump({"proxies": [{"name": airport + "-node", "type": "http",
+            file.write_text(yaml.safe_dump({"proxies": [{"name": airport + "-node " + region, "type": "http",
                 "server": "127.0.0.1", "port": server.server_port}]}), encoding="utf-8")
             cfg["proxy-providers"][airport] = {"type": "file", "path": str(file), "health-check":
                 {"enable": True, "url": url, "interval": 1, "timeout": 500, "lazy": False, "expected-status": 204}}
-            cfg["proxy-groups"].append({"name": airport, "type": "url-test", "use": [airport],
-                "url": url, "interval": 1, "timeout": 500, "lazy": False, "expected-status": 204})
-        cfg["proxy-groups"].append({"name": "failover", "type": "fallback", "proxies": ["primary", "backup"],
-            "url": url, "interval": 1, "timeout": 500, "lazy": False, "expected-status": 204})
         file = path / "config.yaml"
         file.write_text(yaml.safe_dump(cfg), encoding="utf-8")
         with (path / "log.txt").open("w") as log:
@@ -99,7 +100,7 @@ def run(core):
                             with proxied.open("http://content.invalid/content", timeout=2) as response:
                                 actual = response.read().decode()
                             if actual == airport:
-                                print("Verified traffic through " + airport)
+                                print("Verified " + region + " nodes: traffic through " + airport)
                                 return
                         except (OSError, ValueError):
                             pass
@@ -125,4 +126,6 @@ def run(core):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--mihomo", required=True)
-    run(str(Path(parser.parse_args().mihomo).resolve()))
+    parser.add_argument("--region", default="美国")
+    args = parser.parse_args()
+    run(str(Path(args.mihomo).resolve()), args.region)

@@ -5,3 +5,5 @@
 Emby 使用 blackmatrix7 中现成规则，其文件标注作者 justdoiting、来源 https://github.com/justdoiting/emby-rules 。其他分类可能包含进一步的上游贡献者，发布 manifest.json 保留每个源文件的完整注释头、原始 URL、文件摘要与上游提交，供溯源和查看原始声明。
 
 本项目是对选定分流规则的自动分类、格式规范化与兼容转换。没有复制 666OS/YYDS 配置或机场节点，不提供机场订阅或解锁保证。规则覆盖与准确性取决于上游维护；本仓库不重新手工维护 Emby 列表。
+
+分类和地区选择的产品结构参考 YYDS666 的 Pro_cn：https://raw.githubusercontent.com/666OS/YYDS/refs/heads/main/mihomo/config/cn/Pro_cn.yaml 。本仓库以独立配置生成代码实现，地区匹配表达式、主备分层和地区为空时的通用兜底均为本项目实现；参考文件不作为规则源，也未复制模板文件进行再分发。

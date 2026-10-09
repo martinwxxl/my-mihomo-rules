@@ -1,15 +1,23 @@
 {
   "upstream": "blackmatrix7/ios_rule_script",
   "ref": "master",
-  "priority": ["ads", "ai", "emby", "streaming", "apple", "social", "development", "domesticmedia", "domestic"],
+  "priority": ["ads", "speedtest", "im", "social", "ai", "development", "emby", "streaming", "games", "crypto", "google", "facebook", "microsoft", "apple", "domesticmedia", "global", "domestic"],
   "categories": {
-    "ads": ["AdvertisingLite"],
+    "ads": ["Privacy", "AdvertisingLite"],
+    "speedtest": ["Speedtest"],
+    "im": ["Telegram", "Line", "Whatsapp"],
     "ai": ["OpenAI", "Claude", "Gemini", "Copilot"],
     "emby": ["Emby"],
     "streaming": ["GlobalMedia"],
     "apple": ["Apple"],
-    "social": ["Telegram", "Twitter", "Facebook", "Instagram", "Discord", "Reddit"],
+    "social": ["Twitter", "Instagram", "Discord", "Reddit"],
     "development": ["Developer", "GitHub"],
+    "games": ["Game"],
+    "crypto": ["Cryptocurrency"],
+    "google": ["Google"],
+    "facebook": ["Facebook"],
+    "microsoft": ["Microsoft"],
+    "global": ["Proxy"],
     "domesticmedia": ["ChinaMedia"],
     "domestic": ["China", "ChinaIPs"]
   },
@@ -19,6 +27,8 @@
     "China": "rule/Clash/China/China_Classical.yaml",
     "GlobalMedia": "rule/Clash/GlobalMedia/GlobalMedia_Classical.yaml",
     "ChinaIPs": "rule/Clash/ChinaIPs/ChinaIPs_Classical_No_Resolve.yaml"
+    ,"Privacy": "rule/Clash/Privacy/Privacy_Classical.yaml"
+    ,"Proxy": "rule/Clash/Proxy/Proxy_Classical.yaml"
   },
   "max_drop_fraction": 0.5
 }

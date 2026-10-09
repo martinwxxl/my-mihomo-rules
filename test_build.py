@@ -2,7 +2,7 @@ import json
 from pathlib import Path
 import tempfile
 import unittest
-from build import normalize, split_rule, assign_categories, overlaps, guard_drop, make_config
+from build import normalize, split_rule, assign_categories, overlaps, guard_drop, make_config, REGIONS
 from publish import verify_dist
 
 
@@ -58,13 +58,25 @@ class BuildTests(unittest.TestCase):
     def test_domestic_policies_are_independently_selectable(self):
         cfg = make_config({}, ["domesticmedia", "domestic"], "yaml")
         groups = {g["name"]: g for g in cfg["proxy-groups"]}
-        for name in ("国内媒体", "国内流量", "Apple"):
+        for name in ("国内媒体", "国内流量", "苹果服务"):
             self.assertEqual(groups[name]["type"], "select")
             self.assertEqual(groups[name]["proxies"][0], "DIRECT")
             self.assertIn("机场故障转移", groups[name]["proxies"])
         media = cfg['rules'].index('RULE-SET,domesticmedia-classical,国内媒体')
         domestic = cfg['rules'].index('RULE-SET,domestic-classical,国内流量')
         self.assertLess(media, domestic)
+
+    def test_every_region_defaults_to_primary_backup_failover(self):
+        cfg = make_config({}, ["ai"], "yaml")
+        groups = {g["name"]: g for g in cfg["proxy-groups"]}
+        for region in REGIONS:
+            self.assertEqual(groups[region + "策略"]["proxies"][0], region + "故障转移")
+            self.assertEqual(groups[region + "故障转移"]["proxies"], [region + "主机场", region + "备机场"])
+            self.assertEqual(groups[region + "主机场"]["use"], ["primary"])
+            self.assertEqual(groups[region + "备机场"]["use"], ["backup"])
+            self.assertEqual(groups[region + "主机场"]["empty-fallback"], "REJECT")
+        self.assertEqual(groups["人工智能优先路由"]["proxies"], ["美国故障转移", "机场故障转移"])
+        self.assertEqual(groups["即时通讯优先路由"]["proxies"], ["狮城故障转移", "机场故障转移"])
 
 
 if __name__ == "__main__":
