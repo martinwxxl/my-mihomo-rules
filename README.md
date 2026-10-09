@@ -1,80 +1,41 @@
 # my-mihomo-rules
 
-[![Build](https://github.com/martinwxxl/my-mihomo-rules/actions/workflows/build.yml/badge.svg)](https://github.com/martinwxxl/my-mihomo-rules/actions/workflows/build.yml)
+以 blackmatrix7/ios_rule_script 构建自有规则，以 YYDS666 的原版 Pro_cn 作为配置模板。
 
-自建、自维护的 Mihomo / OpenClash 规则仓库。规则全部来自 blackmatrix7/ios_rule_script，Emby 使用其现成列表。分类和地区选择参考 [Pro_cn](https://raw.githubusercontent.com/666OS/YYDS/refs/heads/main/mihomo/config/cn/Pro_cn.yaml)，以独立实现保留主备机场优先级。机场优先，Cloudflare 节点后续再接入。
+## 当前版本
 
-## 构建与发布
+直接抓取同一提交下的原版 Pro_cn，保留原注释、锚点和所有非规则设置；只替换 rules、rule-providers，并按用户要求将 ipv6 和 dns.ipv6 开启。配置语义对比发现任何其他变化时构建失败。上游提交、来源与修改范围记录在 manifest.json。
 
-main 保存构建代码和来源；release 保存通过校验的配置、规则、manifest.json、conflicts.json、SHA256SUMS。每天北京时间 04:23 构建，也支持推送和手动运行；GitHub 定时任务可能延迟。
+策略组名称、分类、地区过滤、默认选择、300 秒自动测速、均衡、地区故障转移、DNS、嗅探、端口、面板及认证设置都使用原版。没有增加主机场优先策略，也没有新增国内媒体策略组。国内媒体规则归入原版国内流量。原版自动测速可能选择备用机场更快的节点；故障转移仍按原版地区顺序运行。
 
-每次固定一个上游提交，抓取完整 classical 文件，规范化、去重、检查交叉覆盖，转换兼容 MRS 并启动内核验证。任何源下载失败、空列表、声明数量不符、较上次源数量骤降超过 50%、转换或校验失败，均不发布。通过全部校验后，一次非强制推送更新 release；失败保留上次发布，历史提交可用于回滚。
+推荐 YAML：
 
-## 分类与默认策略
+https://raw.githubusercontent.com/martinwxxl/my-mihomo-rules/release/openclash-yaml.yaml
 
-下表顺序为分类优先级。局域网规则在分类之前，最终未匹配流量交给漏网之鱼。国内媒体独立分类是本项目额外提供的选择。
+兼容 MRS：
 
-| 分类 | 上游列表 | 默认策略 |
-|---|---|---|
-| 广告拦截 | Privacy / AdvertisingLite | REJECT-DROP，可改 REJECT 或 DIRECT |
-| 网络测试 | Speedtest | 故障转移 |
-| 即时通讯 | Telegram / Line / Whatsapp | 狮城策略 |
-| 社交平台 | Twitter / Instagram / Discord / Reddit | 美国策略 |
-| 人工智能 | OpenAI / Claude / Gemini / Copilot | 美国策略 |
-| 开发服务 | Developer / GitHub | 美国策略 |
-| EMBY | Emby | 美国策略 |
-| 国际媒体 | GlobalMedia | 美国策略 |
-| 游戏平台 | Game | 美国策略 |
-| 货币平台 | Cryptocurrency | 日本策略 |
-| 谷歌服务 | Google | 美国策略 |
-| 脸书服务 | Facebook | 美国策略 |
-| 微软服务 | Microsoft | 美国策略 |
-| 苹果服务 | Apple | DIRECT |
-| 国内媒体 | ChinaMedia | DIRECT |
-| 国外流量 | Proxy | 故障转移 |
-| 国内流量 | China / ChinaIPs | DIRECT |
-| 漏网之鱼 | MATCH | 故障转移 |
+https://raw.githubusercontent.com/martinwxxl/my-mihomo-rules/release/openclash-mrs.yaml
 
-所有分类都可在面板独立选择。国内网站、国内媒体和苹果默认直连，但没有写死 DIRECT。
+原版 proxy-providers 留空，私人订阅由本地覆写注入。不要把机场订阅、节点凭据或令牌提交到公共仓库。
 
-分类内去重，跨分类同一规则归优先级较高分类。域名后缀、精确域名、关键词和 IP 包含关系写入 conflicts.json，按规则顺序确定策略。正常交叉覆盖不一概删除；正则、进程和复杂逻辑规则无法静态穷尽冲突。
+## OpenClash 接入
 
-## 地区与主备机场
+导入 openclash/My_Mihomo_Rules_OpenClash_IPTV.conf，参数为 EN_KEY1=主机场Clash订阅;EN_KEY2=备用机场Clash订阅。已有私人版本可直接导入，不需要参数。停用此前自建策略覆写模块和旧 Pro_cn 模块，选中 Pro_cn.yaml。
 
-面板沿用 Pro_cn 的结构：先显示业务分类，再显示故障转移、全球手动和香港、台湾、日本、狮城、韩国、美国六个地区策略。分类只提供地区策略、故障转移、全球手动和 DIRECT；不显示主/备机场或服务优先路由。共 26 个可见组（额外保留独立国内媒体分类）。内部测速和故障转移组使用 hidden=true；面板需支持 Mihomo 的 hidden 字段。
+模块沿用用户原来的 Primary/Backup 订阅提供者、24 小时订阅刷新、300 秒健康检查，以及局域网访问和 IPTV 覆写；只将基础模板的下载地址换成自建规则仓库。每日上午 06:00 按原模块设定刷新模板。福建移动 IPTV 专用直连节点继续强制 IPv4；全局和 DNS 的 IPv6 已开启。客户端能否使用 IPv6 还取决于路由器网络和机场节点。
 
-每个地区策略默认选择“地区自动”，也可选择“地区均衡”或具体节点。地区自动在后台先用主机场该地区的健康节点，再用备用机场该地区节点；地区全部不可用或没有节点时转到通用主备机场。地区优先意味着备用机场美国节点可能先于主机场其他地区节点使用；同一地区内主机场优先。内部空组使用 REJECT，避免空组自动变成直连。
+模板自带的认证和控制设置来自上游；OpenClash 会按其运行设置处理。路由器实际覆写、机场订阅下载、解锁和 IPTV 播放尚未实测。
 
-地区均衡在两家的该地区节点之间做 consistent-hashing 负载均衡。全球手动可直接选择节点。自动模式保留我们自己的主备机场优先级，这是与 Pro_cn 单纯按延迟测速的差异。
+## 构建与验证
 
-所有自动健康检查每 60 秒执行，超时 5 秒，lazy=false。主机场恢复后后续检查优先回切，已有连接可能需要重连。两个机场都不可用时代理请求失败，不自动直连。手动选择地区均衡或具体节点时，采用相应模式，不再保证主机场优先。
+每天北京时间 04:23 自动构建，也可手动运行 Actions。每次构建固定 blackmatrix7 和 Pro_cn 各自的提交快照。规则规范化、分类内外去重，按优先级处理完全重复；域名及 IP 覆盖冲突写入 conflicts.json，复杂逻辑规则的冲突无法穷尽判断。
 
-地区通过节点名称匹配；非标准名称可调整 build.py 的 REGIONS。204 探测只证明目标可达，不能保证 AI、流媒体或 Emby 解锁。面板选择会被记住，升级后需检查实际选择。
+只有 DOMAIN/DOMAIN-SUFFIX 转换为 domain MRS，带 no-resolve 的 IP-CIDR 转换为 ipcidr MRS；其他规则保留 classical YAML，避免丢失行为。混合 MRS 配置仍可能包含 classical YAML。
 
-## YAML 与 MRS
+CI 验证原版设置保持不变和 IPv6、分类映射，再用固定 Mihomo v1.19.32 解析两份配置并实际启动确认每个规则提供者加载且非空。测试用的代理提供者仅为占位节点，验证配置不会发布。旧版自建主备故障转移测试已移除，因为当前策略完全交由 Pro_cn。
 
-完整 classical 规则为 rules/<category>.yaml。仅 DOMAIN、DOMAIN-SUFFIX、带 no-resolve 的 IP-CIDR/IP-CIDR6 转换 MRS。关键词、进程名、ASN、需要 DNS 解析的 IP 和其他复杂规则继续使用 classical YAML，不丢规则或改变解析语义。兼容 domain/ipcidr 同时输出 YAML 和 MRS。
+只有全部验证通过，才校验 SHA256SUMS 并非强制推送 release 分支。失败保留上一次成功发布。manifest.json 记录规则源文件原始注释、文件摘要、数量、上游提交和模板提交。数量异常下降或模板结构变化时停止发布。
 
-## OpenClash 与 IPTV 覆写
+## 许可与来源
 
-使用 Mihomo 内核。下载 [完整 YAML 配置](https://raw.githubusercontent.com/martinwxxl/my-mihomo-rules/release/openclash-yaml.yaml) 或 [MRS 混合配置](https://raw.githubusercontent.com/martinwxxl/my-mihomo-rules/release/openclash-mrs.yaml)。所有 rule-providers 指向自建 release，每 24 小时刷新。
-
-模板默认读取 ./proxy_provider/primary.yaml 和 ./proxy_provider/backup.yaml，相对 Mihomo 工作目录，必须是 proxies: [...] 格式。OpenClash 通常使用 /etc/openclash，需在实际安装中确认。需要自动下载机场订阅时，在本地改为 HTTP provider，添加私人 URL、interval: 3600，保留 path、override、health-check。
-
-推荐导入 [覆写模块](openclash/My_Mihomo_Rules_OpenClash_IPTV.conf)，参数为 EN_KEY1=主机场Clash订阅地址;EN_KEY2=备用机场Clash订阅地址，停用旧 Pro_cn 模块。模块每天 06:00 更新自建模板并重启应用覆写；保留 sntp.me、micu 直连和 fj.chinamobile.com 的专用 IPv4 直连。其他分类、地区策略和 DNS 不替换。
-
-已有私人地址的本地覆写版不需要再次填参数，但不能上传公共仓库。订阅 URL、节点密码、UUID、控制器密钥都只保存在本地；CI 不需要机场 secrets。不要将私人订阅交给公共转换站。
-
-首次升级完整分类版需重新下载基础 YAML 并重启应用覆写。只刷新规则 provider 不会新增策略组。TUN/TProxy、DNS 劫持、LAN、IPv6 按实际网络配置；不要让其他模板覆写替换本配置策略组或规则。
-
-## 验证与维护
-
-固定 Mihomo v1.19.32，安装包检查官方 release SHA-256。Actions 固定核验提交和 Ubuntu 24.04。测试覆盖规范化、优先级、MRS 语义、数量骤降、国内默认策略、地区主备顺序、发布路径。
-
-CI 使用真实配置生成函数及本地模拟机场，验证美国地区主故障切备用、恢复回切；再用只有香港节点的机场验证美国策略的自动模式退到通用主备机场。YAML 与混合 MRS 先通过 mihomo -t，再启动内核确认每个规则 provider 加载且非空。测试不代表真实机场解锁、家庭 IPTV 播放或路由器覆写流程已验证。
-
-本地使用 Python 3.12：安装 requirements.txt，运行 install_mihomo.py，然后执行 python -m unittest -v test_build 和 python build.py --mihomo runtime/mihomo --output dist。Windows 内核路径为 runtime/mihomo.exe，dist 必须是新目录。
-
-manifest.json 保留来源 URL、提交、哈希、原注释和数量；SHA256SUMS 校验发布文件。回滚时将 provider URL 中的 release 改成某个已验证发布提交 SHA。
-
-规则及构建代码采用 GPL-2.0。参考说明见 LICENSE、NOTICE.md。地区和分类逻辑独立实现，未复制 Pro_cn 模板或 666OS 规则文件。
+规则及本仓库构建代码保留 GPL-2.0 和 LICENSE。Pro_cn 模板保留 YYDS666 / 666OS/YYDS 署名，按上游 GPL-3.0 附带 LICENSE-Pro_cn.txt 和 NOTICE-Pro_cn.md。上游声明见 https://github.com/666OS/YYDS ，包括其禁止转载/发布到中国互联网平台的说明。详细来源见 NOTICE.md 和发布 manifest.json。

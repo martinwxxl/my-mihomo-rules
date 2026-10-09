@@ -16,7 +16,8 @@ def validate_runtime(core, directory, cfg):
         listener.bind(("127.0.0.1", 0))
         port = listener.getsockname()[1]
     cfg = dict(cfg)
-    cfg.update({"mixed-port": 0, "allow-lan": False, "dns": {"enable": False},
+    cfg.update({"mixed-port": 0, "port": 0, "socks-port": 0, "redir-port": 0,
+                "tproxy-port": 0, "log-level": "info", "allow-lan": False, "dns": {"enable": False},
                 "external-controller": f"127.0.0.1:{port}", "secret": secrets.token_hex(24)})
     file = Path(directory) / "runtime.yaml"
     file.write_text(yaml.safe_dump(cfg, allow_unicode=True, sort_keys=False), encoding="utf-8")

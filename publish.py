@@ -9,7 +9,8 @@ import tempfile
 
 def verify_dist(dist):
     allowed = {"LICENSE", "NOTICE.md", "README.md", "manifest.json", "conflicts.json",
-               "SHA256SUMS", "openclash-yaml.yaml", "openclash-mrs.yaml"}
+               "SHA256SUMS", "openclash-yaml.yaml", "openclash-mrs.yaml",
+               "LICENSE-Pro_cn.txt", "NOTICE-Pro_cn.md"}
     expected = {}
     for line in (dist / "SHA256SUMS").read_text(encoding="utf-8").splitlines():
         digest, name = line.split("  ", 1)

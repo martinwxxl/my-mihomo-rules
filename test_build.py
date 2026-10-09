@@ -2,11 +2,35 @@ import json
 from pathlib import Path
 import tempfile
 import unittest
-from build import normalize, split_rule, assign_categories, overlaps, guard_drop, make_config, REGIONS
+from build import normalize, split_rule, assign_categories, overlaps, guard_drop, make_config
 from publish import verify_dist
+from pro_cn import render_template
+import yaml
 
 
 class BuildTests(unittest.TestCase):
+    def test_original_settings_survive_rule_replacement_and_ipv6(self):
+        template = """ipv6: false
+dns:
+  ipv6: false
+  nameserver: [https://dns.example/dns-query]
+proxy-groups:
+  - {name: 国内流量, type: select, proxies: [DIRECT]}
+  - {name: 漏网之鱼, type: select, proxies: [DIRECT]}
+profile: {store-selected: true}
+# 规则路由
+rules: [MATCH,漏网之鱼]
+rule-providers: {}
+"""
+        generated = make_config({}, ["domesticmedia", "domestic"], "yaml")
+        rendered = yaml.safe_load(render_template(template, generated))
+        self.assertTrue(rendered['ipv6'])
+        self.assertTrue(rendered['dns']['ipv6'])
+        self.assertEqual(rendered['dns']['nameserver'], ['https://dns.example/dns-query'])
+        self.assertEqual(rendered['proxy-groups'], yaml.safe_load(template)['proxy-groups'])
+        self.assertIn('RULE-SET,domesticmedia-classical,国内流量', rendered['rules'])
+        self.assertEqual(rendered['profile'], {'store-selected': True})
+
     def test_normalization(self):
         self.assertEqual(normalize(" domain-suffix , ExAmPle.COM. "), "DOMAIN-SUFFIX,example.com")
         self.assertEqual(normalize("IP-CIDR,10.0.0.1/8,no-resolve"), "IP-CIDR,10.0.0.0/8,no-resolve")
@@ -40,13 +64,6 @@ class BuildTests(unittest.TestCase):
                 guard_drop(previous, {"Emby": 49}, 0.5)
             guard_drop(previous, {"Emby": 50}, 0.5)
 
-    def test_fallback_order_and_no_direct_leak(self):
-        cfg = make_config({}, ["ai"], "yaml")
-        fallback = next(g for g in cfg["proxy-groups"] if g["type"] == "fallback")
-        self.assertEqual(fallback["proxies"], ["主机场", "备机场"])
-        self.assertFalse(fallback["lazy"])
-        self.assertNotIn("DIRECT", fallback["proxies"])
-        self.assertEqual(cfg["proxy-providers"]["primary"]["type"], "file")
 
     def test_publish_rejects_traversal(self):
         with tempfile.TemporaryDirectory() as temporary:
@@ -55,38 +72,8 @@ class BuildTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 verify_dist(path)
 
-    def test_domestic_policies_are_independently_selectable(self):
-        cfg = make_config({}, ["domesticmedia", "domestic"], "yaml")
-        groups = {g["name"]: g for g in cfg["proxy-groups"]}
-        for name in ("国内媒体", "国内流量", "苹果服务"):
-            self.assertEqual(groups[name]["type"], "select")
-            self.assertEqual(groups[name]["proxies"][0], "DIRECT")
-            self.assertIn("故障转移", groups[name]["proxies"])
-        media = cfg['rules'].index('RULE-SET,domesticmedia-classical,国内媒体')
-        domestic = cfg['rules'].index('RULE-SET,domestic-classical,国内流量')
-        self.assertLess(media, domestic)
 
-    def test_every_region_defaults_to_primary_backup_failover(self):
-        cfg = make_config({}, ["ai"], "yaml")
-        groups = {g["name"]: g for g in cfg["proxy-groups"]}
-        for region in REGIONS:
-            self.assertEqual(groups[region + "策略"]["proxies"][0], region + "自动")
-            self.assertEqual(groups[region + "自动"]["proxies"], [region + "故障转移", "机场故障转移"])
-            self.assertEqual(groups[region + "故障转移"]["proxies"], [region + "主机场", region + "备机场"])
-            self.assertEqual(groups[region + "主机场"]["use"], ["primary"])
-            self.assertEqual(groups[region + "备机场"]["use"], ["backup"])
-            self.assertEqual(groups[region + "主机场"]["empty-fallback"], "REJECT")
-        self.assertEqual(groups["人工智能"]["proxies"][0], "美国策略")
-        self.assertEqual(groups["即时通讯"]["proxies"][0], "狮城策略")
 
-    def test_panel_exposes_only_categories_regions_and_global_controls(self):
-        groups = make_config({}, ["ai"], "yaml")["proxy-groups"]
-        visible = {g["name"] for g in groups if not g.get("hidden")}
-        self.assertEqual(len(visible), 26)
-        self.assertTrue({"故障转移", "全球手动", "人工智能", "香港策略"} <= visible)
-        for group in groups:
-            if group["name"] in visible and group["name"] not in {"故障转移", "全球手动"} and not group["name"].endswith("策略"):
-                self.assertFalse(any("机场" in p or "优先路由" in p for p in group["proxies"]))
 
 
 if __name__ == "__main__":

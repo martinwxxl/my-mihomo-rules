@@ -15,18 +15,11 @@ import urllib.request
 
 import yaml
 from validate_runtime import validate_runtime
+from pro_cn import fetch_template, render_template
 
 ROOT = Path(__file__).resolve().parent
 REPOSITORY = os.environ.get("GITHUB_REPOSITORY", "martinwxxl/my-mihomo-rules")
 CHECK_URL = "https://www.gstatic.com/generate_204"
-REGIONS = {
-    "香港": r"(?i)(香港|港|Hong[ _-]?Kong|\bHK\b|\bHKG\b|🇭🇰)",
-    "台湾": r"(?i)(台湾|台灣|台北|Taiwan|Taipei|\bTW\b|\bTPE\b|🇹🇼)",
-    "日本": r"(?i)(日本|东京|大阪|Japan|Tokyo|Osaka|\bJP\b|\bNRT\b|🇯🇵)",
-    "狮城": r"(?i)(新加坡|狮城|Singapore|\bSG\b|\bSIN\b|🇸🇬)",
-    "韩国": r"(?i)(韩国|韓國|首尔|首爾|Korea|Seoul|\bKR\b|\bICN\b|🇰🇷)",
-    "美国": r"(?i)(美国|美國|美东|美西|United[ _-]?States|America|\bUSA?\b|🇺🇸)",
-}
 POLICIES = {
     "ads": "广告拦截", "speedtest": "网络测试", "im": "即时通讯", "social": "社交平台",
     "ai": "人工智能", "development": "开发服务", "emby": "EMBY", "streaming": "国际媒体",
@@ -157,65 +150,7 @@ def write_yaml(path, data):
 
 
 def make_config(index, priority, fmt, local=False):
-    cfg = {"mixed-port": 7890, "allow-lan": True, "mode": "rule", "log-level": "info",
-           "ipv6": False, "profile": {"store-selected": True},
-           "dns": {"enable": True, "listen": "127.0.0.1:7874", "enhanced-mode": "fake-ip",
-                   "fake-ip-range": "198.18.0.1/16", "fake-ip-filter": ["*.lan", "*.local"],
-                   "default-nameserver": ["223.5.5.5", "119.29.29.29"],
-                   "nameserver": ["https://dns.alidns.com/dns-query", "https://doh.pub/dns-query"],
-                   "proxy-server-nameserver": ["https://dns.alidns.com/dns-query"]}}
-    cfg["proxy-providers"] = {}
-    for name in ("primary", "backup"):
-        cfg["proxy-providers"][name] = {"type": "file", "path": f"./proxy_provider/{name}.yaml",
-            "override": {"additional-prefix": name + " | "},
-            "health-check": {"enable": True, "url": CHECK_URL, "interval": 60,
-                             "timeout": 5000, "lazy": False, "expected-status": 204}}
-    groups = []
-    for name, provider in (("主机场", "primary"), ("备机场", "backup")):
-        groups.append({"name": name, "type": "url-test", "use": [provider], "url": CHECK_URL,
-                       "interval": 60, "timeout": 5000, "tolerance": 50, "lazy": False,
-                       "expected-status": 204, "empty-fallback": "REJECT", "hidden": True})
-    groups += [{"name": "机场故障转移", "type": "fallback", "proxies": ["主机场", "备机场"],
-                "url": CHECK_URL, "interval": 60, "timeout": 5000, "lazy": False,
-                "expected-status": 204, "empty-fallback": "REJECT", "hidden": True},
-               {"name": "故障转移", "type": "fallback", "proxies": ["主机场", "备机场"],
-                "url": CHECK_URL, "interval": 60, "timeout": 5000, "lazy": False,
-                "expected-status": 204, "empty-fallback": "REJECT"},
-               {"name": "全球手动", "type": "select", "proxies": ["机场故障转移"],
-                "use": ["primary", "backup"]}]
-    health = {"url": CHECK_URL, "interval": 60, "timeout": 5000,
-              "lazy": False, "expected-status": 204, "empty-fallback": "REJECT"}
-    for region, pattern in REGIONS.items():
-        for airport, provider in (("主机场", "primary"), ("备机场", "backup")):
-            groups.append({"name": region + airport, "type": "url-test", "use": [provider],
-                           "filter": pattern, "tolerance": 50, "hidden": True, **health})
-        groups.append({"name": region + "故障转移", "type": "fallback",
-                       "proxies": [region + "主机场", region + "备机场"], "hidden": True, **health})
-        groups.append({"name": region + "自动", "type": "fallback",
-                       "proxies": [region + "故障转移", "机场故障转移"], "hidden": True, **health})
-        groups.append({"name": region + "均衡", "type": "load-balance", "use": ["primary", "backup"],
-                       "filter": pattern, "strategy": "consistent-hashing", "hidden": True, **health})
-        groups.append({"name": region + "策略", "type": "select", "use": ["primary", "backup"],
-                       "filter": pattern, "proxies": [region + "自动", region + "均衡"]})
-    region_choices = [region + "策略" for region in REGIONS]
-    general = ["故障转移", "全球手动", *region_choices, "DIRECT"]
-    preferred = {"im": "狮城", "social": "美国", "ai": "美国", "development": "美国",
-                 "emby": "美国", "streaming": "美国", "games": "美国", "crypto": "日本",
-                 "google": "美国", "facebook": "美国", "microsoft": "美国"}
-    for category, name in POLICIES.items():
-        if category == "ads":
-            choices = ["REJECT-DROP", "REJECT", "DIRECT"]
-        elif category in ("apple", "domesticmedia", "domestic"):
-            choices = ["DIRECT", *general[:-1]]
-        elif category in preferred:
-            choices = [preferred[category] + "策略", *general]
-        else:
-            choices = general
-        groups.append({"name": name, "type": "select", "proxies": list(dict.fromkeys(choices))})
-    groups.append({"name": "漏网之鱼", "type": "select", "proxies": general})
-    display_order = [*POLICIES.values(), "漏网之鱼", "故障转移", "全球手动", *region_choices]
-    cfg["proxy-groups"] = sorted(groups, key=lambda g: display_order.index(g["name"])
-                                  if g["name"] in display_order else len(display_order))
+    cfg = {}
     cfg["rule-providers"] = {}
     rules = ["IP-CIDR,127.0.0.0/8,DIRECT,no-resolve", "IP-CIDR,10.0.0.0/8,DIRECT,no-resolve",
              "IP-CIDR,172.16.0.0/12,DIRECT,no-resolve", "IP-CIDR,192.168.0.0/16,DIRECT,no-resolve",
@@ -321,8 +256,18 @@ def build(args):
                 index[category].append((behavior, mrspath))
             else:
                 index[category].append((behavior, path))
+    template, template_license, template_provenance = fetch_template(download)
+    (out / "LICENSE-Pro_cn.txt").write_bytes(template_license)
+    (out / "NOTICE-Pro_cn.md").write_text(
+        "# Pro_cn template attribution\n\nOriginal: YYDS666, 666OS/YYDS (GPL-3.0).\n"
+        + template_provenance['url'] + "\n\nOnly rules/providers and IPv6 settings are changed.\n"
+        "Keep original attribution and LICENSE-Pro_cn.txt. Source and restrictions: "
+        "https://github.com/666OS/YYDS/blob/" + template_provenance['commit'] + "/README.md\n"
+        "Original notice prohibits reproduction/publication on Chinese internet platforms.\n",
+        encoding="utf-8")
     for fmt in ("yaml", "mrs"):
-        write_yaml(out / f"openclash-{fmt}.yaml", make_config(index, priority, fmt))
+        rendered = render_template(template, make_config(index, priority, fmt))
+        (out / f"openclash-{fmt}.yaml").write_text(rendered, encoding="utf-8")
         # Both configurations are validated against local generated providers.
         validation = out / ("validate-" + fmt)
         validation.mkdir()
@@ -330,7 +275,12 @@ def build(args):
         for name in ("primary", "backup"):
             write_yaml(validation / f"proxy_provider/{name}.yaml", {"proxies": [{"name": "ci-" + name,
                        "type": "http", "server": "127.0.0.1", "port": 9}]})
-        local_config = make_config(index, priority, fmt, local=True)
+        local_config = yaml.safe_load(render_template(template, make_config(index, priority, fmt, local=True)))
+        # Validation-only placeholders; shipped Pro_cn providers remain unchanged.
+        local_config["proxy-providers"] = {name: {"type": "file", "path": f"./proxy_provider/{name}.yaml"}
+                                           for name in ("primary", "backup")}
+        local_config["external-ui"] = ""
+        local_config["external-ui-url"] = ""
         write_yaml(validation / "config.yaml", local_config)
         run_core(core, ["-t", "-d", validation, "-f", validation / "config.yaml"])
         validate_runtime(core, validation, local_config)
@@ -340,7 +290,8 @@ def build(args):
                 "mihomo": subprocess.check_output([core, "-v"], text=True).strip(),
                 "priority": priority, "source_counts": source_counts,
                 "category_counts": {k: len(v) for k, v in categories.items()},
-                "sources": {name: provenance for name, _, provenance in fetched}}
+                "sources": {name: provenance for name, _, provenance in fetched},
+                "template": template_provenance}
     (out / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     (out / "conflicts.json").write_text(json.dumps({"policy": "first category in priority wins; overlaps retained and order resolves",
         "exact_duplicates": duplicates, "coverage_overlaps": coverage,
