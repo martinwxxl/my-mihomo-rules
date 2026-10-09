@@ -1,9 +1,9 @@
 # 上游与再分发说明
 
-规则上游为 [blackmatrix7/ios_rule_script](https://github.com/blackmatrix7/ios_rule_script)，沿用其 GPL-2.0 许可；LICENSE 保留完整许可文本。本仓库构建代码同样以 GPL-2.0 发布。
+规则源为 blackmatrix7/ios_rule_script，保留其 GPL-2.0 许可及原始来源信息。本仓库构建代码亦使用 GPL-2.0。Emby 列表使用该上游维护的 Emby，原文件标注 justdoiting 和 https://github.com/justdoiting/emby-rules 。发布 manifest.json 保留所有来源文件的注释头、URL、摘要和提交。
 
-Emby 使用 blackmatrix7 中现成规则，其文件标注作者 justdoiting、来源 https://github.com/justdoiting/emby-rules 。其他分类可能包含进一步的上游贡献者，发布 manifest.json 保留每个源文件的完整注释头、原始 URL、文件摘要与上游提交，供溯源和查看原始声明。
+配置模板直接使用 YYDS666 / 666OS/YYDS 的 Pro_cn。保留原作者署名、原版非规则文本、原版策略及设置，仅替换 rules / rule-providers，并按用户要求开启全局及 DNS IPv6。国内媒体规则映射至原版国内流量分类。上游模板提交及原始摘要记录在 manifest.json。
 
-本项目是对选定分流规则的自动分类、格式规范化与兼容转换。没有复制 666OS/YYDS 配置或机场节点，不提供机场订阅或解锁保证。规则覆盖与准确性取决于上游维护；本仓库不重新手工维护 Emby 列表。
+Pro_cn 使用上游 GPL-3.0，发布附带 LICENSE-Pro_cn.txt 和 NOTICE-Pro_cn.md；来源及声明为 https://github.com/666OS/YYDS 。原项目声明禁止任何形式的转载或发布至中国互联网平台，请保留该声明和原署名。
 
-分类和地区选择的产品结构参考 YYDS666 的 Pro_cn：https://raw.githubusercontent.com/666OS/YYDS/refs/heads/main/mihomo/config/cn/Pro_cn.yaml 。本仓库以独立配置生成代码实现，地区匹配表达式、主备分层和地区为空时的通用兜底均为本项目实现；参考文件不作为规则源，也未复制模板文件进行再分发。
+本仓库不包含机场订阅、节点凭据或私人覆写文件，不保证机场解锁或路由器实测效果。

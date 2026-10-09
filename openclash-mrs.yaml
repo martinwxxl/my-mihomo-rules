@@ -1,754 +1,205 @@
-mixed-port: 7890
-allow-lan: true
+# >>=====================================<<
+# ||                                     ||
+# ||      ██████╗  ██████╗  ██████╗      ||
+# ||     ██╔════╝ ██╔════╝ ██╔════╝      ||
+# ||     ███████╗ ███████╗ ███████╗      ||
+# ||     ██╔═══██╗██╔═══██╗██╔═══██╗     ||
+# ||     ╚██████╔╝╚██████╔╝╚██████╔╝     ||
+# ||      ╚═════╝  ╚═════╝  ╚═════╝      ||
+# ||                                     ||
+# >>=====================================<<
+# Pro 中文版 v2.0.6 by YYDS666 (2026-07-11)
+# 项目: https://github.com/666OS/YYDS | 频道: https://t.me/Pinched666
+# 请在 proxy-providers 中添加您的订阅链接，或在 proxies 中添加自定义节点
+
+
+# 锚点配置
+x-base-provider: &base-provider {type: http, interval: 86400, health-check: {enable: true, url: 'https://www.google.com/generate_204', interval: 300}, filter: '^(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author))'}
+
+x-url-test:     &url-test     { type: url-test, url: "https://www.gstatic.com/generate_204", interval: 300, empty-fallback: REJECT, include-all: true, hidden: true, tolerance: 50 }
+x-load-balance: &load-balance { type: load-balance, url: "https://www.gstatic.com/generate_204", interval: 300, empty-fallback: REJECT, include-all: true, hidden: true, strategy: consistent-hashing }
+x-fallback:     &fallback     { type: fallback, url: "https://www.gstatic.com/generate_204", interval: 300, empty-fallback: REJECT }
+
+x-filter-hk:    &filter-hk    "^(?i)(?=.*(香港|港深|深港|沪港|广港|陆港|(?<![a-zA-Z])(hk|hkg)(?![a-zA-Z])|hongkong|hong kong|🇭🇰))(?!.*(排除)).*$"
+x-filter-tw:    &filter-tw    "^(?i)(?=.*(台湾|台北|台中|台南|台东|湾湾|(?<![a-zA-Z])(tw|tpe|khh|tsa)(?![a-zA-Z])|taiwan|taipei|🇹🇼|🇼🇸))(?!.*(排除)).*$"
+x-filter-jp:    &filter-jp    "^(?i)(?=.*(日本|东京|大阪|京都|神奈川|琦玉|(?<![a-zA-Z])(jp|nrt|hnd|kix|cts|fuk)(?![a-zA-Z])|japan|tokyo|🇯🇵))(?!.*(排除)).*$"
+x-filter-sg:    &filter-sg    "^(?i)(?=.*(新加坡|坡县|坡|狮城|(?<![a-zA-Z])(sg|sin|xsp)(?![a-zA-Z])|singapore|🇸🇬))(?!.*(排除)).*$"
+x-filter-kr:    &filter-kr    "^(?i)(?=.*(韩国|韓國|首尔|首爾|南朝鲜|(?<![a-zA-Z])(kr|icn|gmp|pus)(?![a-zA-Z])|korea|seoul|🇰🇷))(?!.*(排除)).*$"
+x-filter-us:    &filter-us    "^(?i)(?=.*(美国|美东|美西|美中|美南|美港|美日|中美|美专|(?<![a-zA-Z])(us|usa|lax|sfo|jfk|sjc)(?![a-zA-Z])|america|united states|🇺🇸))(?!.*(排除)).*$"
+
+x-oversea:      &oversea      [故障转移, 全球手动, 香港策略, 台湾策略, 日本策略, 狮城策略, 韩国策略, 美国策略, DIRECT]
+x-direct:       &direct       [DIRECT, 故障转移, 全球手动, 香港策略, 台湾策略, 日本策略, 狮城策略, 韩国策略, 美国策略]
+x-us-first:     &us-first     [美国策略, 故障转移, 全球手动, 香港策略, 台湾策略, 日本策略, 狮城策略, 韩国策略, DIRECT]
+x-hk-first:     &hk-first     [香港策略, 故障转移, 全球手动, 台湾策略, 日本策略, 狮城策略, 韩国策略, 美国策略, DIRECT]
+x-sg-first:     &sg-first     [狮城策略, 故障转移, 全球手动, 香港策略, 台湾策略, 日本策略, 韩国策略, 美国策略, DIRECT]
+x-jp-first:     &jp-first     [日本策略, 故障转移, 全球手动, 香港策略, 台湾策略, 狮城策略, 韩国策略, 美国策略, DIRECT]
+
+x-rule-set-domain: &rule-set-domain { type: http, behavior: domain, format: mrs, interval: 86400 }
+x-rule-set-ipcidr: &rule-set-ipcidr { type: http, behavior: ipcidr, format: mrs, interval: 86400 }
+
+proxy-providers:
+  # Primary: {<<: *base-provider, url: 'YOUR_PRIMARY_URL', override: {additional-prefix: '[P] '}}
+  # Backup:   {<<: *base-provider, url: 'YOUR_BACKUP_URL',  override: {additional-prefix: '[B] '}}
+
+# 自定义代理节点
+proxies:
+  # - name: "ss1"
+  #   type: ss
+  #   server: server
+  #   port: 443
+  #   cipher: aes-128-gcm
+  #   password: password
+
+# 基础设置
 mode: rule
-log-level: info
-ipv6: false
-profile:
-  store-selected: true
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+tproxy-port: 7895
+ipv6: true
+allow-lan: false
+unified-delay: true
+tcp-concurrent: true
+log-level: silent
+bind-address: '*'
+find-process-mode: 'always'
+keep-alive-interval: 15
+keep-alive-idle: 600
+authentication: [mihomo:yyds666]
+skip-auth-prefixes: [127.0.0.1/8, '::1/128']
+experimental: {quic-go-disable-gso: true}
+
+# 控制面板
+external-ui-url: https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip
+external-ui-name: zashboard
+external-ui: ui
+external-controller: 127.0.0.1:9090
+secret: yyds666
+profile: {store-selected: true, store-fake-ip: true}
+
+# 流量嗅探
+sniffer:
+  enable: true
+  sniff:
+    HTTP:  {ports: [80, 8080-8880], override-destination: true}
+    TLS:   {ports: [443, 8443]}
+    QUIC:  {ports: [443, 8443]}
+  skip-domain: ["Mijia Cloud", "+.push.apple.com"]
+
+# TUN模式
+tun:
+  enable: false
+  stack: mixed
+  dns-hijack: ["any:53", "tcp://any:53"]
+  auto-route: true
+  auto-redirect: true
+  auto-detect-interface: true
+
+# DNS设置
 dns:
   enable: true
-  listen: 127.0.0.1:7874
+  ipv6: true
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
-  fake-ip-filter:
-  - '*.lan'
-  - '*.local'
-  default-nameserver:
-  - 223.5.5.5
-  - 119.29.29.29
-  nameserver:
-  - https://dns.alidns.com/dns-query
-  - https://doh.pub/dns-query
-  proxy-server-nameserver:
-  - https://dns.alidns.com/dns-query
-proxy-providers:
-  primary:
-    type: file
-    path: ./proxy_provider/primary.yaml
-    override:
-      additional-prefix: 'primary | '
-    health-check:
-      enable: true
-      url: https://www.gstatic.com/generate_204
-      interval: 60
-      timeout: 5000
-      lazy: false
-      expected-status: 204
-  backup:
-    type: file
-    path: ./proxy_provider/backup.yaml
-    override:
-      additional-prefix: 'backup | '
-    health-check:
-      enable: true
-      url: https://www.gstatic.com/generate_204
-      interval: 60
-      timeout: 5000
-      lazy: false
-      expected-status: 204
+  default-nameserver: [119.29.29.29, 180.184.1.1, 223.5.5.5]
+  nameserver: [https://dns.alidns.com/dns-query, https://doh.pub/dns-query]
+  fake-ip-filter: ["+.lan", "*.local", "+.gstatic.com", "+.miwifi.com", "+.market.xiaomi.com", "+.push.apple.com"]
+
+# 代理策略组
 proxy-groups:
-- name: 广告拦截
-  type: select
-  proxies:
-  - REJECT-DROP
-  - REJECT
-  - DIRECT
-- name: 网络测试
-  type: select
-  proxies:
-  - 故障转移
-  - 全球手动
-  - 香港策略
-  - 台湾策略
-  - 日本策略
-  - 狮城策略
-  - 韩国策略
-  - 美国策略
-  - DIRECT
-- name: 即时通讯
-  type: select
-  proxies:
-  - 狮城策略
-  - 故障转移
-  - 全球手动
-  - 香港策略
-  - 台湾策略
-  - 日本策略
-  - 韩国策略
-  - 美国策略
-  - DIRECT
-- name: 社交平台
-  type: select
-  proxies:
-  - 美国策略
-  - 故障转移
-  - 全球手动
-  - 香港策略
-  - 台湾策略
-  - 日本策略
-  - 狮城策略
-  - 韩国策略
-  - DIRECT
-- name: 人工智能
-  type: select
-  proxies:
-  - 美国策略
-  - 故障转移
-  - 全球手动
-  - 香港策略
-  - 台湾策略
-  - 日本策略
-  - 狮城策略
-  - 韩国策略
-  - DIRECT
-- name: 开发服务
-  type: select
-  proxies:
-  - 美国策略
-  - 故障转移
-  - 全球手动
-  - 香港策略
-  - 台湾策略
-  - 日本策略
-  - 狮城策略
-  - 韩国策略
-  - DIRECT
-- name: EMBY
-  type: select
-  proxies:
-  - 美国策略
-  - 故障转移
-  - 全球手动
-  - 香港策略
-  - 台湾策略
-  - 日本策略
-  - 狮城策略
-  - 韩国策略
-  - DIRECT
-- name: 国际媒体
-  type: select
-  proxies:
-  - 美国策略
-  - 故障转移
-  - 全球手动
-  - 香港策略
-  - 台湾策略
-  - 日本策略
-  - 狮城策略
-  - 韩国策略
-  - DIRECT
-- name: 游戏平台
-  type: select
-  proxies:
-  - 美国策略
-  - 故障转移
-  - 全球手动
-  - 香港策略
-  - 台湾策略
-  - 日本策略
-  - 狮城策略
-  - 韩国策略
-  - DIRECT
-- name: 货币平台
-  type: select
-  proxies:
-  - 日本策略
-  - 故障转移
-  - 全球手动
-  - 香港策略
-  - 台湾策略
-  - 狮城策略
-  - 韩国策略
-  - 美国策略
-  - DIRECT
-- name: 谷歌服务
-  type: select
-  proxies:
-  - 美国策略
-  - 故障转移
-  - 全球手动
-  - 香港策略
-  - 台湾策略
-  - 日本策略
-  - 狮城策略
-  - 韩国策略
-  - DIRECT
-- name: 脸书服务
-  type: select
-  proxies:
-  - 美国策略
-  - 故障转移
-  - 全球手动
-  - 香港策略
-  - 台湾策略
-  - 日本策略
-  - 狮城策略
-  - 韩国策略
-  - DIRECT
-- name: 微软服务
-  type: select
-  proxies:
-  - 美国策略
-  - 故障转移
-  - 全球手动
-  - 香港策略
-  - 台湾策略
-  - 日本策略
-  - 狮城策略
-  - 韩国策略
-  - DIRECT
-- name: 苹果服务
-  type: select
-  proxies:
-  - DIRECT
-  - 故障转移
-  - 全球手动
-  - 香港策略
-  - 台湾策略
-  - 日本策略
-  - 狮城策略
-  - 韩国策略
-  - 美国策略
-- name: 国内媒体
-  type: select
-  proxies:
-  - DIRECT
-  - 故障转移
-  - 全球手动
-  - 香港策略
-  - 台湾策略
-  - 日本策略
-  - 狮城策略
-  - 韩国策略
-  - 美国策略
-- name: 国外流量
-  type: select
-  proxies:
-  - 故障转移
-  - 全球手动
-  - 香港策略
-  - 台湾策略
-  - 日本策略
-  - 狮城策略
-  - 韩国策略
-  - 美国策略
-  - DIRECT
-- name: 国内流量
-  type: select
-  proxies:
-  - DIRECT
-  - 故障转移
-  - 全球手动
-  - 香港策略
-  - 台湾策略
-  - 日本策略
-  - 狮城策略
-  - 韩国策略
-  - 美国策略
-- name: 漏网之鱼
-  type: select
-  proxies:
-  - 故障转移
-  - 全球手动
-  - 香港策略
-  - 台湾策略
-  - 日本策略
-  - 狮城策略
-  - 韩国策略
-  - 美国策略
-  - DIRECT
-- name: 故障转移
-  type: fallback
-  proxies:
-  - 主机场
-  - 备机场
-  url: https://www.gstatic.com/generate_204
-  interval: 60
-  timeout: 5000
-  lazy: false
-  expected-status: 204
-  empty-fallback: REJECT
-- name: 全球手动
-  type: select
-  proxies:
-  - 机场故障转移
-  use:
-  - primary
-  - backup
-- name: 香港策略
-  type: select
-  use:
-  - primary
-  - backup
-  filter: (?i)(香港|港|Hong[ _-]?Kong|\bHK\b|\bHKG\b|🇭🇰)
-  proxies:
-  - 香港自动
-  - 香港均衡
-- name: 台湾策略
-  type: select
-  use:
-  - primary
-  - backup
-  filter: (?i)(台湾|台灣|台北|Taiwan|Taipei|\bTW\b|\bTPE\b|🇹🇼)
-  proxies:
-  - 台湾自动
-  - 台湾均衡
-- name: 日本策略
-  type: select
-  use:
-  - primary
-  - backup
-  filter: (?i)(日本|东京|大阪|Japan|Tokyo|Osaka|\bJP\b|\bNRT\b|🇯🇵)
-  proxies:
-  - 日本自动
-  - 日本均衡
-- name: 狮城策略
-  type: select
-  use:
-  - primary
-  - backup
-  filter: (?i)(新加坡|狮城|Singapore|\bSG\b|\bSIN\b|🇸🇬)
-  proxies:
-  - 狮城自动
-  - 狮城均衡
-- name: 韩国策略
-  type: select
-  use:
-  - primary
-  - backup
-  filter: (?i)(韩国|韓國|首尔|首爾|Korea|Seoul|\bKR\b|\bICN\b|🇰🇷)
-  proxies:
-  - 韩国自动
-  - 韩国均衡
-- name: 美国策略
-  type: select
-  use:
-  - primary
-  - backup
-  filter: (?i)(美国|美國|美东|美西|United[ _-]?States|America|\bUSA?\b|🇺🇸)
-  proxies:
-  - 美国自动
-  - 美国均衡
-- name: 主机场
-  type: url-test
-  use:
-  - primary
-  url: https://www.gstatic.com/generate_204
-  interval: 60
-  timeout: 5000
-  tolerance: 50
-  lazy: false
-  expected-status: 204
-  empty-fallback: REJECT
-  hidden: true
-- name: 备机场
-  type: url-test
-  use:
-  - backup
-  url: https://www.gstatic.com/generate_204
-  interval: 60
-  timeout: 5000
-  tolerance: 50
-  lazy: false
-  expected-status: 204
-  empty-fallback: REJECT
-  hidden: true
-- name: 机场故障转移
-  type: fallback
-  proxies:
-  - 主机场
-  - 备机场
-  url: https://www.gstatic.com/generate_204
-  interval: 60
-  timeout: 5000
-  lazy: false
-  expected-status: 204
-  empty-fallback: REJECT
-  hidden: true
-- name: 香港主机场
-  type: url-test
-  use:
-  - primary
-  filter: (?i)(香港|港|Hong[ _-]?Kong|\bHK\b|\bHKG\b|🇭🇰)
-  tolerance: 50
-  hidden: true
-  url: https://www.gstatic.com/generate_204
-  interval: 60
-  timeout: 5000
-  lazy: false
-  expected-status: 204
-  empty-fallback: REJECT
-- name: 香港备机场
-  type: url-test
-  use:
-  - backup
-  filter: (?i)(香港|港|Hong[ _-]?Kong|\bHK\b|\bHKG\b|🇭🇰)
-  tolerance: 50
-  hidden: true
-  url: https://www.gstatic.com/generate_204
-  interval: 60
-  timeout: 5000
-  lazy: false
-  expected-status: 204
-  empty-fallback: REJECT
-- name: 香港故障转移
-  type: fallback
-  proxies:
-  - 香港主机场
-  - 香港备机场
-  hidden: true
-  url: https://www.gstatic.com/generate_204
-  interval: 60
-  timeout: 5000
-  lazy: false
-  expected-status: 204
-  empty-fallback: REJECT
-- name: 香港自动
-  type: fallback
-  proxies:
-  - 香港故障转移
-  - 机场故障转移
-  hidden: true
-  url: https://www.gstatic.com/generate_204
-  interval: 60
-  timeout: 5000
-  lazy: false
-  expected-status: 204
-  empty-fallback: REJECT
-- name: 香港均衡
-  type: load-balance
-  use:
-  - primary
-  - backup
-  filter: (?i)(香港|港|Hong[ _-]?Kong|\bHK\b|\bHKG\b|🇭🇰)
-  strategy: consistent-hashing
-  hidden: true
-  url: https://www.gstatic.com/generate_204
-  interval: 60
-  timeout: 5000
-  lazy: false
-  expected-status: 204
-  empty-fallback: REJECT
-- name: 台湾主机场
-  type: url-test
-  use:
-  - primary
-  filter: (?i)(台湾|台灣|台北|Taiwan|Taipei|\bTW\b|\bTPE\b|🇹🇼)
-  tolerance: 50
-  hidden: true
-  url: https://www.gstatic.com/generate_204
-  interval: 60
-  timeout: 5000
-  lazy: false
-  expected-status: 204
-  empty-fallback: REJECT
-- name: 台湾备机场
-  type: url-test
-  use:
-  - backup
-  filter: (?i)(台湾|台灣|台北|Taiwan|Taipei|\bTW\b|\bTPE\b|🇹🇼)
-  tolerance: 50
-  hidden: true
-  url: https://www.gstatic.com/generate_204
-  interval: 60
-  timeout: 5000
-  lazy: false
-  expected-status: 204
-  empty-fallback: REJECT
-- name: 台湾故障转移
-  type: fallback
-  proxies:
-  - 台湾主机场
-  - 台湾备机场
-  hidden: true
-  url: https://www.gstatic.com/generate_204
-  interval: 60
-  timeout: 5000
-  lazy: false
-  expected-status: 204
-  empty-fallback: REJECT
-- name: 台湾自动
-  type: fallback
-  proxies:
-  - 台湾故障转移
-  - 机场故障转移
-  hidden: true
-  url: https://www.gstatic.com/generate_204
-  interval: 60
-  timeout: 5000
-  lazy: false
-  expected-status: 204
-  empty-fallback: REJECT
-- name: 台湾均衡
-  type: load-balance
-  use:
-  - primary
-  - backup
-  filter: (?i)(台湾|台灣|台北|Taiwan|Taipei|\bTW\b|\bTPE\b|🇹🇼)
-  strategy: consistent-hashing
-  hidden: true
-  url: https://www.gstatic.com/generate_204
-  interval: 60
-  timeout: 5000
-  lazy: false
-  expected-status: 204
-  empty-fallback: REJECT
-- name: 日本主机场
-  type: url-test
-  use:
-  - primary
-  filter: (?i)(日本|东京|大阪|Japan|Tokyo|Osaka|\bJP\b|\bNRT\b|🇯🇵)
-  tolerance: 50
-  hidden: true
-  url: https://www.gstatic.com/generate_204
-  interval: 60
-  timeout: 5000
-  lazy: false
-  expected-status: 204
-  empty-fallback: REJECT
-- name: 日本备机场
-  type: url-test
-  use:
-  - backup
-  filter: (?i)(日本|东京|大阪|Japan|Tokyo|Osaka|\bJP\b|\bNRT\b|🇯🇵)
-  tolerance: 50
-  hidden: true
-  url: https://www.gstatic.com/generate_204
-  interval: 60
-  timeout: 5000
-  lazy: false
-  expected-status: 204
-  empty-fallback: REJECT
-- name: 日本故障转移
-  type: fallback
-  proxies:
-  - 日本主机场
-  - 日本备机场
-  hidden: true
-  url: https://www.gstatic.com/generate_204
-  interval: 60
-  timeout: 5000
-  lazy: false
-  expected-status: 204
-  empty-fallback: REJECT
-- name: 日本自动
-  type: fallback
-  proxies:
-  - 日本故障转移
-  - 机场故障转移
-  hidden: true
-  url: https://www.gstatic.com/generate_204
-  interval: 60
-  timeout: 5000
-  lazy: false
-  expected-status: 204
-  empty-fallback: REJECT
-- name: 日本均衡
-  type: load-balance
-  use:
-  - primary
-  - backup
-  filter: (?i)(日本|东京|大阪|Japan|Tokyo|Osaka|\bJP\b|\bNRT\b|🇯🇵)
-  strategy: consistent-hashing
-  hidden: true
-  url: https://www.gstatic.com/generate_204
-  interval: 60
-  timeout: 5000
-  lazy: false
-  expected-status: 204
-  empty-fallback: REJECT
-- name: 狮城主机场
-  type: url-test
-  use:
-  - primary
-  filter: (?i)(新加坡|狮城|Singapore|\bSG\b|\bSIN\b|🇸🇬)
-  tolerance: 50
-  hidden: true
-  url: https://www.gstatic.com/generate_204
-  interval: 60
-  timeout: 5000
-  lazy: false
-  expected-status: 204
-  empty-fallback: REJECT
-- name: 狮城备机场
-  type: url-test
-  use:
-  - backup
-  filter: (?i)(新加坡|狮城|Singapore|\bSG\b|\bSIN\b|🇸🇬)
-  tolerance: 50
-  hidden: true
-  url: https://www.gstatic.com/generate_204
-  interval: 60
-  timeout: 5000
-  lazy: false
-  expected-status: 204
-  empty-fallback: REJECT
-- name: 狮城故障转移
-  type: fallback
-  proxies:
-  - 狮城主机场
-  - 狮城备机场
-  hidden: true
-  url: https://www.gstatic.com/generate_204
-  interval: 60
-  timeout: 5000
-  lazy: false
-  expected-status: 204
-  empty-fallback: REJECT
-- name: 狮城自动
-  type: fallback
-  proxies:
-  - 狮城故障转移
-  - 机场故障转移
-  hidden: true
-  url: https://www.gstatic.com/generate_204
-  interval: 60
-  timeout: 5000
-  lazy: false
-  expected-status: 204
-  empty-fallback: REJECT
-- name: 狮城均衡
-  type: load-balance
-  use:
-  - primary
-  - backup
-  filter: (?i)(新加坡|狮城|Singapore|\bSG\b|\bSIN\b|🇸🇬)
-  strategy: consistent-hashing
-  hidden: true
-  url: https://www.gstatic.com/generate_204
-  interval: 60
-  timeout: 5000
-  lazy: false
-  expected-status: 204
-  empty-fallback: REJECT
-- name: 韩国主机场
-  type: url-test
-  use:
-  - primary
-  filter: (?i)(韩国|韓國|首尔|首爾|Korea|Seoul|\bKR\b|\bICN\b|🇰🇷)
-  tolerance: 50
-  hidden: true
-  url: https://www.gstatic.com/generate_204
-  interval: 60
-  timeout: 5000
-  lazy: false
-  expected-status: 204
-  empty-fallback: REJECT
-- name: 韩国备机场
-  type: url-test
-  use:
-  - backup
-  filter: (?i)(韩国|韓國|首尔|首爾|Korea|Seoul|\bKR\b|\bICN\b|🇰🇷)
-  tolerance: 50
-  hidden: true
-  url: https://www.gstatic.com/generate_204
-  interval: 60
-  timeout: 5000
-  lazy: false
-  expected-status: 204
-  empty-fallback: REJECT
-- name: 韩国故障转移
-  type: fallback
-  proxies:
-  - 韩国主机场
-  - 韩国备机场
-  hidden: true
-  url: https://www.gstatic.com/generate_204
-  interval: 60
-  timeout: 5000
-  lazy: false
-  expected-status: 204
-  empty-fallback: REJECT
-- name: 韩国自动
-  type: fallback
-  proxies:
-  - 韩国故障转移
-  - 机场故障转移
-  hidden: true
-  url: https://www.gstatic.com/generate_204
-  interval: 60
-  timeout: 5000
-  lazy: false
-  expected-status: 204
-  empty-fallback: REJECT
-- name: 韩国均衡
-  type: load-balance
-  use:
-  - primary
-  - backup
-  filter: (?i)(韩国|韓國|首尔|首爾|Korea|Seoul|\bKR\b|\bICN\b|🇰🇷)
-  strategy: consistent-hashing
-  hidden: true
-  url: https://www.gstatic.com/generate_204
-  interval: 60
-  timeout: 5000
-  lazy: false
-  expected-status: 204
-  empty-fallback: REJECT
-- name: 美国主机场
-  type: url-test
-  use:
-  - primary
-  filter: (?i)(美国|美國|美东|美西|United[ _-]?States|America|\bUSA?\b|🇺🇸)
-  tolerance: 50
-  hidden: true
-  url: https://www.gstatic.com/generate_204
-  interval: 60
-  timeout: 5000
-  lazy: false
-  expected-status: 204
-  empty-fallback: REJECT
-- name: 美国备机场
-  type: url-test
-  use:
-  - backup
-  filter: (?i)(美国|美國|美东|美西|United[ _-]?States|America|\bUSA?\b|🇺🇸)
-  tolerance: 50
-  hidden: true
-  url: https://www.gstatic.com/generate_204
-  interval: 60
-  timeout: 5000
-  lazy: false
-  expected-status: 204
-  empty-fallback: REJECT
-- name: 美国故障转移
-  type: fallback
-  proxies:
-  - 美国主机场
-  - 美国备机场
-  hidden: true
-  url: https://www.gstatic.com/generate_204
-  interval: 60
-  timeout: 5000
-  lazy: false
-  expected-status: 204
-  empty-fallback: REJECT
-- name: 美国自动
-  type: fallback
-  proxies:
-  - 美国故障转移
-  - 机场故障转移
-  hidden: true
-  url: https://www.gstatic.com/generate_204
-  interval: 60
-  timeout: 5000
-  lazy: false
-  expected-status: 204
-  empty-fallback: REJECT
-- name: 美国均衡
-  type: load-balance
-  use:
-  - primary
-  - backup
-  filter: (?i)(美国|美國|美东|美西|United[ _-]?States|America|\bUSA?\b|🇺🇸)
-  strategy: consistent-hashing
-  hidden: true
-  url: https://www.gstatic.com/generate_204
-  interval: 60
-  timeout: 5000
-  lazy: false
-  expected-status: 204
-  empty-fallback: REJECT
+  # 路由策略
+  - { name: 广告拦截, type: select, proxies: [REJECT-DROP, REJECT, DIRECT], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Reject.png }
+  - { name: 网络测试, type: select, proxies: *oversea, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Speedtest.png }
+  - { name: 即时通讯, type: select, proxies: *sg-first, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Telegram_X.png }
+  - { name: 社交平台, type: select, proxies: *us-first, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Twitter.png }
+  - { name: 人工智能, type: select, proxies: *us-first, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/AI.png }
+  - { name: 开发服务, type: select, proxies: *us-first, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/GitHub.png }
+  - { name: EMBY,    type: select, proxies: *us-first, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Emby.png }
+  - { name: 国际媒体, type: select, proxies: *us-first, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Streaming.png }
+  - { name: 游戏平台, type: select, proxies: *us-first, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Game.png }
+  - { name: 货币平台, type: select, proxies: *jp-first, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Cryptocurrency_3.png }
+  - { name: 谷歌服务, type: select, proxies: *us-first, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Google_Search.png }
+  - { name: 脸书服务, type: select, proxies: *us-first, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Facebook.png }
+  - { name: 微软服务, type: select, proxies: *us-first, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Microsoft.png }
+  - { name: 苹果服务, type: select, proxies: *direct, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Apple_1.png }
+  - { name: 国外流量, type: select, proxies: *oversea, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Global.png }
+  - { name: 国内流量, type: select, proxies: *direct, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/China.png }
+  - { name: 漏网之鱼, type: select, proxies: *oversea, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Final.png }
+  
+  # 自动选择
+  - { name: 故障转移, <<: *fallback, proxies: [美国策略, 日本策略, 狮城策略, 韩国策略, 香港策略, 台湾策略], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/ULB.png }
+
+  # 手动选择
+  - { name: 全球手动, type: select, include-all: true, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Clubhouse.png }
+  
+  # 策略组区域
+  - { name: 香港策略, type: select, include-all: true, filter: *filter-hk, proxies: [香港自动, 香港均衡], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Hong_Kong.png }
+  - { name: 台湾策略, type: select, include-all: true, filter: *filter-tw, proxies: [台湾自动, 台湾均衡], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Taiwan.png }
+  - { name: 日本策略, type: select, include-all: true, filter: *filter-jp, proxies: [日本自动, 日本均衡], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Japan.png }
+  - { name: 狮城策略, type: select, include-all: true, filter: *filter-sg, proxies: [狮城自动, 狮城均衡], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Singapore.png }
+  - { name: 韩国策略, type: select, include-all: true, filter: *filter-kr, proxies: [韩国自动, 韩国均衡], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Korea.png }
+  - { name: 美国策略, type: select, include-all: true, filter: *filter-us, proxies: [美国自动, 美国均衡], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/United_States.png }
+
+  # 自动测速
+  - { name: 香港自动, <<: *url-test, filter: *filter-hk, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Auto.png }
+  - { name: 台湾自动, <<: *url-test, filter: *filter-tw, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Auto.png }
+  - { name: 日本自动, <<: *url-test, filter: *filter-jp, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Auto.png }
+  - { name: 狮城自动, <<: *url-test, filter: *filter-sg, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Auto.png }
+  - { name: 韩国自动, <<: *url-test, filter: *filter-kr, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Auto.png }
+  - { name: 美国自动, <<: *url-test, filter: *filter-us, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Auto.png }
+
+  # 负载均衡
+  - { name: 香港均衡, <<: *load-balance, filter: *filter-hk, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Round_Robin_1.png }
+  - { name: 台湾均衡, <<: *load-balance, filter: *filter-tw, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Round_Robin_1.png }
+  - { name: 日本均衡, <<: *load-balance, filter: *filter-jp, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Round_Robin_1.png }
+  - { name: 狮城均衡, <<: *load-balance, filter: *filter-sg, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Round_Robin_1.png }
+  - { name: 韩国均衡, <<: *load-balance, filter: *filter-kr, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Round_Robin_1.png }
+  - { name: 美国均衡, <<: *load-balance, filter: *filter-us, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Round_Robin_1.png }
+
+# 规则路由：仅规则来源改为自建仓库；IPv6 按用户要求开启
+rules:
+- IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
+- IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
+- IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
+- IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
+- DOMAIN-SUFFIX,lan,DIRECT
+- DOMAIN-SUFFIX,local,DIRECT
+- RULE-SET,ads-domain,广告拦截
+- RULE-SET,ads-classical,广告拦截
+- RULE-SET,speedtest-domain,网络测试
+- RULE-SET,speedtest-classical,网络测试
+- RULE-SET,im-domain,即时通讯
+- RULE-SET,im-classical,即时通讯
+- RULE-SET,social-domain,社交平台
+- RULE-SET,social-classical,社交平台
+- RULE-SET,ai-domain,人工智能
+- RULE-SET,ai-classical,人工智能
+- RULE-SET,development-domain,开发服务
+- RULE-SET,development-classical,开发服务
+- RULE-SET,emby-domain,EMBY
+- RULE-SET,emby-classical,EMBY
+- RULE-SET,streaming-domain,国际媒体
+- RULE-SET,streaming-classical,国际媒体
+- RULE-SET,games-domain,游戏平台
+- RULE-SET,games-classical,游戏平台
+- RULE-SET,crypto-domain,货币平台
+- RULE-SET,google-domain,谷歌服务
+- RULE-SET,google-classical,谷歌服务
+- RULE-SET,facebook-domain,脸书服务
+- RULE-SET,facebook-classical,脸书服务
+- RULE-SET,microsoft-domain,微软服务
+- RULE-SET,microsoft-classical,微软服务
+- RULE-SET,apple-domain,苹果服务
+- RULE-SET,apple-classical,苹果服务
+- RULE-SET,domesticmedia-domain,国内流量
+- RULE-SET,domesticmedia-classical,国内流量
+- RULE-SET,global-domain,国外流量
+- RULE-SET,global-classical,国外流量
+- RULE-SET,domestic-domain,国内流量
+- RULE-SET,domestic-ipcidr,国内流量,no-resolve
+- RULE-SET,domestic-classical,国内流量
+- MATCH,漏网之鱼
 rule-providers:
   ads-domain:
     type: http
@@ -988,45 +439,3 @@ rule-providers:
     path: ./rules/domestic-classical.yaml
     url: https://raw.githubusercontent.com/martinwxxl/my-mihomo-rules/release/rules/domestic-classical.yaml
     interval: 86400
-rules:
-- IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
-- IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
-- IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
-- IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
-- DOMAIN-SUFFIX,lan,DIRECT
-- DOMAIN-SUFFIX,local,DIRECT
-- RULE-SET,ads-domain,广告拦截
-- RULE-SET,ads-classical,广告拦截
-- RULE-SET,speedtest-domain,网络测试
-- RULE-SET,speedtest-classical,网络测试
-- RULE-SET,im-domain,即时通讯
-- RULE-SET,im-classical,即时通讯
-- RULE-SET,social-domain,社交平台
-- RULE-SET,social-classical,社交平台
-- RULE-SET,ai-domain,人工智能
-- RULE-SET,ai-classical,人工智能
-- RULE-SET,development-domain,开发服务
-- RULE-SET,development-classical,开发服务
-- RULE-SET,emby-domain,EMBY
-- RULE-SET,emby-classical,EMBY
-- RULE-SET,streaming-domain,国际媒体
-- RULE-SET,streaming-classical,国际媒体
-- RULE-SET,games-domain,游戏平台
-- RULE-SET,games-classical,游戏平台
-- RULE-SET,crypto-domain,货币平台
-- RULE-SET,google-domain,谷歌服务
-- RULE-SET,google-classical,谷歌服务
-- RULE-SET,facebook-domain,脸书服务
-- RULE-SET,facebook-classical,脸书服务
-- RULE-SET,microsoft-domain,微软服务
-- RULE-SET,microsoft-classical,微软服务
-- RULE-SET,apple-domain,苹果服务
-- RULE-SET,apple-classical,苹果服务
-- RULE-SET,domesticmedia-domain,国内媒体
-- RULE-SET,domesticmedia-classical,国内媒体
-- RULE-SET,global-domain,国外流量
-- RULE-SET,global-classical,国外流量
-- RULE-SET,domestic-domain,国内流量
-- RULE-SET,domestic-ipcidr,国内流量,no-resolve
-- RULE-SET,domestic-classical,国内流量
-- MATCH,漏网之鱼

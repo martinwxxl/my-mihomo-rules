@@ -2,7 +2,7 @@
   "schema": 1,
   "upstream": "blackmatrix7/ios_rule_script",
   "upstream_commit": "036c097eb26c6a52c4f04ebcb6633043cb942669",
-  "builder_commit": "6fda1efe24f038d3938928d30d7226fb3208a139",
+  "builder_commit": "45dfbc655f829b7679f02832125a3fc4933889a5",
   "mihomo": "Mihomo Meta v1.19.32 linux amd64 with go1.26.8 Wed Sep 30 16:55:19 UTC 2026\nUse tags: with_gvisor",
   "priority": [
     "ads",
@@ -213,5 +213,17 @@
       "sha256": "fce89bfff5101fee701336bb28934c7af7c570d1594fd5244e6db1743f0bb254",
       "header": "# NAME: Whatsapp\n# AUTHOR: blackmatrix7\n# REPO: https://github.com/blackmatrix7/ios_rule_script\n# UPDATED: 2025-06-06 09:16:56\n# DOMAIN: 1\n# DOMAIN-KEYWORD: 1\n# DOMAIN-SUFFIX: 4\n# IP-CIDR: 11\n# TOTAL: 17"
     }
+  },
+  "template": {
+    "repository": "666OS/YYDS",
+    "commit": "a6c60eff3be764644d7b50844a4c4a064c678221",
+    "url": "https://raw.githubusercontent.com/666OS/YYDS/a6c60eff3be764644d7b50844a4c4a064c678221/mihomo/config/cn/Pro_cn.yaml",
+    "sha256": "f7c8862be099ce3d6b4aed28550a2339c0938a28aaf657671695661d194297db",
+    "changes": [
+      "rules",
+      "rule-providers",
+      "ipv6=true",
+      "dns.ipv6=true"
+    ]
   }
 }
