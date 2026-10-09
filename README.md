@@ -16,14 +16,17 @@
 
 | 优先级 | 分类 | 上游列表 | 默认策略 |
 |---:|---|---|---|
-| 1 | ads | AdvertisingLite | REJECT |
+| 1 | ads | AdvertisingLite | 广告拦截，默认 REJECT |
 | 2 | ai | OpenAI / Claude / Gemini / Copilot | AI |
 | 3 | emby | Emby | Emby |
 | 4 | streaming | GlobalMedia | 流媒体 |
-| 5 | apple | Apple | Apple |
+| 5 | apple | Apple | Apple，默认 DIRECT |
 | 6 | social | Telegram / Twitter / Facebook / Instagram / Discord / Reddit | 社交 |
 | 7 | development | Developer / GitHub | 开发 |
-| 8 | domestic | China / ChinaIPs / ChinaMedia | DIRECT |
+| 8 | domesticmedia | ChinaMedia | 国内媒体，默认 DIRECT |
+| 9 | domestic | China / ChinaIPs | 国内流量，默认 DIRECT |
+
+参考 Pro_cn 的可选择策略组方式：国内流量和 Apple 默认直连，但可在面板单独切换到机场故障转移或某一家机场；广告拦截也可单独切换为 DIRECT。额外将国内媒体从国内流量拆出，便于独立设置。这里参考分类交互方式，没有复制其模板或 666OS 的规则数据，也没有引入其地区策略组。
 
 分类内去重，跨分类同一规则归优先级较高分类。域名后缀/精确域名/关键词与 IP 网段包含关系写入 conflicts.json，按以上顺序执行。它们通常是正常的交叉覆盖，不一概删除；正则、进程规则、逻辑组合无法静态穷尽冲突，保留给 Mihomo 语法检查和真实流量验证。
 
@@ -93,7 +96,7 @@ proxy-providers:
 
 健康检查每 60 秒一次，超时 5 秒，关闭 lazy。故障发现取决于检查时机，已有连接可能需要重新连接；备用订阅和节点必须事先可用。两个机场都不可用时代理请求失败，fallback 不含 DIRECT，不会自动转直连。
 
-AI、Emby、流媒体、Apple、社交、开发默认选 `机场故障转移`，可在面板手动改成某机场或 DIRECT。面板手动选择会被记住；要保留自动故障转移，请让分类策略继续选择 `机场故障转移`。通用 204 检查只证明探测目标可达，不能保证 AI/Netflix/Emby 解锁；需要地域时，在本地按分类复制一组主备 url-test 并加节点 filter，然后套相同 fallback 顺序。
+AI、Emby、流媒体、社交、开发默认选 `机场故障转移`；Apple、国内媒体、国内流量默认选 DIRECT，均可在面板单独切换。面板手动选择会被记住；升级前已有 Apple 策略选择可能继续沿用，需要在面板手动确认。要保留自动故障转移，请让需要代理的分类策略继续选择 `机场故障转移`。通用 204 检查只证明探测目标可达，不能保证 AI/Netflix/Emby 解锁；需要地域时，在本地按分类复制一组主备 url-test 并加节点 filter，然后套相同 fallback 顺序。
 
 ## 验证与回滚
 

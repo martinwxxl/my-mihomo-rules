@@ -55,6 +55,17 @@ class BuildTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 verify_dist(path)
 
+    def test_domestic_policies_are_independently_selectable(self):
+        cfg = make_config({}, ["domesticmedia", "domestic"], "yaml")
+        groups = {g["name"]: g for g in cfg["proxy-groups"]}
+        for name in ("国内媒体", "国内流量", "Apple"):
+            self.assertEqual(groups[name]["type"], "select")
+            self.assertEqual(groups[name]["proxies"][0], "DIRECT")
+            self.assertIn("机场故障转移", groups[name]["proxies"])
+        media = cfg['rules'].index('RULE-SET,domesticmedia-classical,国内媒体')
+        domestic = cfg['rules'].index('RULE-SET,domestic-classical,国内流量')
+        self.assertLess(media, domestic)
+
 
 if __name__ == "__main__":
     unittest.main()

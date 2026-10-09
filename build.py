@@ -164,10 +164,15 @@ def make_config(index, priority, fmt, local=False):
                 "url": CHECK_URL, "interval": 60, "timeout": 5000, "lazy": False,
                 "expected-status": 204},
                {"name": "默认代理", "type": "select", "proxies": ["机场故障转移", "主机场", "备机场"]}]
-    policy = {"ads": "REJECT", "ai": "AI", "emby": "Emby", "streaming": "流媒体",
-              "apple": "Apple", "social": "社交", "development": "开发", "domestic": "DIRECT"}
+    policy = {"ads": "广告拦截", "ai": "AI", "emby": "Emby", "streaming": "流媒体",
+              "apple": "Apple", "social": "社交", "development": "开发",
+              "domesticmedia": "国内媒体", "domestic": "国内流量"}
+    groups.append({"name": "广告拦截", "type": "select", "proxies": ["REJECT", "DIRECT"]})
     for name in ("AI", "Emby", "流媒体", "Apple", "社交", "开发"):
-        groups.append({"name": name, "type": "select", "proxies": ["机场故障转移", "主机场", "备机场", "DIRECT"]})
+        choices = ["DIRECT", "机场故障转移", "主机场", "备机场"] if name == "Apple" else ["机场故障转移", "主机场", "备机场", "DIRECT"]
+        groups.append({"name": name, "type": "select", "proxies": choices})
+    for name in ("国内媒体", "国内流量"):
+        groups.append({"name": name, "type": "select", "proxies": ["DIRECT", "机场故障转移", "主机场", "备机场"]})
     cfg["proxy-groups"] = groups
     cfg["rule-providers"] = {}
     rules = ["IP-CIDR,127.0.0.0/8,DIRECT,no-resolve", "IP-CIDR,10.0.0.0/8,DIRECT,no-resolve",
