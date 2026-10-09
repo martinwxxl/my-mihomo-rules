@@ -1,0 +1,272 @@
+mixed-port: 7890
+allow-lan: true
+mode: rule
+log-level: info
+ipv6: false
+profile:
+  store-selected: true
+dns:
+  enable: true
+  listen: 127.0.0.1:7874
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+  - '*.lan'
+  - '*.local'
+  default-nameserver:
+  - 223.5.5.5
+  - 119.29.29.29
+  nameserver:
+  - https://dns.alidns.com/dns-query
+  - https://doh.pub/dns-query
+  proxy-server-nameserver:
+  - https://dns.alidns.com/dns-query
+proxy-providers:
+  primary:
+    type: file
+    path: ./proxy_provider/primary.yaml
+    override:
+      additional-prefix: 'primary | '
+    health-check:
+      enable: true
+      url: https://www.gstatic.com/generate_204
+      interval: 60
+      timeout: 5000
+      lazy: false
+      expected-status: 204
+  backup:
+    type: file
+    path: ./proxy_provider/backup.yaml
+    override:
+      additional-prefix: 'backup | '
+    health-check:
+      enable: true
+      url: https://www.gstatic.com/generate_204
+      interval: 60
+      timeout: 5000
+      lazy: false
+      expected-status: 204
+proxy-groups:
+- name: 主机场
+  type: url-test
+  use:
+  - primary
+  url: https://www.gstatic.com/generate_204
+  interval: 60
+  timeout: 5000
+  tolerance: 50
+  lazy: false
+  expected-status: 204
+- name: 备机场
+  type: url-test
+  use:
+  - backup
+  url: https://www.gstatic.com/generate_204
+  interval: 60
+  timeout: 5000
+  tolerance: 50
+  lazy: false
+  expected-status: 204
+- name: 机场故障转移
+  type: fallback
+  proxies:
+  - 主机场
+  - 备机场
+  url: https://www.gstatic.com/generate_204
+  interval: 60
+  timeout: 5000
+  lazy: false
+  expected-status: 204
+- name: 默认代理
+  type: select
+  proxies:
+  - 机场故障转移
+  - 主机场
+  - 备机场
+- name: AI
+  type: select
+  proxies:
+  - 机场故障转移
+  - 主机场
+  - 备机场
+  - DIRECT
+- name: Emby
+  type: select
+  proxies:
+  - 机场故障转移
+  - 主机场
+  - 备机场
+  - DIRECT
+- name: 流媒体
+  type: select
+  proxies:
+  - 机场故障转移
+  - 主机场
+  - 备机场
+  - DIRECT
+- name: Apple
+  type: select
+  proxies:
+  - 机场故障转移
+  - 主机场
+  - 备机场
+  - DIRECT
+- name: 社交
+  type: select
+  proxies:
+  - 机场故障转移
+  - 主机场
+  - 备机场
+  - DIRECT
+- name: 开发
+  type: select
+  proxies:
+  - 机场故障转移
+  - 主机场
+  - 备机场
+  - DIRECT
+rule-providers:
+  ads-domain:
+    type: http
+    behavior: domain
+    format: mrs
+    path: ./rules/ads-domain.mrs
+    url: https://raw.githubusercontent.com/martinwxxl/my-mihomo-rules/release/rules/ads-domain.mrs
+    interval: 86400
+  ads-classical:
+    type: http
+    behavior: classical
+    format: yaml
+    path: ./rules/ads-classical.yaml
+    url: https://raw.githubusercontent.com/martinwxxl/my-mihomo-rules/release/rules/ads-classical.yaml
+    interval: 86400
+  ai-domain:
+    type: http
+    behavior: domain
+    format: mrs
+    path: ./rules/ai-domain.mrs
+    url: https://raw.githubusercontent.com/martinwxxl/my-mihomo-rules/release/rules/ai-domain.mrs
+    interval: 86400
+  ai-classical:
+    type: http
+    behavior: classical
+    format: yaml
+    path: ./rules/ai-classical.yaml
+    url: https://raw.githubusercontent.com/martinwxxl/my-mihomo-rules/release/rules/ai-classical.yaml
+    interval: 86400
+  emby-domain:
+    type: http
+    behavior: domain
+    format: mrs
+    path: ./rules/emby-domain.mrs
+    url: https://raw.githubusercontent.com/martinwxxl/my-mihomo-rules/release/rules/emby-domain.mrs
+    interval: 86400
+  emby-classical:
+    type: http
+    behavior: classical
+    format: yaml
+    path: ./rules/emby-classical.yaml
+    url: https://raw.githubusercontent.com/martinwxxl/my-mihomo-rules/release/rules/emby-classical.yaml
+    interval: 86400
+  streaming-domain:
+    type: http
+    behavior: domain
+    format: mrs
+    path: ./rules/streaming-domain.mrs
+    url: https://raw.githubusercontent.com/martinwxxl/my-mihomo-rules/release/rules/streaming-domain.mrs
+    interval: 86400
+  streaming-classical:
+    type: http
+    behavior: classical
+    format: yaml
+    path: ./rules/streaming-classical.yaml
+    url: https://raw.githubusercontent.com/martinwxxl/my-mihomo-rules/release/rules/streaming-classical.yaml
+    interval: 86400
+  apple-domain:
+    type: http
+    behavior: domain
+    format: mrs
+    path: ./rules/apple-domain.mrs
+    url: https://raw.githubusercontent.com/martinwxxl/my-mihomo-rules/release/rules/apple-domain.mrs
+    interval: 86400
+  apple-classical:
+    type: http
+    behavior: classical
+    format: yaml
+    path: ./rules/apple-classical.yaml
+    url: https://raw.githubusercontent.com/martinwxxl/my-mihomo-rules/release/rules/apple-classical.yaml
+    interval: 86400
+  social-domain:
+    type: http
+    behavior: domain
+    format: mrs
+    path: ./rules/social-domain.mrs
+    url: https://raw.githubusercontent.com/martinwxxl/my-mihomo-rules/release/rules/social-domain.mrs
+    interval: 86400
+  social-classical:
+    type: http
+    behavior: classical
+    format: yaml
+    path: ./rules/social-classical.yaml
+    url: https://raw.githubusercontent.com/martinwxxl/my-mihomo-rules/release/rules/social-classical.yaml
+    interval: 86400
+  development-domain:
+    type: http
+    behavior: domain
+    format: mrs
+    path: ./rules/development-domain.mrs
+    url: https://raw.githubusercontent.com/martinwxxl/my-mihomo-rules/release/rules/development-domain.mrs
+    interval: 86400
+  development-classical:
+    type: http
+    behavior: classical
+    format: yaml
+    path: ./rules/development-classical.yaml
+    url: https://raw.githubusercontent.com/martinwxxl/my-mihomo-rules/release/rules/development-classical.yaml
+    interval: 86400
+  domestic-domain:
+    type: http
+    behavior: domain
+    format: mrs
+    path: ./rules/domestic-domain.mrs
+    url: https://raw.githubusercontent.com/martinwxxl/my-mihomo-rules/release/rules/domestic-domain.mrs
+    interval: 86400
+  domestic-ipcidr:
+    type: http
+    behavior: ipcidr
+    format: mrs
+    path: ./rules/domestic-ipcidr.mrs
+    url: https://raw.githubusercontent.com/martinwxxl/my-mihomo-rules/release/rules/domestic-ipcidr.mrs
+    interval: 86400
+  domestic-classical:
+    type: http
+    behavior: classical
+    format: yaml
+    path: ./rules/domestic-classical.yaml
+    url: https://raw.githubusercontent.com/martinwxxl/my-mihomo-rules/release/rules/domestic-classical.yaml
+    interval: 86400
+rules:
+- IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
+- IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
+- IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
+- IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
+- DOMAIN-SUFFIX,lan,DIRECT
+- DOMAIN-SUFFIX,local,DIRECT
+- RULE-SET,ads-domain,REJECT
+- RULE-SET,ads-classical,REJECT
+- RULE-SET,ai-domain,AI
+- RULE-SET,ai-classical,AI
+- RULE-SET,emby-domain,Emby
+- RULE-SET,emby-classical,Emby
+- RULE-SET,streaming-domain,流媒体
+- RULE-SET,streaming-classical,流媒体
+- RULE-SET,apple-domain,Apple
+- RULE-SET,apple-classical,Apple
+- RULE-SET,social-domain,社交
+- RULE-SET,social-classical,社交
+- RULE-SET,development-domain,开发
+- RULE-SET,development-classical,开发
+- RULE-SET,domestic-domain,DIRECT
+- RULE-SET,domestic-ipcidr,DIRECT,no-resolve
+- RULE-SET,domestic-classical,DIRECT
+- MATCH,默认代理
