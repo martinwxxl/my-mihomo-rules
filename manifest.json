@@ -2,7 +2,7 @@
   "schema": 1,
   "upstream": "blackmatrix7/ios_rule_script",
   "upstream_commit": "036c097eb26c6a52c4f04ebcb6633043cb942669",
-  "builder_commit": "a4885e13d56311fd77e1912ab401f389a297fb8a",
+  "builder_commit": "6fda1efe24f038d3938928d30d7226fb3208a139",
   "mihomo": "Mihomo Meta v1.19.32 linux amd64 with go1.26.8 Wed Sep 30 16:55:19 UTC 2026\nUse tags: with_gvisor",
   "priority": [
     "ads",

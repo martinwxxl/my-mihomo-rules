@@ -47,29 +47,217 @@ proxy-providers:
       lazy: false
       expected-status: 204
 proxy-groups:
-- name: 主机场
-  type: url-test
-  use:
-  - primary
-  url: https://www.gstatic.com/generate_204
-  interval: 60
-  timeout: 5000
-  tolerance: 50
-  lazy: false
-  expected-status: 204
-  empty-fallback: REJECT
-- name: 备机场
-  type: url-test
-  use:
-  - backup
-  url: https://www.gstatic.com/generate_204
-  interval: 60
-  timeout: 5000
-  tolerance: 50
-  lazy: false
-  expected-status: 204
-  empty-fallback: REJECT
-- name: 机场故障转移
+- name: 广告拦截
+  type: select
+  proxies:
+  - REJECT-DROP
+  - REJECT
+  - DIRECT
+- name: 网络测试
+  type: select
+  proxies:
+  - 故障转移
+  - 全球手动
+  - 香港策略
+  - 台湾策略
+  - 日本策略
+  - 狮城策略
+  - 韩国策略
+  - 美国策略
+  - DIRECT
+- name: 即时通讯
+  type: select
+  proxies:
+  - 狮城策略
+  - 故障转移
+  - 全球手动
+  - 香港策略
+  - 台湾策略
+  - 日本策略
+  - 韩国策略
+  - 美国策略
+  - DIRECT
+- name: 社交平台
+  type: select
+  proxies:
+  - 美国策略
+  - 故障转移
+  - 全球手动
+  - 香港策略
+  - 台湾策略
+  - 日本策略
+  - 狮城策略
+  - 韩国策略
+  - DIRECT
+- name: 人工智能
+  type: select
+  proxies:
+  - 美国策略
+  - 故障转移
+  - 全球手动
+  - 香港策略
+  - 台湾策略
+  - 日本策略
+  - 狮城策略
+  - 韩国策略
+  - DIRECT
+- name: 开发服务
+  type: select
+  proxies:
+  - 美国策略
+  - 故障转移
+  - 全球手动
+  - 香港策略
+  - 台湾策略
+  - 日本策略
+  - 狮城策略
+  - 韩国策略
+  - DIRECT
+- name: EMBY
+  type: select
+  proxies:
+  - 美国策略
+  - 故障转移
+  - 全球手动
+  - 香港策略
+  - 台湾策略
+  - 日本策略
+  - 狮城策略
+  - 韩国策略
+  - DIRECT
+- name: 国际媒体
+  type: select
+  proxies:
+  - 美国策略
+  - 故障转移
+  - 全球手动
+  - 香港策略
+  - 台湾策略
+  - 日本策略
+  - 狮城策略
+  - 韩国策略
+  - DIRECT
+- name: 游戏平台
+  type: select
+  proxies:
+  - 美国策略
+  - 故障转移
+  - 全球手动
+  - 香港策略
+  - 台湾策略
+  - 日本策略
+  - 狮城策略
+  - 韩国策略
+  - DIRECT
+- name: 货币平台
+  type: select
+  proxies:
+  - 日本策略
+  - 故障转移
+  - 全球手动
+  - 香港策略
+  - 台湾策略
+  - 狮城策略
+  - 韩国策略
+  - 美国策略
+  - DIRECT
+- name: 谷歌服务
+  type: select
+  proxies:
+  - 美国策略
+  - 故障转移
+  - 全球手动
+  - 香港策略
+  - 台湾策略
+  - 日本策略
+  - 狮城策略
+  - 韩国策略
+  - DIRECT
+- name: 脸书服务
+  type: select
+  proxies:
+  - 美国策略
+  - 故障转移
+  - 全球手动
+  - 香港策略
+  - 台湾策略
+  - 日本策略
+  - 狮城策略
+  - 韩国策略
+  - DIRECT
+- name: 微软服务
+  type: select
+  proxies:
+  - 美国策略
+  - 故障转移
+  - 全球手动
+  - 香港策略
+  - 台湾策略
+  - 日本策略
+  - 狮城策略
+  - 韩国策略
+  - DIRECT
+- name: 苹果服务
+  type: select
+  proxies:
+  - DIRECT
+  - 故障转移
+  - 全球手动
+  - 香港策略
+  - 台湾策略
+  - 日本策略
+  - 狮城策略
+  - 韩国策略
+  - 美国策略
+- name: 国内媒体
+  type: select
+  proxies:
+  - DIRECT
+  - 故障转移
+  - 全球手动
+  - 香港策略
+  - 台湾策略
+  - 日本策略
+  - 狮城策略
+  - 韩国策略
+  - 美国策略
+- name: 国外流量
+  type: select
+  proxies:
+  - 故障转移
+  - 全球手动
+  - 香港策略
+  - 台湾策略
+  - 日本策略
+  - 狮城策略
+  - 韩国策略
+  - 美国策略
+  - DIRECT
+- name: 国内流量
+  type: select
+  proxies:
+  - DIRECT
+  - 故障转移
+  - 全球手动
+  - 香港策略
+  - 台湾策略
+  - 日本策略
+  - 狮城策略
+  - 韩国策略
+  - 美国策略
+- name: 漏网之鱼
+  type: select
+  proxies:
+  - 故障转移
+  - 全球手动
+  - 香港策略
+  - 台湾策略
+  - 日本策略
+  - 狮城策略
+  - 韩国策略
+  - 美国策略
+  - DIRECT
+- name: 故障转移
   type: fallback
   proxies:
   - 主机场
@@ -87,6 +275,96 @@ proxy-groups:
   use:
   - primary
   - backup
+- name: 香港策略
+  type: select
+  use:
+  - primary
+  - backup
+  filter: (?i)(香港|港|Hong[ _-]?Kong|\bHK\b|\bHKG\b|🇭🇰)
+  proxies:
+  - 香港自动
+  - 香港均衡
+- name: 台湾策略
+  type: select
+  use:
+  - primary
+  - backup
+  filter: (?i)(台湾|台灣|台北|Taiwan|Taipei|\bTW\b|\bTPE\b|🇹🇼)
+  proxies:
+  - 台湾自动
+  - 台湾均衡
+- name: 日本策略
+  type: select
+  use:
+  - primary
+  - backup
+  filter: (?i)(日本|东京|大阪|Japan|Tokyo|Osaka|\bJP\b|\bNRT\b|🇯🇵)
+  proxies:
+  - 日本自动
+  - 日本均衡
+- name: 狮城策略
+  type: select
+  use:
+  - primary
+  - backup
+  filter: (?i)(新加坡|狮城|Singapore|\bSG\b|\bSIN\b|🇸🇬)
+  proxies:
+  - 狮城自动
+  - 狮城均衡
+- name: 韩国策略
+  type: select
+  use:
+  - primary
+  - backup
+  filter: (?i)(韩国|韓國|首尔|首爾|Korea|Seoul|\bKR\b|\bICN\b|🇰🇷)
+  proxies:
+  - 韩国自动
+  - 韩国均衡
+- name: 美国策略
+  type: select
+  use:
+  - primary
+  - backup
+  filter: (?i)(美国|美國|美东|美西|United[ _-]?States|America|\bUSA?\b|🇺🇸)
+  proxies:
+  - 美国自动
+  - 美国均衡
+- name: 主机场
+  type: url-test
+  use:
+  - primary
+  url: https://www.gstatic.com/generate_204
+  interval: 60
+  timeout: 5000
+  tolerance: 50
+  lazy: false
+  expected-status: 204
+  empty-fallback: REJECT
+  hidden: true
+- name: 备机场
+  type: url-test
+  use:
+  - backup
+  url: https://www.gstatic.com/generate_204
+  interval: 60
+  timeout: 5000
+  tolerance: 50
+  lazy: false
+  expected-status: 204
+  empty-fallback: REJECT
+  hidden: true
+- name: 机场故障转移
+  type: fallback
+  proxies:
+  - 主机场
+  - 备机场
+  url: https://www.gstatic.com/generate_204
+  interval: 60
+  timeout: 5000
+  lazy: false
+  expected-status: 204
+  empty-fallback: REJECT
+  hidden: true
 - name: 香港主机场
   type: url-test
   use:
@@ -118,6 +396,7 @@ proxy-groups:
   proxies:
   - 香港主机场
   - 香港备机场
+  hidden: true
   url: https://www.gstatic.com/generate_204
   interval: 60
   timeout: 5000
@@ -125,12 +404,10 @@ proxy-groups:
   expected-status: 204
   empty-fallback: REJECT
 - name: 香港自动
-  type: url-test
-  use:
-  - primary
-  - backup
-  filter: (?i)(香港|港|Hong[ _-]?Kong|\bHK\b|\bHKG\b|🇭🇰)
-  tolerance: 50
+  type: fallback
+  proxies:
+  - 香港故障转移
+  - 机场故障转移
   hidden: true
   url: https://www.gstatic.com/generate_204
   interval: 60
@@ -152,16 +429,6 @@ proxy-groups:
   lazy: false
   expected-status: 204
   empty-fallback: REJECT
-- name: 香港策略
-  type: select
-  use:
-  - primary
-  - backup
-  filter: (?i)(香港|港|Hong[ _-]?Kong|\bHK\b|\bHKG\b|🇭🇰)
-  proxies:
-  - 香港故障转移
-  - 香港自动
-  - 香港均衡
 - name: 台湾主机场
   type: url-test
   use:
@@ -193,6 +460,7 @@ proxy-groups:
   proxies:
   - 台湾主机场
   - 台湾备机场
+  hidden: true
   url: https://www.gstatic.com/generate_204
   interval: 60
   timeout: 5000
@@ -200,12 +468,10 @@ proxy-groups:
   expected-status: 204
   empty-fallback: REJECT
 - name: 台湾自动
-  type: url-test
-  use:
-  - primary
-  - backup
-  filter: (?i)(台湾|台灣|台北|Taiwan|Taipei|\bTW\b|\bTPE\b|🇹🇼)
-  tolerance: 50
+  type: fallback
+  proxies:
+  - 台湾故障转移
+  - 机场故障转移
   hidden: true
   url: https://www.gstatic.com/generate_204
   interval: 60
@@ -227,16 +493,6 @@ proxy-groups:
   lazy: false
   expected-status: 204
   empty-fallback: REJECT
-- name: 台湾策略
-  type: select
-  use:
-  - primary
-  - backup
-  filter: (?i)(台湾|台灣|台北|Taiwan|Taipei|\bTW\b|\bTPE\b|🇹🇼)
-  proxies:
-  - 台湾故障转移
-  - 台湾自动
-  - 台湾均衡
 - name: 日本主机场
   type: url-test
   use:
@@ -268,6 +524,7 @@ proxy-groups:
   proxies:
   - 日本主机场
   - 日本备机场
+  hidden: true
   url: https://www.gstatic.com/generate_204
   interval: 60
   timeout: 5000
@@ -275,12 +532,10 @@ proxy-groups:
   expected-status: 204
   empty-fallback: REJECT
 - name: 日本自动
-  type: url-test
-  use:
-  - primary
-  - backup
-  filter: (?i)(日本|东京|大阪|Japan|Tokyo|Osaka|\bJP\b|\bNRT\b|🇯🇵)
-  tolerance: 50
+  type: fallback
+  proxies:
+  - 日本故障转移
+  - 机场故障转移
   hidden: true
   url: https://www.gstatic.com/generate_204
   interval: 60
@@ -302,16 +557,6 @@ proxy-groups:
   lazy: false
   expected-status: 204
   empty-fallback: REJECT
-- name: 日本策略
-  type: select
-  use:
-  - primary
-  - backup
-  filter: (?i)(日本|东京|大阪|Japan|Tokyo|Osaka|\bJP\b|\bNRT\b|🇯🇵)
-  proxies:
-  - 日本故障转移
-  - 日本自动
-  - 日本均衡
 - name: 狮城主机场
   type: url-test
   use:
@@ -343,6 +588,7 @@ proxy-groups:
   proxies:
   - 狮城主机场
   - 狮城备机场
+  hidden: true
   url: https://www.gstatic.com/generate_204
   interval: 60
   timeout: 5000
@@ -350,12 +596,10 @@ proxy-groups:
   expected-status: 204
   empty-fallback: REJECT
 - name: 狮城自动
-  type: url-test
-  use:
-  - primary
-  - backup
-  filter: (?i)(新加坡|狮城|Singapore|\bSG\b|\bSIN\b|🇸🇬)
-  tolerance: 50
+  type: fallback
+  proxies:
+  - 狮城故障转移
+  - 机场故障转移
   hidden: true
   url: https://www.gstatic.com/generate_204
   interval: 60
@@ -377,16 +621,6 @@ proxy-groups:
   lazy: false
   expected-status: 204
   empty-fallback: REJECT
-- name: 狮城策略
-  type: select
-  use:
-  - primary
-  - backup
-  filter: (?i)(新加坡|狮城|Singapore|\bSG\b|\bSIN\b|🇸🇬)
-  proxies:
-  - 狮城故障转移
-  - 狮城自动
-  - 狮城均衡
 - name: 韩国主机场
   type: url-test
   use:
@@ -418,6 +652,7 @@ proxy-groups:
   proxies:
   - 韩国主机场
   - 韩国备机场
+  hidden: true
   url: https://www.gstatic.com/generate_204
   interval: 60
   timeout: 5000
@@ -425,12 +660,10 @@ proxy-groups:
   expected-status: 204
   empty-fallback: REJECT
 - name: 韩国自动
-  type: url-test
-  use:
-  - primary
-  - backup
-  filter: (?i)(韩国|韓國|首尔|首爾|Korea|Seoul|\bKR\b|\bICN\b|🇰🇷)
-  tolerance: 50
+  type: fallback
+  proxies:
+  - 韩国故障转移
+  - 机场故障转移
   hidden: true
   url: https://www.gstatic.com/generate_204
   interval: 60
@@ -452,16 +685,6 @@ proxy-groups:
   lazy: false
   expected-status: 204
   empty-fallback: REJECT
-- name: 韩国策略
-  type: select
-  use:
-  - primary
-  - backup
-  filter: (?i)(韩国|韓國|首尔|首爾|Korea|Seoul|\bKR\b|\bICN\b|🇰🇷)
-  proxies:
-  - 韩国故障转移
-  - 韩国自动
-  - 韩国均衡
 - name: 美国主机场
   type: url-test
   use:
@@ -493,6 +716,7 @@ proxy-groups:
   proxies:
   - 美国主机场
   - 美国备机场
+  hidden: true
   url: https://www.gstatic.com/generate_204
   interval: 60
   timeout: 5000
@@ -500,12 +724,10 @@ proxy-groups:
   expected-status: 204
   empty-fallback: REJECT
 - name: 美国自动
-  type: url-test
-  use:
-  - primary
-  - backup
-  filter: (?i)(美国|美國|美东|美西|United[ _-]?States|America|\bUSA?\b|🇺🇸)
-  tolerance: 50
+  type: fallback
+  proxies:
+  - 美国故障转移
+  - 机场故障转移
   hidden: true
   url: https://www.gstatic.com/generate_204
   interval: 60
@@ -527,403 +749,6 @@ proxy-groups:
   lazy: false
   expected-status: 204
   empty-fallback: REJECT
-- name: 美国策略
-  type: select
-  use:
-  - primary
-  - backup
-  filter: (?i)(美国|美國|美东|美西|United[ _-]?States|America|\bUSA?\b|🇺🇸)
-  proxies:
-  - 美国故障转移
-  - 美国自动
-  - 美国均衡
-- name: 广告拦截
-  type: select
-  proxies:
-  - REJECT-DROP
-  - REJECT
-  - DIRECT
-- name: 网络测试
-  type: select
-  proxies:
-  - 机场故障转移
-  - 全球手动
-  - 香港策略
-  - 台湾策略
-  - 日本策略
-  - 狮城策略
-  - 韩国策略
-  - 美国策略
-  - 主机场
-  - 备机场
-  - DIRECT
-- name: 即时通讯优先路由
-  type: fallback
-  hidden: true
-  proxies:
-  - 狮城故障转移
-  - 机场故障转移
-  url: https://www.gstatic.com/generate_204
-  interval: 60
-  timeout: 5000
-  lazy: false
-  expected-status: 204
-  empty-fallback: REJECT
-- name: 即时通讯
-  type: select
-  proxies:
-  - 即时通讯优先路由
-  - 狮城策略
-  - 机场故障转移
-  - 全球手动
-  - 香港策略
-  - 台湾策略
-  - 日本策略
-  - 韩国策略
-  - 美国策略
-  - 主机场
-  - 备机场
-  - DIRECT
-- name: 社交平台优先路由
-  type: fallback
-  hidden: true
-  proxies:
-  - 美国故障转移
-  - 机场故障转移
-  url: https://www.gstatic.com/generate_204
-  interval: 60
-  timeout: 5000
-  lazy: false
-  expected-status: 204
-  empty-fallback: REJECT
-- name: 社交平台
-  type: select
-  proxies:
-  - 社交平台优先路由
-  - 美国策略
-  - 机场故障转移
-  - 全球手动
-  - 香港策略
-  - 台湾策略
-  - 日本策略
-  - 狮城策略
-  - 韩国策略
-  - 主机场
-  - 备机场
-  - DIRECT
-- name: 人工智能优先路由
-  type: fallback
-  hidden: true
-  proxies:
-  - 美国故障转移
-  - 机场故障转移
-  url: https://www.gstatic.com/generate_204
-  interval: 60
-  timeout: 5000
-  lazy: false
-  expected-status: 204
-  empty-fallback: REJECT
-- name: 人工智能
-  type: select
-  proxies:
-  - 人工智能优先路由
-  - 美国策略
-  - 机场故障转移
-  - 全球手动
-  - 香港策略
-  - 台湾策略
-  - 日本策略
-  - 狮城策略
-  - 韩国策略
-  - 主机场
-  - 备机场
-  - DIRECT
-- name: 开发服务优先路由
-  type: fallback
-  hidden: true
-  proxies:
-  - 美国故障转移
-  - 机场故障转移
-  url: https://www.gstatic.com/generate_204
-  interval: 60
-  timeout: 5000
-  lazy: false
-  expected-status: 204
-  empty-fallback: REJECT
-- name: 开发服务
-  type: select
-  proxies:
-  - 开发服务优先路由
-  - 美国策略
-  - 机场故障转移
-  - 全球手动
-  - 香港策略
-  - 台湾策略
-  - 日本策略
-  - 狮城策略
-  - 韩国策略
-  - 主机场
-  - 备机场
-  - DIRECT
-- name: EMBY优先路由
-  type: fallback
-  hidden: true
-  proxies:
-  - 美国故障转移
-  - 机场故障转移
-  url: https://www.gstatic.com/generate_204
-  interval: 60
-  timeout: 5000
-  lazy: false
-  expected-status: 204
-  empty-fallback: REJECT
-- name: EMBY
-  type: select
-  proxies:
-  - EMBY优先路由
-  - 美国策略
-  - 机场故障转移
-  - 全球手动
-  - 香港策略
-  - 台湾策略
-  - 日本策略
-  - 狮城策略
-  - 韩国策略
-  - 主机场
-  - 备机场
-  - DIRECT
-- name: 国际媒体优先路由
-  type: fallback
-  hidden: true
-  proxies:
-  - 美国故障转移
-  - 机场故障转移
-  url: https://www.gstatic.com/generate_204
-  interval: 60
-  timeout: 5000
-  lazy: false
-  expected-status: 204
-  empty-fallback: REJECT
-- name: 国际媒体
-  type: select
-  proxies:
-  - 国际媒体优先路由
-  - 美国策略
-  - 机场故障转移
-  - 全球手动
-  - 香港策略
-  - 台湾策略
-  - 日本策略
-  - 狮城策略
-  - 韩国策略
-  - 主机场
-  - 备机场
-  - DIRECT
-- name: 游戏平台优先路由
-  type: fallback
-  hidden: true
-  proxies:
-  - 美国故障转移
-  - 机场故障转移
-  url: https://www.gstatic.com/generate_204
-  interval: 60
-  timeout: 5000
-  lazy: false
-  expected-status: 204
-  empty-fallback: REJECT
-- name: 游戏平台
-  type: select
-  proxies:
-  - 游戏平台优先路由
-  - 美国策略
-  - 机场故障转移
-  - 全球手动
-  - 香港策略
-  - 台湾策略
-  - 日本策略
-  - 狮城策略
-  - 韩国策略
-  - 主机场
-  - 备机场
-  - DIRECT
-- name: 货币平台优先路由
-  type: fallback
-  hidden: true
-  proxies:
-  - 日本故障转移
-  - 机场故障转移
-  url: https://www.gstatic.com/generate_204
-  interval: 60
-  timeout: 5000
-  lazy: false
-  expected-status: 204
-  empty-fallback: REJECT
-- name: 货币平台
-  type: select
-  proxies:
-  - 货币平台优先路由
-  - 日本策略
-  - 机场故障转移
-  - 全球手动
-  - 香港策略
-  - 台湾策略
-  - 狮城策略
-  - 韩国策略
-  - 美国策略
-  - 主机场
-  - 备机场
-  - DIRECT
-- name: 谷歌服务优先路由
-  type: fallback
-  hidden: true
-  proxies:
-  - 美国故障转移
-  - 机场故障转移
-  url: https://www.gstatic.com/generate_204
-  interval: 60
-  timeout: 5000
-  lazy: false
-  expected-status: 204
-  empty-fallback: REJECT
-- name: 谷歌服务
-  type: select
-  proxies:
-  - 谷歌服务优先路由
-  - 美国策略
-  - 机场故障转移
-  - 全球手动
-  - 香港策略
-  - 台湾策略
-  - 日本策略
-  - 狮城策略
-  - 韩国策略
-  - 主机场
-  - 备机场
-  - DIRECT
-- name: 脸书服务优先路由
-  type: fallback
-  hidden: true
-  proxies:
-  - 美国故障转移
-  - 机场故障转移
-  url: https://www.gstatic.com/generate_204
-  interval: 60
-  timeout: 5000
-  lazy: false
-  expected-status: 204
-  empty-fallback: REJECT
-- name: 脸书服务
-  type: select
-  proxies:
-  - 脸书服务优先路由
-  - 美国策略
-  - 机场故障转移
-  - 全球手动
-  - 香港策略
-  - 台湾策略
-  - 日本策略
-  - 狮城策略
-  - 韩国策略
-  - 主机场
-  - 备机场
-  - DIRECT
-- name: 微软服务优先路由
-  type: fallback
-  hidden: true
-  proxies:
-  - 美国故障转移
-  - 机场故障转移
-  url: https://www.gstatic.com/generate_204
-  interval: 60
-  timeout: 5000
-  lazy: false
-  expected-status: 204
-  empty-fallback: REJECT
-- name: 微软服务
-  type: select
-  proxies:
-  - 微软服务优先路由
-  - 美国策略
-  - 机场故障转移
-  - 全球手动
-  - 香港策略
-  - 台湾策略
-  - 日本策略
-  - 狮城策略
-  - 韩国策略
-  - 主机场
-  - 备机场
-  - DIRECT
-- name: 苹果服务
-  type: select
-  proxies:
-  - DIRECT
-  - 机场故障转移
-  - 全球手动
-  - 香港策略
-  - 台湾策略
-  - 日本策略
-  - 狮城策略
-  - 韩国策略
-  - 美国策略
-  - 主机场
-  - 备机场
-- name: 国内媒体
-  type: select
-  proxies:
-  - DIRECT
-  - 机场故障转移
-  - 全球手动
-  - 香港策略
-  - 台湾策略
-  - 日本策略
-  - 狮城策略
-  - 韩国策略
-  - 美国策略
-  - 主机场
-  - 备机场
-- name: 国外流量
-  type: select
-  proxies:
-  - 机场故障转移
-  - 全球手动
-  - 香港策略
-  - 台湾策略
-  - 日本策略
-  - 狮城策略
-  - 韩国策略
-  - 美国策略
-  - 主机场
-  - 备机场
-  - DIRECT
-- name: 国内流量
-  type: select
-  proxies:
-  - DIRECT
-  - 机场故障转移
-  - 全球手动
-  - 香港策略
-  - 台湾策略
-  - 日本策略
-  - 狮城策略
-  - 韩国策略
-  - 美国策略
-  - 主机场
-  - 备机场
-- name: 漏网之鱼
-  type: select
-  proxies:
-  - 机场故障转移
-  - 全球手动
-  - 香港策略
-  - 台湾策略
-  - 日本策略
-  - 狮城策略
-  - 韩国策略
-  - 美国策略
-  - 主机场
-  - 备机场
-  - DIRECT
 rule-providers:
   ads-domain:
     type: http
