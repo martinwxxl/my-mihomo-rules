@@ -83,6 +83,11 @@ proxy-groups:
   - 机场故障转移
   - 主机场
   - 备机场
+- name: 广告拦截
+  type: select
+  proxies:
+  - REJECT
+  - DIRECT
 - name: AI
   type: select
   proxies:
@@ -107,10 +112,10 @@ proxy-groups:
 - name: Apple
   type: select
   proxies:
+  - DIRECT
   - 机场故障转移
   - 主机场
   - 备机场
-  - DIRECT
 - name: 社交
   type: select
   proxies:
@@ -125,6 +130,20 @@ proxy-groups:
   - 主机场
   - 备机场
   - DIRECT
+- name: 国内媒体
+  type: select
+  proxies:
+  - DIRECT
+  - 机场故障转移
+  - 主机场
+  - 备机场
+- name: 国内流量
+  type: select
+  proxies:
+  - DIRECT
+  - 机场故障转移
+  - 主机场
+  - 备机场
 rule-providers:
   ads-domain:
     type: http
@@ -224,6 +243,20 @@ rule-providers:
     path: ./rules/development-classical.yaml
     url: https://raw.githubusercontent.com/martinwxxl/my-mihomo-rules/release/rules/development-classical.yaml
     interval: 86400
+  domesticmedia-domain:
+    type: http
+    behavior: domain
+    format: mrs
+    path: ./rules/domesticmedia-domain.mrs
+    url: https://raw.githubusercontent.com/martinwxxl/my-mihomo-rules/release/rules/domesticmedia-domain.mrs
+    interval: 86400
+  domesticmedia-classical:
+    type: http
+    behavior: classical
+    format: yaml
+    path: ./rules/domesticmedia-classical.yaml
+    url: https://raw.githubusercontent.com/martinwxxl/my-mihomo-rules/release/rules/domesticmedia-classical.yaml
+    interval: 86400
   domestic-domain:
     type: http
     behavior: domain
@@ -252,8 +285,8 @@ rules:
 - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
 - DOMAIN-SUFFIX,lan,DIRECT
 - DOMAIN-SUFFIX,local,DIRECT
-- RULE-SET,ads-domain,REJECT
-- RULE-SET,ads-classical,REJECT
+- RULE-SET,ads-domain,广告拦截
+- RULE-SET,ads-classical,广告拦截
 - RULE-SET,ai-domain,AI
 - RULE-SET,ai-classical,AI
 - RULE-SET,emby-domain,Emby
@@ -266,7 +299,9 @@ rules:
 - RULE-SET,social-classical,社交
 - RULE-SET,development-domain,开发
 - RULE-SET,development-classical,开发
-- RULE-SET,domestic-domain,DIRECT
-- RULE-SET,domestic-ipcidr,DIRECT,no-resolve
-- RULE-SET,domestic-classical,DIRECT
+- RULE-SET,domesticmedia-domain,国内媒体
+- RULE-SET,domesticmedia-classical,国内媒体
+- RULE-SET,domestic-domain,国内流量
+- RULE-SET,domestic-ipcidr,国内流量,no-resolve
+- RULE-SET,domestic-classical,国内流量
 - MATCH,默认代理

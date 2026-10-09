@@ -83,6 +83,11 @@ proxy-groups:
   - 机场故障转移
   - 主机场
   - 备机场
+- name: 广告拦截
+  type: select
+  proxies:
+  - REJECT
+  - DIRECT
 - name: AI
   type: select
   proxies:
@@ -107,10 +112,10 @@ proxy-groups:
 - name: Apple
   type: select
   proxies:
+  - DIRECT
   - 机场故障转移
   - 主机场
   - 备机场
-  - DIRECT
 - name: 社交
   type: select
   proxies:
@@ -125,6 +130,20 @@ proxy-groups:
   - 主机场
   - 备机场
   - DIRECT
+- name: 国内媒体
+  type: select
+  proxies:
+  - DIRECT
+  - 机场故障转移
+  - 主机场
+  - 备机场
+- name: 国内流量
+  type: select
+  proxies:
+  - DIRECT
+  - 机场故障转移
+  - 主机场
+  - 备机场
 rule-providers:
   ads-classical:
     type: http
@@ -175,6 +194,13 @@ rule-providers:
     path: ./rules/development.yaml
     url: https://raw.githubusercontent.com/martinwxxl/my-mihomo-rules/release/rules/development.yaml
     interval: 86400
+  domesticmedia-classical:
+    type: http
+    behavior: classical
+    format: yaml
+    path: ./rules/domesticmedia.yaml
+    url: https://raw.githubusercontent.com/martinwxxl/my-mihomo-rules/release/rules/domesticmedia.yaml
+    interval: 86400
   domestic-classical:
     type: http
     behavior: classical
@@ -189,12 +215,13 @@ rules:
 - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
 - DOMAIN-SUFFIX,lan,DIRECT
 - DOMAIN-SUFFIX,local,DIRECT
-- RULE-SET,ads-classical,REJECT
+- RULE-SET,ads-classical,广告拦截
 - RULE-SET,ai-classical,AI
 - RULE-SET,emby-classical,Emby
 - RULE-SET,streaming-classical,流媒体
 - RULE-SET,apple-classical,Apple
 - RULE-SET,social-classical,社交
 - RULE-SET,development-classical,开发
-- RULE-SET,domestic-classical,DIRECT
+- RULE-SET,domesticmedia-classical,国内媒体
+- RULE-SET,domestic-classical,国内流量
 - MATCH,默认代理

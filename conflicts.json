@@ -224,25 +224,160 @@
     {
       "rule": "DOMAIN,api.iplay.163.com",
       "winner": "ads",
-      "removed_from": "domestic"
+      "removed_from": "domesticmedia"
     },
     {
       "rule": "DOMAIN,mam.netease.com",
       "winner": "ads",
-      "removed_from": "domestic"
+      "removed_from": "domesticmedia"
     },
     {
       "rule": "DOMAIN-SUFFIX,1.letvlive.com",
       "winner": "ads",
-      "removed_from": "domestic"
-    },
-    {
-      "rule": "DOMAIN-SUFFIX,123juzi.net",
-      "winner": "ads",
-      "removed_from": "domestic"
+      "removed_from": "domesticmedia"
     },
     {
       "rule": "DOMAIN-SUFFIX,2.letvlive.com",
+      "winner": "ads",
+      "removed_from": "domesticmedia"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,ads1.lfengmobile.com",
+      "winner": "ads",
+      "removed_from": "domesticmedia"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,afp.pplive.com",
+      "winner": "ads",
+      "removed_from": "domesticmedia"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,bilibili.tv",
+      "winner": "streaming",
+      "removed_from": "domesticmedia"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,biliintl.com",
+      "winner": "streaming",
+      "removed_from": "domesticmedia"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,iq.com",
+      "winner": "streaming",
+      "removed_from": "domesticmedia"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,koowo.com",
+      "winner": "ads",
+      "removed_from": "domesticmedia"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,mmstat.com",
+      "winner": "ads",
+      "removed_from": "domesticmedia"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,pgdt.gtimg.cn",
+      "winner": "ads",
+      "removed_from": "domesticmedia"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,snssdk.com",
+      "winner": "streaming",
+      "removed_from": "domesticmedia"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,v.smtcdns.com",
+      "winner": "streaming",
+      "removed_from": "domesticmedia"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,v1d.szbdyd.com",
+      "winner": "ads",
+      "removed_from": "domesticmedia"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,videojj.com",
+      "winner": "ads",
+      "removed_from": "domesticmedia"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,zamplus.com",
+      "winner": "ads",
+      "removed_from": "domesticmedia"
+    },
+    {
+      "rule": "IP-CIDR,103.5.34.153/32",
+      "winner": "streaming",
+      "removed_from": "domesticmedia"
+    },
+    {
+      "rule": "IP-CIDR,104.109.129.153/32",
+      "winner": "streaming",
+      "removed_from": "domesticmedia"
+    },
+    {
+      "rule": "IP-CIDR,110.238.107.47/32",
+      "winner": "streaming",
+      "removed_from": "domesticmedia"
+    },
+    {
+      "rule": "IP-CIDR,203.211.4.169/32",
+      "winner": "streaming",
+      "removed_from": "domesticmedia"
+    },
+    {
+      "rule": "IP-CIDR,203.211.4.193/32",
+      "winner": "streaming",
+      "removed_from": "domesticmedia"
+    },
+    {
+      "rule": "IP-CIDR,203.74.95.131/32",
+      "winner": "streaming",
+      "removed_from": "domesticmedia"
+    },
+    {
+      "rule": "IP-CIDR,203.74.95.139/32",
+      "winner": "streaming",
+      "removed_from": "domesticmedia"
+    },
+    {
+      "rule": "IP-CIDR,203.74.95.153/32",
+      "winner": "streaming",
+      "removed_from": "domesticmedia"
+    },
+    {
+      "rule": "IP-CIDR,210.201.32.11/32",
+      "winner": "streaming",
+      "removed_from": "domesticmedia"
+    },
+    {
+      "rule": "IP-CIDR,210.201.32.8/32",
+      "winner": "streaming",
+      "removed_from": "domesticmedia"
+    },
+    {
+      "rule": "IP-CIDR,210.71.227.200/32",
+      "winner": "streaming",
+      "removed_from": "domesticmedia"
+    },
+    {
+      "rule": "IP-CIDR,210.71.227.202/32",
+      "winner": "streaming",
+      "removed_from": "domesticmedia"
+    },
+    {
+      "rule": "IP-CIDR,23.40.242.10/32",
+      "winner": "streaming",
+      "removed_from": "domesticmedia"
+    },
+    {
+      "rule": "IP-CIDR,23.53.32.88/32",
+      "winner": "streaming",
+      "removed_from": "domesticmedia"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,123juzi.net",
       "winner": "ads",
       "removed_from": "domestic"
     },
@@ -267,8 +402,43 @@
       "removed_from": "domestic"
     },
     {
+      "rule": "DOMAIN-SUFFIX,56.com",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,71.am",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,71.am.com",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,71edge.com",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
       "rule": "DOMAIN-SUFFIX,aaplimg.com",
       "winner": "apple",
+      "removed_from": "domestic"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,acfun.tv",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,acg.tv",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,acgvideo.com",
+      "winner": "domesticmedia",
       "removed_from": "domestic"
     },
     {
@@ -282,23 +452,18 @@
       "removed_from": "domestic"
     },
     {
-      "rule": "DOMAIN-SUFFIX,ads1.lfengmobile.com",
-      "winner": "ads",
-      "removed_from": "domestic"
-    },
-    {
       "rule": "DOMAIN-SUFFIX,adxvip.com",
-      "winner": "ads",
-      "removed_from": "domestic"
-    },
-    {
-      "rule": "DOMAIN-SUFFIX,afp.pplive.com",
       "winner": "ads",
       "removed_from": "domestic"
     },
     {
       "rule": "DOMAIN-SUFFIX,agrantsem.com",
       "winner": "ads",
+      "removed_from": "domestic"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,aixifan.com",
+      "winner": "domesticmedia",
       "removed_from": "domestic"
     },
     {
@@ -317,8 +482,23 @@
       "removed_from": "domestic"
     },
     {
+      "rule": "DOMAIN-SUFFIX,animetamashi.com",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,anitama.net",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
       "rule": "DOMAIN-SUFFIX,anquan.org",
       "winner": "ads",
+      "removed_from": "domestic"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,b23.tv",
+      "winner": "domesticmedia",
       "removed_from": "domestic"
     },
     {
@@ -342,8 +522,98 @@
       "removed_from": "domestic"
     },
     {
+      "rule": "DOMAIN-SUFFIX,biliapi.com",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,biliapi.net",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,bilibili.cc",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,bilibili.com",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,bilibili.net",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
       "rule": "DOMAIN-SUFFIX,bilibili.tv",
       "winner": "streaming",
+      "removed_from": "domestic"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,bilibiligame.co",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,bilibiligame.net",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,bilibilipay.com",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,bilicdn1.com",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,bilicdn2.com",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,bilicdn3.com",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,bilicdn4.com",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,bilicdn5.com",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,bilicomics.com",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,biligame.co",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,biligame.com",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,biligame.net",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,biligo.com",
+      "winner": "domesticmedia",
       "removed_from": "domestic"
     },
     {
@@ -352,8 +622,38 @@
       "removed_from": "domestic"
     },
     {
+      "rule": "DOMAIN-SUFFIX,bilivideo.com",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,bilivideo.net",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
       "rule": "DOMAIN-SUFFIX,bjcathay.com",
       "winner": "ads",
+      "removed_from": "domestic"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,cctv.com",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,cctvpic.com",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,chinalive.com",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,cibntv.net",
+      "winner": "domesticmedia",
       "removed_from": "domestic"
     },
     {
@@ -379,6 +679,11 @@
     {
       "rule": "DOMAIN-SUFFIX,dopa.com",
       "winner": "ads",
+      "removed_from": "domestic"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,dreamcast.hk",
+      "winner": "domesticmedia",
       "removed_from": "domestic"
     },
     {
@@ -417,8 +722,53 @@
       "removed_from": "domestic"
     },
     {
+      "rule": "DOMAIN-SUFFIX,gitv.tv",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
       "rule": "DOMAIN-SUFFIX,gtags.net",
       "winner": "ads",
+      "removed_from": "domestic"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,hdslb.com",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,hdslb.org",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,hitv.com",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,hunantv.com",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,im9.com",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,imgo.tv",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,ipanda.com",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,ipanda.net",
+      "winner": "domesticmedia",
       "removed_from": "domestic"
     },
     {
@@ -432,6 +782,21 @@
       "removed_from": "domestic"
     },
     {
+      "rule": "DOMAIN-SUFFIX,iqiyi.com",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,iqiyipic.com",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,ixigua.com",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
       "rule": "DOMAIN-SUFFIX,jddebug.com",
       "winner": "ads",
       "removed_from": "domestic"
@@ -442,13 +807,23 @@
       "removed_from": "domestic"
     },
     {
+      "rule": "DOMAIN-SUFFIX,jstucdn.com",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
       "rule": "DOMAIN-SUFFIX,kejet.net",
       "winner": "ads",
       "removed_from": "domestic"
     },
     {
-      "rule": "DOMAIN-SUFFIX,koowo.com",
-      "winner": "ads",
+      "rule": "DOMAIN-SUFFIX,kugou.com",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,kumiao.com",
+      "winner": "domesticmedia",
       "removed_from": "domestic"
     },
     {
@@ -457,8 +832,33 @@
       "removed_from": "domestic"
     },
     {
+      "rule": "DOMAIN-SUFFIX,le.com",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,letv.com",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,livechina.com",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
       "rule": "DOMAIN-SUFFIX,lufax.com",
       "winner": "ads",
+      "removed_from": "domestic"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,maoercdn.com",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,mcbbs.net",
+      "winner": "domesticmedia",
       "removed_from": "domestic"
     },
     {
@@ -477,8 +877,23 @@
       "removed_from": "domestic"
     },
     {
+      "rule": "DOMAIN-SUFFIX,mgtv.com",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
       "rule": "DOMAIN-SUFFIX,miaozhen.com",
       "winner": "ads",
+      "removed_from": "domestic"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,miguvideo.com",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,mincdn.com",
+      "winner": "domesticmedia",
       "removed_from": "domestic"
     },
     {
@@ -522,8 +937,28 @@
       "removed_from": "domestic"
     },
     {
-      "rule": "DOMAIN-SUFFIX,pgdt.gtimg.cn",
-      "winner": "ads",
+      "rule": "DOMAIN-SUFFIX,pps.tv",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,ppsimg.com",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,pptv.com",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,qiyi.com",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,qiyipic.com",
+      "winner": "domesticmedia",
       "removed_from": "domestic"
     },
     {
@@ -537,8 +972,18 @@
       "removed_from": "domestic"
     },
     {
+      "rule": "DOMAIN-SUFFIX,qy.net",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
       "rule": "DOMAIN-SUFFIX,scdng.com",
       "winner": "ads",
+      "removed_from": "domestic"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,smtcdns.net",
+      "winner": "domesticmedia",
       "removed_from": "domestic"
     },
     {
@@ -547,8 +992,33 @@
       "removed_from": "domestic"
     },
     {
+      "rule": "DOMAIN-SUFFIX,sohu.com",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,soku.com",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,taihe.com",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
       "rule": "DOMAIN-SUFFIX,tanx.com",
       "winner": "ads",
+      "removed_from": "domestic"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,tencentmusic.com",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,tudou.com",
+      "winner": "domesticmedia",
       "removed_from": "domestic"
     },
     {
@@ -572,13 +1042,8 @@
       "removed_from": "domestic"
     },
     {
-      "rule": "DOMAIN-SUFFIX,v.smtcdns.com",
-      "winner": "streaming",
-      "removed_from": "domestic"
-    },
-    {
-      "rule": "DOMAIN-SUFFIX,v1d.szbdyd.com",
-      "winner": "ads",
+      "rule": "DOMAIN-SUFFIX,v-56.com",
+      "winner": "domesticmedia",
       "removed_from": "domestic"
     },
     {
@@ -617,6 +1082,26 @@
       "removed_from": "domestic"
     },
     {
+      "rule": "DOMAIN-SUFFIX,xiami.com",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,xiami.net",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,xn--fiq53l6wcx3kp9bc7joo6apn8a.xn--fiqs8s",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,xn--kprv4ewxfr9cpxcc7joo6apn8a.xn--fiqs8s",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
       "rule": "DOMAIN-SUFFIX,yaoyl.com",
       "winner": "ads",
       "removed_from": "domestic"
@@ -642,17 +1127,27 @@
       "removed_from": "domestic"
     },
     {
+      "rule": "DOMAIN-SUFFIX,ykimg.com",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,yo9.com",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,youku.com",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
       "rule": "DOMAIN-SUFFIX,yunshipei.com",
       "winner": "ads",
       "removed_from": "domestic"
     },
     {
       "rule": "DOMAIN-SUFFIX,zampdsp.com",
-      "winner": "ads",
-      "removed_from": "domestic"
-    },
-    {
-      "rule": "DOMAIN-SUFFIX,zamplus.com",
       "winner": "ads",
       "removed_from": "domestic"
     },
@@ -672,38 +1167,53 @@
       "removed_from": "domestic"
     },
     {
+      "rule": "DOMAIN-SUFFIX,zimuzu.io",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,zimuzu.tv",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,zmz2019.com",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,zmzapi.com",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,zmzapi.net",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,zmzfile.com",
+      "winner": "domesticmedia",
+      "removed_from": "domestic"
+    },
+    {
       "rule": "IP-CIDR,101.224.0.0/13,no-resolve",
-      "winner": "domestic",
+      "winner": "domesticmedia",
       "removed_from": "domestic"
     },
     {
       "rule": "IP-CIDR,103.44.56.0/22,no-resolve",
-      "winner": "domestic",
-      "removed_from": "domestic"
-    },
-    {
-      "rule": "IP-CIDR,103.5.34.153/32",
-      "winner": "streaming",
-      "removed_from": "domestic"
-    },
-    {
-      "rule": "IP-CIDR,104.109.129.153/32",
-      "winner": "streaming",
+      "winner": "domesticmedia",
       "removed_from": "domestic"
     },
     {
       "rule": "IP-CIDR,106.11.0.0/16,no-resolve",
-      "winner": "domestic",
-      "removed_from": "domestic"
-    },
-    {
-      "rule": "IP-CIDR,110.238.107.47/32",
-      "winner": "streaming",
+      "winner": "domesticmedia",
       "removed_from": "domestic"
     },
     {
       "rule": "IP-CIDR,119.176.0.0/12,no-resolve",
-      "winner": "domestic",
+      "winner": "domesticmedia",
       "removed_from": "domestic"
     },
     {
@@ -713,62 +1223,7 @@
     },
     {
       "rule": "IP-CIDR,203.107.1.0/24,no-resolve",
-      "winner": "domestic",
-      "removed_from": "domestic"
-    },
-    {
-      "rule": "IP-CIDR,203.211.4.169/32",
-      "winner": "streaming",
-      "removed_from": "domestic"
-    },
-    {
-      "rule": "IP-CIDR,203.211.4.193/32",
-      "winner": "streaming",
-      "removed_from": "domestic"
-    },
-    {
-      "rule": "IP-CIDR,203.74.95.131/32",
-      "winner": "streaming",
-      "removed_from": "domestic"
-    },
-    {
-      "rule": "IP-CIDR,203.74.95.139/32",
-      "winner": "streaming",
-      "removed_from": "domestic"
-    },
-    {
-      "rule": "IP-CIDR,203.74.95.153/32",
-      "winner": "streaming",
-      "removed_from": "domestic"
-    },
-    {
-      "rule": "IP-CIDR,210.201.32.11/32",
-      "winner": "streaming",
-      "removed_from": "domestic"
-    },
-    {
-      "rule": "IP-CIDR,210.201.32.8/32",
-      "winner": "streaming",
-      "removed_from": "domestic"
-    },
-    {
-      "rule": "IP-CIDR,210.71.227.200/32",
-      "winner": "streaming",
-      "removed_from": "domestic"
-    },
-    {
-      "rule": "IP-CIDR,210.71.227.202/32",
-      "winner": "streaming",
-      "removed_from": "domestic"
-    },
-    {
-      "rule": "IP-CIDR,23.40.242.10/32",
-      "winner": "streaming",
-      "removed_from": "domestic"
-    },
-    {
-      "rule": "IP-CIDR,23.53.32.88/32",
-      "winner": "streaming",
+      "winner": "domesticmedia",
       "removed_from": "domestic"
     }
   ],
@@ -1280,7 +1735,7 @@
     {
       "rule": "DOMAIN,a.cntv.cn",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -1399,21 +1854,21 @@
     {
       "rule": "DOMAIN,acs.56.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN,acs.agent.56.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN,acs.agent.v-56.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -1518,7 +1973,7 @@
     {
       "rule": "DOMAIN,ad.tencentmusic.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -1588,21 +2043,21 @@
     {
       "rule": "DOMAIN,adcdn.tencentmusic.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN,adcdn6.tencentmusic.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN,adclick.tencentmusic.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -1630,7 +2085,7 @@
     {
       "rule": "DOMAIN,adexpo.tencentmusic.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -1784,7 +2239,7 @@
     {
       "rule": "DOMAIN,adsfilebssdlbig.tx.kugou.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -1812,7 +2267,7 @@
     {
       "rule": "DOMAIN,adstats.tencentmusic.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -1882,7 +2337,7 @@
     {
       "rule": "DOMAIN,adx.op.cp18.ott.cibntv.net",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -2071,7 +2526,7 @@
     {
       "rule": "DOMAIN,amdc.m.youku.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -2225,7 +2680,7 @@
     {
       "rule": "DOMAIN,api.aixifan.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -2253,7 +2708,7 @@
     {
       "rule": "DOMAIN,api.cupid.ptqy.gitv.tv",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -2295,14 +2750,14 @@
     {
       "rule": "DOMAIN,api.iqiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN,api.iqiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain keyword coverage"
     },
@@ -2351,14 +2806,14 @@
     {
       "rule": "DOMAIN,api.ts.feedback.qy.net",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN,api.tv.sohu.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -2379,7 +2834,7 @@
     {
       "rule": "DOMAIN,apilog.app.acfun.cn",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -2400,7 +2855,7 @@
     {
       "rule": "DOMAIN,apiv4-iyes.youku.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -2491,7 +2946,7 @@
     {
       "rule": "DOMAIN,assp.sohu.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -2512,7 +2967,7 @@
     {
       "rule": "DOMAIN,audit.aaa.mgtv.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -2715,14 +3170,14 @@
     {
       "rule": "DOMAIN,baiducdncmn.inter.iqiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN,baiducdncmn.inter.iqiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain keyword coverage"
     },
@@ -2967,14 +3422,14 @@
     {
       "rule": "DOMAIN,bill.agent.56.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN,bill.agent.v-56.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -3065,7 +3520,7 @@
     {
       "rule": "DOMAIN,bkcommdata.v.qq.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -3079,7 +3534,7 @@
     {
       "rule": "DOMAIN,bksoup.v.qq.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -3450,7 +3905,7 @@
     {
       "rule": "DOMAIN,changyan.sohu.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -3667,7 +4122,7 @@
     {
       "rule": "DOMAIN,commdata.v.qq.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -3814,14 +4269,14 @@
     {
       "rule": "DOMAIN,cr-status.iqiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN,cr-status.iqiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain keyword coverage"
     },
@@ -3856,14 +4311,14 @@
     {
       "rule": "DOMAIN,cs-feige.iqiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN,cs-feige.iqiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain keyword coverage"
     },
@@ -5529,7 +5984,7 @@
     {
       "rule": "DOMAIN,data.mgtv.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -5697,7 +6152,7 @@
     {
       "rule": "DOMAIN,dflow.bz.mgtv.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -6054,7 +6509,7 @@
     {
       "rule": "DOMAIN,download.56.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -7503,21 +7958,21 @@
     {
       "rule": "DOMAIN,emoticon-sns.iqiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN,emoticon-sns.iqiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain keyword coverage"
     },
     {
       "rule": "DOMAIN,encounter.bz.mgtv.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -7601,7 +8056,7 @@
     {
       "rule": "DOMAIN,exceptionlog.kugou.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -7811,7 +8266,7 @@
     {
       "rule": "DOMAIN,floor.bz.mgtv.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -7853,7 +8308,7 @@
     {
       "rule": "DOMAIN,fpb.sohu.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -7944,14 +8399,14 @@
     {
       "rule": "DOMAIN,ggadoffline.miguvideo.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN,ggc.cmvideo.cn",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -7972,21 +8427,21 @@
     {
       "rule": "DOMAIN,ggic03.miguvideo.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN,ggmk.miguvideo.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN,ggv.cmvideo.cn",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -8000,7 +8455,7 @@
     {
       "rule": "DOMAIN,ggx.cmvideo.cn",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -8014,7 +8469,7 @@
     {
       "rule": "DOMAIN,ggx03.miguvideo.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -8931,14 +9386,14 @@
     {
       "rule": "DOMAIN,imall.cctv.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN,imall.cntv.cn",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -9008,7 +9463,7 @@
     {
       "rule": "DOMAIN,img1.g.pptv.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -9022,7 +9477,7 @@
     {
       "rule": "DOMAIN,img2.g.pptv.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -9036,7 +9491,7 @@
     {
       "rule": "DOMAIN,img3.g.pptv.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -9120,7 +9575,7 @@
     {
       "rule": "DOMAIN,iqiyim.adtrack.enlightent.cn",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain keyword coverage"
     },
@@ -9659,7 +10114,7 @@
     {
       "rule": "DOMAIN,layer.bz.mgtv.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -9946,7 +10401,7 @@
     {
       "rule": "DOMAIN,log.event.hunantv.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -9988,7 +10443,7 @@
     {
       "rule": "DOMAIN,log.so.hunantv.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -10170,7 +10625,7 @@
     {
       "rule": "DOMAIN,m-vali.cp31.ott.cibntv.net",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -11906,14 +12361,14 @@
     {
       "rule": "DOMAIN,mall0.qiyipic.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN,mall0.qiyipic.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain keyword coverage"
     },
@@ -12242,7 +12697,7 @@
     {
       "rule": "DOMAIN,mob.bz.mgtv.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -12277,7 +12732,7 @@
     {
       "rule": "DOMAIN,monitor.music.qq.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -12340,7 +12795,7 @@
     {
       "rule": "DOMAIN,msgv6.qy.net",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -12697,14 +13152,14 @@
     {
       "rule": "DOMAIN,nl-rcd.iqiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN,nl-rcd.iqiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain keyword coverage"
     },
@@ -12984,56 +13439,56 @@
     {
       "rule": "DOMAIN,paopao0.qiyipic.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN,paopao0.qiyipic.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain keyword coverage"
     },
     {
       "rule": "DOMAIN,paopao1.qiyipic.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN,paopao1.qiyipic.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain keyword coverage"
     },
     {
       "rule": "DOMAIN,paopao2.qiyipic.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN,paopao2.qiyipic.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain keyword coverage"
     },
     {
       "rule": "DOMAIN,paopao3.qiyipic.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN,paopao3.qiyipic.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain keyword coverage"
     },
@@ -13264,7 +13719,7 @@
     {
       "rule": "DOMAIN,pl.cp31.ott.cibntv.net",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -13404,28 +13859,28 @@
     {
       "rule": "DOMAIN,puma-api.iqiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN,puma-api.iqiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain keyword coverage"
     },
     {
       "rule": "DOMAIN,puma.api.iqiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN,puma.api.iqiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain keyword coverage"
     },
@@ -13551,7 +14006,7 @@
     {
       "rule": "DOMAIN,qpb.sohu.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -13656,7 +14111,7 @@
     {
       "rule": "DOMAIN,rc-topic-api.bz.mgtv.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -13726,7 +14181,7 @@
     {
       "rule": "DOMAIN,rlog.video.qq.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -14027,7 +14482,7 @@
     {
       "rule": "DOMAIN,sdksp.video.qq.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -14062,7 +14517,7 @@
     {
       "rule": "DOMAIN,sealine.youku.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -14083,14 +14538,14 @@
     {
       "rule": "DOMAIN,search.video.iqiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN,search.video.iqiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain keyword coverage"
     },
@@ -14111,7 +14566,7 @@
     {
       "rule": "DOMAIN,serveraddr.service.kugou.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -14349,7 +14804,7 @@
     {
       "rule": "DOMAIN,soup.v.qq.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -14370,7 +14825,7 @@
     {
       "rule": "DOMAIN,sp.qf.56.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -14440,7 +14895,7 @@
     {
       "rule": "DOMAIN,stat.56.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -14552,7 +15007,7 @@
     {
       "rule": "DOMAIN,stat.y.qq.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -14594,7 +15049,7 @@
     {
       "rule": "DOMAIN,stat2.corp.56.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -14720,21 +15175,21 @@
     {
       "rule": "DOMAIN,sub.ykimg.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN,subscription.iqiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN,subscription.iqiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain keyword coverage"
     },
@@ -15112,7 +15567,7 @@
     {
       "rule": "DOMAIN,tj.g.pptv.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -15154,7 +15609,7 @@
     {
       "rule": "DOMAIN,tmead.y.qq.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -15168,7 +15623,7 @@
     {
       "rule": "DOMAIN,tmeadbak.y.qq.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -15182,7 +15637,7 @@
     {
       "rule": "DOMAIN,tmeadcomm.y.qq.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -15357,7 +15812,7 @@
     {
       "rule": "DOMAIN,tracker.ai.xiaomi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -15630,7 +16085,7 @@
     {
       "rule": "DOMAIN,union.56.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -15749,7 +16204,7 @@
     {
       "rule": "DOMAIN,uvimage.56.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -15896,7 +16351,7 @@
     {
       "rule": "DOMAIN,v16.56.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -15917,7 +16372,7 @@
     {
       "rule": "DOMAIN,v3-ad.ixigua.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -15945,21 +16400,21 @@
     {
       "rule": "DOMAIN,v6-novelapp.ixigua.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN,vali-g1.cp31.ott.cibntv.net",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN,vali-ugc.cp31.ott.cibntv.net",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -16050,7 +16505,7 @@
     {
       "rule": "DOMAIN,vip.bz.mgtv.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -16435,7 +16890,7 @@
     {
       "rule": "DOMAIN,wxsmsdy.video.qq.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -16736,14 +17191,14 @@
     {
       "rule": "DOMAIN,yk-ssp.ad.youku.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN,ykad-data.youku.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -17870,7 +18325,7 @@
     {
       "rule": "DOMAIN-SUFFIX,3rd.t.sohu.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -18612,7 +19067,7 @@
     {
       "rule": "DOMAIN-SUFFIX,888.tv.sohu.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -18822,7 +19277,7 @@
     {
       "rule": "DOMAIN-SUFFIX,a-dxk.play.api.3g.youku.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -18878,21 +19333,21 @@
     {
       "rule": "DOMAIN-SUFFIX,a.cctv.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,a.ckm.iqiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,a.ckm.iqiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain keyword coverage"
     },
@@ -19060,7 +19515,7 @@
     {
       "rule": "DOMAIN-SUFFIX,a1.itc.cn",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -19326,7 +19781,7 @@
     {
       "rule": "DOMAIN-SUFFIX,actives.youku.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -19347,7 +19802,7 @@
     {
       "rule": "DOMAIN-SUFFIX,acz.youku.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -19424,21 +19879,21 @@
     {
       "rule": "DOMAIN-SUFFIX,ad.api.3g.tudou.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,ad.api.3g.youku.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,ad.api.mobile.youku.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -19466,7 +19921,7 @@
     {
       "rule": "DOMAIN-SUFFIX,ad.cctv.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -19480,7 +19935,7 @@
     {
       "rule": "DOMAIN-SUFFIX,ad.cmvideo.cn",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -19494,7 +19949,7 @@
     {
       "rule": "DOMAIN-SUFFIX,ad.cntv.cn",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -19627,21 +20082,21 @@
     {
       "rule": "DOMAIN-SUFFIX,ad.m.iqiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,ad.m.iqiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain keyword coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,ad.mail.sohu.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -19655,7 +20110,7 @@
     {
       "rule": "DOMAIN-SUFFIX,ad.mobile.youku.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -19732,7 +20187,7 @@
     {
       "rule": "DOMAIN-SUFFIX,ad.sohu.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -19984,7 +20439,7 @@
     {
       "rule": "DOMAIN-SUFFIX,adcontrol.tudou.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -20117,7 +20572,7 @@
     {
       "rule": "DOMAIN-SUFFIX,adinf.cp11.ott.cibntv.net",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -20306,7 +20761,7 @@
     {
       "rule": "DOMAIN-SUFFIX,admusicpic.music.126.net",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -20334,7 +20789,7 @@
     {
       "rule": "DOMAIN-SUFFIX,adnet.sohu.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -20369,7 +20824,7 @@
     {
       "rule": "DOMAIN-SUFFIX,adplay.tudou.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -20453,14 +20908,14 @@
     {
       "rule": "DOMAIN-SUFFIX,ads.aplus.pptv.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,ads.aplusapi.pptv.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -20495,7 +20950,7 @@
     {
       "rule": "DOMAIN-SUFFIX,ads.service.kugou.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -20509,7 +20964,7 @@
     {
       "rule": "DOMAIN-SUFFIX,ads.sohu.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -20782,7 +21237,7 @@
     {
       "rule": "DOMAIN-SUFFIX,adstat.cp11.ott.cibntv.net",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -20922,14 +21377,14 @@
     {
       "rule": "DOMAIN-SUFFIX,adx-core.youku.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,adx-open-service.youku.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -21048,14 +21503,14 @@
     {
       "rule": "DOMAIN-SUFFIX,afp.iqiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,afp.iqiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain keyword coverage"
     },
@@ -21069,14 +21524,14 @@
     {
       "rule": "DOMAIN-SUFFIX,afp.qiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,afp.qiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain keyword coverage"
     },
@@ -21734,7 +22189,7 @@
     {
       "rule": "DOMAIN-SUFFIX,api.adv.ott.cibntv.net",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -21748,14 +22203,14 @@
     {
       "rule": "DOMAIN-SUFFIX,api.cupid.qiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,api.cupid.qiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain keyword coverage"
     },
@@ -21811,7 +22266,7 @@
     {
       "rule": "DOMAIN-SUFFIX,api.push.le.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -21895,7 +22350,7 @@
     {
       "rule": "DOMAIN-SUFFIX,apklog.cp11.ott.cibntv.net",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -21965,7 +22420,7 @@
     {
       "rule": "DOMAIN-SUFFIX,app.aplus.pptv.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -22154,21 +22609,21 @@
     {
       "rule": "DOMAIN-SUFFIX,ark.cp21.ott.cibntv.net",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,ark.letv.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,as.aplus.pptv.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -22203,7 +22658,7 @@
     {
       "rule": "DOMAIN-SUFFIX,as.mgtv.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -22238,7 +22693,7 @@
     {
       "rule": "DOMAIN-SUFFIX,asimgs.pplive.cn",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -22308,7 +22763,7 @@
     {
       "rule": "DOMAIN-SUFFIX,atm.cp31.ott.cibntv.net",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -22322,7 +22777,7 @@
     {
       "rule": "DOMAIN-SUFFIX,atm.youku.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -22336,21 +22791,21 @@
     {
       "rule": "DOMAIN-SUFFIX,aty.cp45.ott.cibntv.net",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,aty.hd.sohu.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,aty.sohu.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -22427,7 +22882,7 @@
     {
       "rule": "DOMAIN-SUFFIX,b.smartvideo.youku.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -22861,7 +23316,7 @@
     {
       "rule": "DOMAIN-SUFFIX,bd.hd.sohu.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -23603,14 +24058,14 @@
     {
       "rule": "DOMAIN-SUFFIX,bssdl.kugou.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,bssdlbig.kugou.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -23652,7 +24107,7 @@
     {
       "rule": "DOMAIN-SUFFIX,btrace.video.qq.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -23862,7 +24317,7 @@
     {
       "rule": "DOMAIN-SUFFIX,c.kuwo.cn",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -23918,14 +24373,14 @@
     {
       "rule": "DOMAIN-SUFFIX,c.uaa.iqiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,c.uaa.iqiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain keyword coverage"
     },
@@ -23939,7 +24394,7 @@
     {
       "rule": "DOMAIN-SUFFIX,c.yes.youku.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -24023,14 +24478,14 @@
     {
       "rule": "DOMAIN-SUFFIX,cachenotice.cp11.ott.cibntv.net",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,cad.youku.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -24758,7 +25213,7 @@
     {
       "rule": "DOMAIN-SUFFIX,click.hd.sohu.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -24779,7 +25234,7 @@
     {
       "rule": "DOMAIN-SUFFIX,click.hunantv.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -24793,7 +25248,7 @@
     {
       "rule": "DOMAIN-SUFFIX,click.qianqian.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -24856,7 +25311,7 @@
     {
       "rule": "DOMAIN-SUFFIX,click2.hd.sohu.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -24968,14 +25423,14 @@
     {
       "rule": "DOMAIN-SUFFIX,cloudpush.iqiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,cloudpush.iqiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain keyword coverage"
     },
@@ -24989,14 +25444,14 @@
     {
       "rule": "DOMAIN-SUFFIX,cm.ad.bilibili.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,cm.ad.bilibili.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain keyword coverage"
     },
@@ -25010,14 +25465,14 @@
     {
       "rule": "DOMAIN-SUFFIX,cm.adcommon.bilibili.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,cm.adcommon.bilibili.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain keyword coverage"
     },
@@ -25038,14 +25493,14 @@
     {
       "rule": "DOMAIN-SUFFIX,cm.bilibili.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,cm.bilibili.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain keyword coverage"
     },
@@ -25059,14 +25514,14 @@
     {
       "rule": "DOMAIN-SUFFIX,cm.game.bilibili.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,cm.game.bilibili.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain keyword coverage"
     },
@@ -25080,28 +25535,28 @@
     {
       "rule": "DOMAIN-SUFFIX,cm.passport.iqiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,cm.passport.iqiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain keyword coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,cm.track.biligame.bilibili.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,cm.track.biligame.bilibili.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain keyword coverage"
     },
@@ -25122,7 +25577,7 @@
     {
       "rule": "DOMAIN-SUFFIX,cmop.mgtv.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -25143,7 +25598,7 @@
     {
       "rule": "DOMAIN-SUFFIX,cmstool.youku.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -25395,7 +25850,7 @@
     {
       "rule": "DOMAIN-SUFFIX,corp.sohu.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -25444,7 +25899,7 @@
     {
       "rule": "DOMAIN-SUFFIX,count.vrs.sohu.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -25549,7 +26004,7 @@
     {
       "rule": "DOMAIN-SUFFIX,cpc.sohu.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -25885,7 +26340,7 @@
     {
       "rule": "DOMAIN-SUFFIX,ctr.hd.sohu.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -26018,7 +26473,7 @@
     {
       "rule": "DOMAIN-SUFFIX,d.cntv.cn",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -26053,7 +26508,7 @@
     {
       "rule": "DOMAIN-SUFFIX,d.kugou.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -26389,14 +26844,14 @@
     {
       "rule": "DOMAIN-SUFFIX,da.hunantv.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,da.mgtv.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -26480,14 +26935,14 @@
     {
       "rule": "DOMAIN-SUFFIX,das.api.youku.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,das.mobile.youku.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -26571,7 +27026,7 @@
     {
       "rule": "DOMAIN-SUFFIX,dc.cp21.ott.cibntv.net",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -26585,7 +27040,7 @@
     {
       "rule": "DOMAIN-SUFFIX,dc.letv.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -26683,14 +27138,14 @@
     {
       "rule": "DOMAIN-SUFFIX,de.as.cp61.ott.cibntv.net",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,de.as.pptv.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -26711,7 +27166,7 @@
     {
       "rule": "DOMAIN-SUFFIX,default.ixigua.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -26725,7 +27180,7 @@
     {
       "rule": "DOMAIN-SUFFIX,deliver.kuwo.cn",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -26760,7 +27215,7 @@
     {
       "rule": "DOMAIN-SUFFIX,dev-push.m.youku.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -26998,7 +27453,7 @@
     {
       "rule": "DOMAIN-SUFFIX,dl.g.youku.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -27194,7 +27649,7 @@
     {
       "rule": "DOMAIN-SUFFIX,dmapp.youku.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -27404,7 +27859,7 @@
     {
       "rule": "DOMAIN-SUFFIX,downmobile.kugou.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -27908,7 +28363,7 @@
     {
       "rule": "DOMAIN-SUFFIX,e.stat.ykimg.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -28146,14 +28601,14 @@
     {
       "rule": "DOMAIN-SUFFIX,emoticon.sns.iqiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,emoticon.sns.iqiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain keyword coverage"
     },
@@ -28244,7 +28699,7 @@
     {
       "rule": "DOMAIN-SUFFIX,epro.sohu.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -28503,7 +28958,7 @@
     {
       "rule": "DOMAIN-SUFFIX,fanxing.kugou.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -28930,7 +29385,7 @@
     {
       "rule": "DOMAIN-SUFFIX,fz.letv.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -29049,7 +29504,7 @@
     {
       "rule": "DOMAIN-SUFFIX,g3.letv.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -29077,7 +29532,7 @@
     {
       "rule": "DOMAIN-SUFFIX,gad.kugou.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -29133,14 +29588,14 @@
     {
       "rule": "DOMAIN-SUFFIX,game.kugou.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,game.kuwo.cn",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -29154,7 +29609,7 @@
     {
       "rule": "DOMAIN-SUFFIX,game.pps.tv",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -29210,28 +29665,28 @@
     {
       "rule": "DOMAIN-SUFFIX,gamebox.kugou.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,gamecenter.iqiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,gamecenter.iqiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain keyword coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,gamex.mobile.youku.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -29322,7 +29777,7 @@
     {
       "rule": "DOMAIN-SUFFIX,gcapi.sy.kugou.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -29420,7 +29875,7 @@
     {
       "rule": "DOMAIN-SUFFIX,gg.kugou.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -29644,7 +30099,7 @@
     {
       "rule": "DOMAIN-SUFFIX,go.sohu.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -29686,7 +30141,7 @@
     {
       "rule": "DOMAIN-SUFFIX,golden1.sohu.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -29707,7 +30162,7 @@
     {
       "rule": "DOMAIN-SUFFIX,goods.tudou.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -29819,7 +30274,7 @@
     {
       "rule": "DOMAIN-SUFFIX,gridsum-vd.cntv.cn",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -30813,7 +31268,7 @@
     {
       "rule": "DOMAIN-SUFFIX,hudong.pl.youku.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -30834,7 +31289,7 @@
     {
       "rule": "DOMAIN-SUFFIX,hui.sohu.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -30862,14 +31317,14 @@
     {
       "rule": "DOMAIN-SUFFIX,huodong.pl.youku.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,huodong.vip.youku.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -30988,7 +31443,7 @@
     {
       "rule": "DOMAIN-SUFFIX,hz.youku.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -31163,7 +31618,7 @@
     {
       "rule": "DOMAIN-SUFFIX,iadmusicmat.music.126.net",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -31177,7 +31632,7 @@
     {
       "rule": "DOMAIN-SUFFIX,iadmusicmatvideo.music.126.net",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -31366,14 +31821,14 @@
     {
       "rule": "DOMAIN-SUFFIX,ifacelog.iqiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,ifacelog.iqiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain keyword coverage"
     },
@@ -31478,7 +31933,7 @@
     {
       "rule": "DOMAIN-SUFFIX,images.sohu.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -31744,7 +32199,7 @@
     {
       "rule": "DOMAIN-SUFFIX,imgaliyun.res.mgtv.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -32010,14 +32465,14 @@
     {
       "rule": "DOMAIN-SUFFIX,install.kugou.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,install2.kugou.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -32059,7 +32514,7 @@
     {
       "rule": "DOMAIN-SUFFIX,inte.sohu.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -32164,28 +32619,28 @@
     {
       "rule": "DOMAIN-SUFFIX,iqiyi.irs01.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain keyword coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,iqiyi.kim",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain keyword coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,iqiyi.pub",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain keyword coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,iqiyi.space",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain keyword coverage"
     },
@@ -32311,14 +32766,14 @@
     {
       "rule": "DOMAIN-SUFFIX,iwstat.tudou.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,iyes.youku.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -32913,7 +33368,7 @@
     {
       "rule": "DOMAIN-SUFFIX,jp.as.pptv.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -33319,14 +33774,14 @@
     {
       "rule": "DOMAIN-SUFFIX,kgmobilestat.kugou.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,kgmobilestatbak.kugou.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -33508,7 +33963,7 @@
     {
       "rule": "DOMAIN-SUFFIX,kwmsg.kuwo.cn",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -33571,14 +34026,14 @@
     {
       "rule": "DOMAIN-SUFFIX,l.ykimg.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,l.youku.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -33865,7 +34320,7 @@
     {
       "rule": "DOMAIN-SUFFIX,livep.l.ott.video.qq.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -33879,14 +34334,14 @@
     {
       "rule": "DOMAIN-SUFFIX,lives.l.cp81.ott.cibntv.net",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,lives.l.ott.video.qq.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -33942,7 +34397,7 @@
     {
       "rule": "DOMAIN-SUFFIX,lm.tv.sohu.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -34012,7 +34467,7 @@
     {
       "rule": "DOMAIN-SUFFIX,log.hunantv.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -34068,14 +34523,14 @@
     {
       "rule": "DOMAIN-SUFFIX,log.p2p.hunantv.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,log.rc.hunantv.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -34110,7 +34565,7 @@
     {
       "rule": "DOMAIN-SUFFIX,log.stat.kugou.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -34159,7 +34614,7 @@
     {
       "rule": "DOMAIN-SUFFIX,log.web.kugou.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -34341,7 +34796,7 @@
     {
       "rule": "DOMAIN-SUFFIX,lstat.youku.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -34425,7 +34880,7 @@
     {
       "rule": "DOMAIN-SUFFIX,lvip.youku.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -34607,7 +35062,7 @@
     {
       "rule": "DOMAIN-SUFFIX,m.yes.youku.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -34936,14 +35391,14 @@
     {
       "rule": "DOMAIN-SUFFIX,mbdlog.iqiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,mbdlog.iqiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain keyword coverage"
     },
@@ -34992,7 +35447,7 @@
     {
       "rule": "DOMAIN-SUFFIX,mcgi.v.qq.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -35041,7 +35496,7 @@
     {
       "rule": "DOMAIN-SUFFIX,mdrecv.app.cntvwb.cn",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -35139,14 +35594,14 @@
     {
       "rule": "DOMAIN-SUFFIX,meta.video.qiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,meta.video.qiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain keyword coverage"
     },
@@ -35174,7 +35629,7 @@
     {
       "rule": "DOMAIN-SUFFIX,mfm.video.qq.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -35377,21 +35832,21 @@
     {
       "rule": "DOMAIN-SUFFIX,miniapp.bilibili.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,miniapp.bilibili.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain keyword coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,minidcsc.kugou.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -35405,7 +35860,7 @@
     {
       "rule": "DOMAIN-SUFFIX,minisite.letv.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -35454,7 +35909,7 @@
     {
       "rule": "DOMAIN-SUFFIX,mixer.cupid.ptqy.gitv.tv",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -35580,7 +36035,7 @@
     {
       "rule": "DOMAIN-SUFFIX,mo.kugou.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -35664,7 +36119,7 @@
     {
       "rule": "DOMAIN-SUFFIX,mobaliyun.res.mgtv.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -35692,14 +36147,14 @@
     {
       "rule": "DOMAIN-SUFFIX,mobilelog.kugou.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,mobilemsg.youku.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -35895,7 +36350,7 @@
     {
       "rule": "DOMAIN-SUFFIX,msclick2.kuwo.cn",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -35923,98 +36378,98 @@
     {
       "rule": "DOMAIN-SUFFIX,msg.iqiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,msg.iqiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain keyword coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,msg.m.letv.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,msg.mobile.kugou.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,msg.ptqy.gitv.tv",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,msg.video.qiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,msg.video.qiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain keyword coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,msg.youku.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,msg1.video.qiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,msg1.video.qiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain keyword coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,msg2.video.qiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,msg2.video.qiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain keyword coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,msga.71.am",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,msga.ptqy.gitv.tv",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -36056,7 +36511,7 @@
     {
       "rule": "DOMAIN-SUFFIX,msphoneclick.kuwo.cn",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -36182,7 +36637,7 @@
     {
       "rule": "DOMAIN-SUFFIX,mvads.kugou.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -36196,7 +36651,7 @@
     {
       "rule": "DOMAIN-SUFFIX,myes.youku.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -36245,7 +36700,7 @@
     {
       "rule": "DOMAIN-SUFFIX,n.mark.letv.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -36420,14 +36875,14 @@
     {
       "rule": "DOMAIN-SUFFIX,news-l.play.cp81.ott.cibntv.net",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,news-l.play.ott.video.qq.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -36602,21 +37057,21 @@
     {
       "rule": "DOMAIN-SUFFIX,nl.rcd.iqiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,nl.rcd.iqiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain keyword coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,nl.rcd.ptqy.gitv.tv",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -36679,14 +37134,14 @@
     {
       "rule": "DOMAIN-SUFFIX,notice.iqiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,notice.iqiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain keyword coverage"
     },
@@ -36707,7 +37162,7 @@
     {
       "rule": "DOMAIN-SUFFIX,novelapp.ixigua.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -36791,7 +37246,7 @@
     {
       "rule": "DOMAIN-SUFFIX,nstat.tudou.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -37302,7 +37757,7 @@
     {
       "rule": "DOMAIN-SUFFIX,p-log.ykimg.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -37316,7 +37771,7 @@
     {
       "rule": "DOMAIN-SUFFIX,p.kugou.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -37372,7 +37827,7 @@
     {
       "rule": "DOMAIN-SUFFIX,p2.hunantv.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -37477,28 +37932,28 @@
     {
       "rule": "DOMAIN-SUFFIX,paopao.iqiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,paopao.iqiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain keyword coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,paopaod.qiyipic.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,paopaod.qiyipic.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain keyword coverage"
     },
@@ -37533,7 +37988,7 @@
     {
       "rule": "DOMAIN-SUFFIX,passport-log.youku.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -37554,14 +38009,14 @@
     {
       "rule": "DOMAIN-SUFFIX,pb.bi.gitv.tv",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,pb.hd.sohu.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -37652,7 +38107,7 @@
     {
       "rule": "DOMAIN-SUFFIX,pcvideoaliyun.titan.mgtv.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -37666,21 +38121,21 @@
     {
       "rule": "DOMAIN-SUFFIX,pcvideoyd.titan.mgtv.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,pcweb-v1.log.mgtv.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,pcweb.v1.mgtv.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -38163,14 +38618,14 @@
     {
       "rule": "DOMAIN-SUFFIX,policy.video.iqiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,policy.video.iqiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain keyword coverage"
     },
@@ -38233,7 +38688,7 @@
     {
       "rule": "DOMAIN-SUFFIX,pp2.pptv.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -38303,7 +38758,7 @@
     {
       "rule": "DOMAIN-SUFFIX,pro.hoye.letv.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -38317,7 +38772,7 @@
     {
       "rule": "DOMAIN-SUFFIX,pro.letv.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -38527,14 +38982,14 @@
     {
       "rule": "DOMAIN-SUFFIX,push.m.youku.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,push.mobile.kugou.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -38562,7 +39017,7 @@
     {
       "rule": "DOMAIN-SUFFIX,push.tv.sohu.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -38947,7 +39402,7 @@
     {
       "rule": "DOMAIN-SUFFIX,qiqiyii.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain keyword coverage"
     },
@@ -39003,7 +39458,7 @@
     {
       "rule": "DOMAIN-SUFFIX,qosp.msg.71.am",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -39507,7 +39962,7 @@
     {
       "rule": "DOMAIN-SUFFIX,res.hunantv.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -39556,7 +40011,7 @@
     {
       "rule": "DOMAIN-SUFFIX,rhdc-acs.youku.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -39703,7 +40158,7 @@
     {
       "rule": "DOMAIN-SUFFIX,routertips.video.qq.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -39822,7 +40277,7 @@
     {
       "rule": "DOMAIN-SUFFIX,rtmonitor.kugou.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -39948,7 +40403,7 @@
     {
       "rule": "DOMAIN-SUFFIX,s.p.youku.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -40438,7 +40893,7 @@
     {
       "rule": "DOMAIN-SUFFIX,sdapprecv.app.cntvwb.cn",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -40473,7 +40928,7 @@
     {
       "rule": "DOMAIN-SUFFIX,sdk.m.youku.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -40501,7 +40956,7 @@
     {
       "rule": "DOMAIN-SUFFIX,sdkconfig.video.qq.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -40536,7 +40991,7 @@
     {
       "rule": "DOMAIN-SUFFIX,sdn.kugou.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -40627,7 +41082,7 @@
     {
       "rule": "DOMAIN-SUFFIX,service.danmu.youku.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -41481,7 +41936,7 @@
     {
       "rule": "DOMAIN-SUFFIX,stat.letv.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -41516,14 +41971,14 @@
     {
       "rule": "DOMAIN-SUFFIX,stat.ppstream.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,stat.pptv.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -41551,7 +42006,7 @@
     {
       "rule": "DOMAIN-SUFFIX,stat.tudou.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -41579,21 +42034,21 @@
     {
       "rule": "DOMAIN-SUFFIX,stat.youku.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,static-s.iqiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,static-s.iqiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain keyword coverage"
     },
@@ -41614,7 +42069,7 @@
     {
       "rule": "DOMAIN-SUFFIX,static.app.m.letv.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -41635,28 +42090,28 @@
     {
       "rule": "DOMAIN-SUFFIX,static.g.iqiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,static.g.iqiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain keyword coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,static.g.ppstream.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,static.g.pptv.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -41726,7 +42181,7 @@
     {
       "rule": "DOMAIN-SUFFIX,statis.mobile.youku.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -41796,7 +42251,7 @@
     {
       "rule": "DOMAIN-SUFFIX,stats.tudou.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -41845,35 +42300,35 @@
     {
       "rule": "DOMAIN-SUFFIX,store.iqiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,store.iqiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain keyword coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,store.ptqy.gitv.tv",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,store.tv.api.3g.youku.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,store.xl.api.3g.youku.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -41992,7 +42447,7 @@
     {
       "rule": "DOMAIN-SUFFIX,suvset.sohu.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -42335,7 +42790,7 @@
     {
       "rule": "DOMAIN-SUFFIX,t7z.cupid.ptqy.gitv.tv",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -42503,7 +42958,7 @@
     {
       "rule": "DOMAIN-SUFFIX,tdrec.youku.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -42573,7 +43028,7 @@
     {
       "rule": "DOMAIN-SUFFIX,terren.cntv.cn",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -42594,7 +43049,7 @@
     {
       "rule": "DOMAIN-SUFFIX,test.ott.youku.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -42706,7 +43161,7 @@
     {
       "rule": "DOMAIN-SUFFIX,thirdparty.biliapi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -42790,14 +43245,14 @@
     {
       "rule": "DOMAIN-SUFFIX,tj.kugou.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,tj.video.qq.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -43119,14 +43574,14 @@
     {
       "rule": "DOMAIN-SUFFIX,tracker.sns.iqiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,tracker.sns.iqiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain keyword coverage"
     },
@@ -43847,7 +44302,7 @@
     {
       "rule": "DOMAIN-SUFFIX,um.hd.sohu.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -44127,7 +44582,7 @@
     {
       "rule": "DOMAIN-SUFFIX,update.mobile.kugou.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -44141,7 +44596,7 @@
     {
       "rule": "DOMAIN-SUFFIX,updatepage.kuwo.cn",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -44190,7 +44645,7 @@
     {
       "rule": "DOMAIN-SUFFIX,uranus.sohu.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -44386,7 +44841,7 @@
     {
       "rule": "DOMAIN-SUFFIX,v1-play.log.mgtv.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -44428,14 +44883,14 @@
     {
       "rule": "DOMAIN-SUFFIX,v2.hunantv.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,v2.log.mgtv.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -44470,7 +44925,7 @@
     {
       "rule": "DOMAIN-SUFFIX,val.api.youku.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -44512,7 +44967,7 @@
     {
       "rule": "DOMAIN-SUFFIX,vdapprecv.app.cntvwb.cn",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -44764,7 +45219,7 @@
     {
       "rule": "DOMAIN-SUFFIX,vpic.video.qq.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -44974,7 +45429,7 @@
     {
       "rule": "DOMAIN-SUFFIX,wa.kuwo.cn",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -45037,14 +45492,14 @@
     {
       "rule": "DOMAIN-SUFFIX,wan.sohu.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,wan.youku.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -45275,14 +45730,14 @@
     {
       "rule": "DOMAIN-SUFFIX,webp2p.letv.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,webstat.kuwo.cn",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -45506,7 +45961,7 @@
     {
       "rule": "DOMAIN-SUFFIX,wl.hd.sohu.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -45821,7 +46276,7 @@
     {
       "rule": "DOMAIN-SUFFIX,wxsnsdy.video.qq.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -46710,21 +47165,21 @@
     {
       "rule": "DOMAIN-SUFFIX,ykatr.youku.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,ykrec.youku.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,ykrectab.youku.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -46850,7 +47305,7 @@
     {
       "rule": "DOMAIN-SUFFIX,youxi.kugou.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -46955,14 +47410,14 @@
     {
       "rule": "DOMAIN-SUFFIX,yuedu.iqiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,yuedu.iqiyi.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain keyword coverage"
     },
@@ -46983,7 +47438,7 @@
     {
       "rule": "DOMAIN-SUFFIX,yule.sohu.com",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
@@ -47662,7 +48117,7 @@
     {
       "rule": "IP-CIDR,101.227.200.11/32",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "CIDR coverage"
     },
@@ -47676,7 +48131,7 @@
     {
       "rule": "IP-CIDR,101.227.200.28/32",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "CIDR coverage"
     },
@@ -47690,7 +48145,7 @@
     {
       "rule": "IP-CIDR,101.227.97.240/32",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "CIDR coverage"
     },
@@ -48040,7 +48495,7 @@
     {
       "rule": "IP-CIDR,119.188.13.0/24",
       "category": "ads",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "ads",
       "reason": "CIDR coverage"
     },
@@ -49678,7 +50133,7 @@
     {
       "rule": "DOMAIN,akmcdnoversea-tw.inter.ptqy.gitv.tv",
       "category": "streaming",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "streaming",
       "reason": "domain suffix coverage"
     },
@@ -49699,7 +50154,7 @@
     {
       "rule": "DOMAIN,apm-misaka.biliapi.net",
       "category": "streaming",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "streaming",
       "reason": "domain suffix coverage"
     },
@@ -49713,7 +50168,7 @@
     {
       "rule": "DOMAIN,chuangcachecdnoversea-tw.inter.ptqy.gitv.tv",
       "category": "streaming",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "streaming",
       "reason": "domain suffix coverage"
     },
@@ -49776,7 +50231,7 @@
     {
       "rule": "DOMAIN-SUFFIX,bilibili.tv",
       "category": "streaming",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "streaming",
       "reason": "domain keyword coverage"
     },
@@ -49860,56 +50315,56 @@
     {
       "rule": "DOMAIN-SUFFIX,inter.iqiyi.com",
       "category": "streaming",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "streaming",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,inter.iqiyi.com",
       "category": "streaming",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "streaming",
       "reason": "domain keyword coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,intl-rcd.iqiyi.com",
       "category": "streaming",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "streaming",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,intl-rcd.iqiyi.com",
       "category": "streaming",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "streaming",
       "reason": "domain keyword coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,intl-subscription.iqiyi.com",
       "category": "streaming",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "streaming",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,intl-subscription.iqiyi.com",
       "category": "streaming",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "streaming",
       "reason": "domain keyword coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,intl.iqiyi.com",
       "category": "streaming",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "streaming",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,intl.iqiyi.com",
       "category": "streaming",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "streaming",
       "reason": "domain keyword coverage"
     },
@@ -49979,7 +50434,7 @@
     {
       "rule": "DOMAIN-SUFFIX,v.smtcdns.net",
       "category": "streaming",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "streaming",
       "reason": "domain suffix coverage"
     },
@@ -49993,7 +50448,7 @@
     {
       "rule": "IP-CIDR,118.26.32.162/32",
       "category": "streaming",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "streaming",
       "reason": "CIDR coverage"
     },
@@ -50007,7 +50462,7 @@
     {
       "rule": "IP-CIDR,118.26.32.178/32",
       "category": "streaming",
-      "overlap_with": "domestic",
+      "overlap_with": "domesticmedia",
       "winner": "streaming",
       "reason": "CIDR coverage"
     },
@@ -50649,35 +51104,1568 @@
       "reason": "domain suffix coverage"
     },
     {
-      "rule": "DOMAIN-SUFFIX,afp.adchina.com",
-      "category": "domestic",
-      "overlap_with": "ads",
-      "winner": "ads",
+      "rule": "DOMAIN,00713915daab0be43def5c338c02c80b.dlied1.cdntips.net",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN,0gr4uqmtt8y41hcjsgrzdrc31.ourdvsss.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN,0gr4uqmtt8y41hcjsgrzdrc3s.ourdvsss.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN,0gr4uqmtt8y41hcjsgrzdrc3z.ourdvsss.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN,0gr4uqmtt8y41hcjsgrzdrctt.ourdvsss.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN,0gr4uqmtt8y41hcjsgrzdrctu.ourdvsss.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN,0gr4uqmtt8y41hcjz8yzdnc31.ourdvsss.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN,0gr4uqmtt8y41hcjz8yzdnc3t.ourdvsss.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN,0gr4uqmtt8y41hcjzgazdrpba.ourdvsss.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN,0gr4uqmtt8y41hcjzgazdrpbz.ourdvsss.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN,0gr4uqmtt8y41hcjzgazdrpjt.ourdvsss.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN,0gr5dgmttgha1hcj38yzdncb3.ourdvsss.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN,112-81-125-43.dhost.00cdn.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN,113-219-145-1.ksyungslb.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN,114-236-92-129.ksyungslb.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN,17caa75e77d31e1f5a7841e0b3374569.dlied1.cdntips.net",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN,180-101-74-1.ksyungslb.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN,1geadrmttge3nhcjwgazdope.ourdvsss.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN,1geadrmttge3nhcjwgwzdqqe.ourdvsss.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN,1gr3uomttgr31hcjo8yzdnco.ourdvsss.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN,1gr3uomttgr31hcjo8yzdnpy.ourdvsss.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN,1gr3uomttgr31hcjtgezdkcy.ourdvsss.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN,1gr4uqmtt8y41hcjigazdqca.ourdvsss.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN,1gr4uqmtt8y41hcjigazdqce.ourdvsss.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN,1gr4uqmtt8y41hcjigazdqco.ourdvsss.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN,1gr4uqmtt8y41hcjigazdqpo.ourdvsss.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN,1gr4uqmtt8y41hcjzgwzdkqe.ourdvsss.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN,1gr5dgmttgha1hcj38yzdcca.ourdvsss.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN,1gr5dgmttgha1hcj38yzdcco.ourdvsss.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN,1gr5dgmttgha1hcj38yzdkca.ourdvsss.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN,1gr5dgmttgha1hcj38yzdkco.ourdvsss.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN,1gr5dgmttgha1hcj38yzdkpe.ourdvsss.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN,1gr5dgmttgha1hcj38yzdkpy.ourdvsss.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN,1gr5dgmttgha1hcj38yzdkqy.ourdvsss.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN,1gr5dgmttgha1hcj3gczdcpa.ourdvsss.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN,1gr5dgmttgha1hcj3gczdcpe.ourdvsss.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN,1gr5dgmttgha1hcj3gczdcpo.ourdvsss.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN,1gr5dgmttgha1hcj3gczdcqy.ourdvsss.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN,1gr5dgmttgha1hcttgrzdnpo.ourdvsss.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN,1graukmttga4nhcjtgozdgce.ourdvsss.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN,218-91-225-1.ksyungslb.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN,219-155-150-1.ksyungslb.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN,222-188-6-1.ksyungslb.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN,36-104-134-1.ksyungslb.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN,36-25-252-1.ksyungslb.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN,3ge3drmttga5nhcbqge3ur.ourdvsss.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN,3geauymtsgrzdnqbofa5do.ourdvsss.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN,3geauymtsgrzdnqbofa5dy.ourdvsss.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN,3geauymtsgrzdrcbzfahue.ourdvsss.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN,3geauymtsgrzdrcbzfahuk.ourdvsss.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN,4go41hcjtgazdoctqge4o.ourdvsss.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN,apd-pcdnvodstat.teg.tencent-cloud.net",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN,aqqmusic.tc.qq.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN,dldir1.qq.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN,iacc.qq.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN,ins-eeww7kom.ias.tencent-cloud.net",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN,ios.video.mpush.qq.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN,moo.qq.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN,rdelivery.qq.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN,ts.qq.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN,v.streaming.qq.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN,video-public-1258344701.shiply-cdn.qq.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN,video-search-1258344701.shiply-cdn.qq.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN,video-vip-1258344701.shiply-cdn.qq.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN,yoo.gtimg.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,0co3geye.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,2isbbess.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,33lwhaoinc.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,52mtkvideo.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,9xsecndns.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,acfun.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,ai.xiaomi.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,aianno.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,androidgo.duapp.com",
-      "category": "domestic",
+      "category": "domesticmedia",
       "overlap_with": "ads",
       "winner": "ads",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,animetamashi.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,anitama.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,api.game.letvstore.com",
-      "category": "domestic",
+      "category": "domesticmedia",
       "overlap_with": "ads",
       "winner": "ads",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,b82yxres.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,bigfun.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,bigfunapp.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,bili22.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,bili2233.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,bili23.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,bili33.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,bilibili.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,bilibiligame.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,bilibilipay.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,biligame.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,bilivideo.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,cctv.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,cctvlib.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,cctvlib.com.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,cctvlibrary.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,cctvlibrary.com.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,cctvpro.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,cctvpro.com.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
       "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,cdn.zampdsp.com",
-      "category": "domestic",
+      "category": "domesticmedia",
       "overlap_with": "ads",
       "winner": "ads",
       "reason": "domain suffix coverage"
     },
     {
+      "rule": "DOMAIN-SUFFIX,chinaepg.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,citv.net.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
       "rule": "DOMAIN-SUFFIX,cm.fancyapi.com",
+      "category": "domesticmedia",
+      "overlap_with": "ads",
+      "winner": "ads",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,cmvideo.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,cnms.net.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,cntv.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,cntv.com.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,cntvwb.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,domesticmedia.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,domesticmediagame.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,domesticmediapay.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,e8h2ty.tdum.alibaba.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,gitv.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,gjgbdszt.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,gjgbdszt.com.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,gjgbdszt.net.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,hdslb.com.w.kunlunhuf.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,hdslb.com.w.kunlunpi.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,i.qq.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,ipanda.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,ipanda.com.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,itc.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,jiangbing.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,kuwo.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,kuxiaomiao.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,kuxiaomiao.com.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,livechina.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,migu.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,music.126.net",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,music.163.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,music.qq.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,music.tc.qq.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,music.xiaomi.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,noxagile.duapp.com",
+      "category": "domesticmedia",
+      "overlap_with": "ads",
+      "winner": "ads",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,ns6mitkxo.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,olympicchannelchina.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,p-bstarstatic.akamaized.net",
+      "category": "domesticmedia",
+      "overlap_with": "streaming",
+      "winner": "streaming",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,p.bstarstatic.com",
+      "category": "domesticmedia",
+      "overlap_with": "streaming",
+      "winner": "streaming",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,pplive.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,ppstream.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,ppstream.com.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,ppstream.net.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,qiyi.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,qqmusic.qq.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,qqvideo.gtimg.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,s.zampdsp.com",
+      "category": "domesticmedia",
+      "overlap_with": "ads",
+      "winner": "ads",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,sk2cdsnw.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,sogoodtech1.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,sohu.com.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,suike.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,tvcc.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,tvcc.com.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,ukoo.com.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,upos-bstar-mirrorakam.akamaized.net",
+      "category": "domesticmedia",
+      "overlap_with": "streaming",
+      "winner": "streaming",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,upos-bstar1-mirrorakam.akamaized.net",
+      "category": "domesticmedia",
+      "overlap_with": "streaming",
+      "winner": "streaming",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,upos-hz-mirrorakam.akamaized.net",
+      "category": "domesticmedia",
+      "overlap_with": "streaming",
+      "winner": "streaming",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,uposdash-302-bilivideo.yfcdn.net",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,v.qq.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,video.qq.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,wingsmobiletek.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,wwc.alicdn.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,wwc.alicdn.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain keyword coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,xn--fiq53l6wcx3kp9bc7joo6apn8a.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,xn--fiq53l90et9fpncc7joo6apn8a.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,xn--kprv4ewxfr9cpxcc7joo6apn8a.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,y.qq.com",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,yoku.net.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,yoqoo.net.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,youku.com.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,zggbdszt.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,zggbdszt.com.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,zggbdszt.net.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,zygbdszt.net.cn",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "domain suffix coverage"
+    },
+    {
+      "rule": "IP-CIDR,101.71.154.241/32",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,106.75.74.76/32",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,106.75.74.76/32",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,111.206.25.147/32",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,112.13.119.17/32",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,112.13.119.17/32",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,112.13.122.1/32",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,112.13.122.1/32",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,115.236.118.33/32",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,115.236.121.1/32",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,118.24.63.156/32",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,118.26.120.0/24",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,118.26.32.0/23",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,119.29.29.29/32",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,119.29.29.29/32",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,119.3.238.64/32",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,120.92.108.182/32",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,120.92.108.182/32",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,120.92.113.99/32",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,120.92.113.99/32",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,120.92.153.217/32",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,120.92.153.217/32",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,134.175.207.130/32",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,164.52.76.18/32",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,193.112.159.225/32",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,203.107.1.0/24",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,203.107.1.0/24",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,203.107.1.0/24",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,223.252.199.66/31",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,223.252.199.66/31",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,223.252.199.66/31",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,23.211.15.99/32",
+      "category": "domesticmedia",
+      "overlap_with": "streaming",
+      "winner": "streaming",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,39.105.63.80/32",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,45.254.48.1/32",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,45.254.48.1/32",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,47.100.127.239/32",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,47.100.127.239/32",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,58.49.111.117/32",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,58.49.111.117/32",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,58.49.111.79/32",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,58.49.111.79/32",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,58.49.111.95/32",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,58.49.111.95/32",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,59.111.160.195/32",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,59.111.160.195/32",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,59.111.160.197/32",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,59.111.160.197/32",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,59.111.181.35/32",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,59.111.181.35/32",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,59.111.181.38/32",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,59.111.181.38/32",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,59.111.181.60/32",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,59.111.181.60/32",
+      "category": "domesticmedia",
+      "overlap_with": "domestic",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,afp.adchina.com",
       "category": "domestic",
       "overlap_with": "ads",
       "winner": "ads",
@@ -50698,27 +52686,6 @@
       "reason": "domain suffix coverage"
     },
     {
-      "rule": "DOMAIN-SUFFIX,noxagile.duapp.com",
-      "category": "domestic",
-      "overlap_with": "ads",
-      "winner": "ads",
-      "reason": "domain suffix coverage"
-    },
-    {
-      "rule": "DOMAIN-SUFFIX,p-bstarstatic.akamaized.net",
-      "category": "domestic",
-      "overlap_with": "streaming",
-      "winner": "streaming",
-      "reason": "domain suffix coverage"
-    },
-    {
-      "rule": "DOMAIN-SUFFIX,p.bstarstatic.com",
-      "category": "domestic",
-      "overlap_with": "streaming",
-      "winner": "streaming",
-      "reason": "domain suffix coverage"
-    },
-    {
       "rule": "DOMAIN-SUFFIX,pangolin-sdk-toutiao.com",
       "category": "domestic",
       "overlap_with": "ads",
@@ -50731,13 +52698,6 @@
       "overlap_with": "ads",
       "winner": "ads",
       "reason": "domain keyword coverage"
-    },
-    {
-      "rule": "DOMAIN-SUFFIX,s.zampdsp.com",
-      "category": "domestic",
-      "overlap_with": "ads",
-      "winner": "ads",
-      "reason": "domain suffix coverage"
     },
     {
       "rule": "DOMAIN-SUFFIX,tanxlog.istreamsche.com",
@@ -50775,25 +52735,144 @@
       "reason": "domain keyword coverage"
     },
     {
-      "rule": "DOMAIN-SUFFIX,upos-bstar-mirrorakam.akamaized.net",
+      "rule": "IP-CIDR,101.224.0.0/14,no-resolve",
       "category": "domestic",
-      "overlap_with": "streaming",
-      "winner": "streaming",
-      "reason": "domain suffix coverage"
+      "overlap_with": "domesticmedia",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
     },
     {
-      "rule": "DOMAIN-SUFFIX,upos-bstar1-mirrorakam.akamaized.net",
+      "rule": "IP-CIDR,101.228.0.0/15,no-resolve",
       "category": "domestic",
-      "overlap_with": "streaming",
-      "winner": "streaming",
-      "reason": "domain suffix coverage"
+      "overlap_with": "domesticmedia",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
     },
     {
-      "rule": "DOMAIN-SUFFIX,upos-hz-mirrorakam.akamaized.net",
+      "rule": "IP-CIDR,101.230.0.0/17,no-resolve",
       "category": "domestic",
-      "overlap_with": "streaming",
-      "winner": "streaming",
-      "reason": "domain suffix coverage"
+      "overlap_with": "domesticmedia",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,101.230.128.0/18,no-resolve",
+      "category": "domestic",
+      "overlap_with": "domesticmedia",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,101.230.192.0/19,no-resolve",
+      "category": "domestic",
+      "overlap_with": "domesticmedia",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,101.230.224.0/20,no-resolve",
+      "category": "domestic",
+      "overlap_with": "domesticmedia",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,101.230.240.0/21,no-resolve",
+      "category": "domestic",
+      "overlap_with": "domesticmedia",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,101.230.248.0/22,no-resolve",
+      "category": "domestic",
+      "overlap_with": "domesticmedia",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,101.230.252.0/24,no-resolve",
+      "category": "domestic",
+      "overlap_with": "domesticmedia",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,101.230.253.0/25,no-resolve",
+      "category": "domestic",
+      "overlap_with": "domesticmedia",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,101.230.253.128/29,no-resolve",
+      "category": "domestic",
+      "overlap_with": "domesticmedia",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,101.230.253.136/31,no-resolve",
+      "category": "domestic",
+      "overlap_with": "domesticmedia",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,101.230.253.139/32,no-resolve",
+      "category": "domestic",
+      "overlap_with": "domesticmedia",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,101.230.253.140/30,no-resolve",
+      "category": "domestic",
+      "overlap_with": "domesticmedia",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,101.230.253.144/28,no-resolve",
+      "category": "domestic",
+      "overlap_with": "domesticmedia",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,101.230.253.160/27,no-resolve",
+      "category": "domestic",
+      "overlap_with": "domesticmedia",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,101.230.253.192/26,no-resolve",
+      "category": "domestic",
+      "overlap_with": "domesticmedia",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,101.230.254.0/23,no-resolve",
+      "category": "domestic",
+      "overlap_with": "domesticmedia",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,101.231.0.0/16,no-resolve",
+      "category": "domestic",
+      "overlap_with": "domesticmedia",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,103.44.58.0/23,no-resolve",
+      "category": "domestic",
+      "overlap_with": "domesticmedia",
+      "winner": "domesticmedia",
+      "reason": "CIDR coverage"
     },
     {
       "rule": "IP-CIDR,144.178.30.48/28,no-resolve",
@@ -52109,13 +54188,6 @@
       "category": "domestic",
       "overlap_with": "apple",
       "winner": "apple",
-      "reason": "CIDR coverage"
-    },
-    {
-      "rule": "IP-CIDR,23.211.15.99/32",
-      "category": "domestic",
-      "overlap_with": "streaming",
-      "winner": "streaming",
       "reason": "CIDR coverage"
     },
     {
