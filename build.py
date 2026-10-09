@@ -174,8 +174,11 @@ def make_config(index, priority, fmt, local=False):
     for name, provider in (("主机场", "primary"), ("备机场", "backup")):
         groups.append({"name": name, "type": "url-test", "use": [provider], "url": CHECK_URL,
                        "interval": 60, "timeout": 5000, "tolerance": 50, "lazy": False,
-                       "expected-status": 204, "empty-fallback": "REJECT"})
+                       "expected-status": 204, "empty-fallback": "REJECT", "hidden": True})
     groups += [{"name": "机场故障转移", "type": "fallback", "proxies": ["主机场", "备机场"],
+                "url": CHECK_URL, "interval": 60, "timeout": 5000, "lazy": False,
+                "expected-status": 204, "empty-fallback": "REJECT", "hidden": True},
+               {"name": "故障转移", "type": "fallback", "proxies": ["主机场", "备机场"],
                 "url": CHECK_URL, "interval": 60, "timeout": 5000, "lazy": False,
                 "expected-status": 204, "empty-fallback": "REJECT"},
                {"name": "全球手动", "type": "select", "proxies": ["机场故障转移"],
@@ -187,15 +190,15 @@ def make_config(index, priority, fmt, local=False):
             groups.append({"name": region + airport, "type": "url-test", "use": [provider],
                            "filter": pattern, "tolerance": 50, "hidden": True, **health})
         groups.append({"name": region + "故障转移", "type": "fallback",
-                       "proxies": [region + "主机场", region + "备机场"], **health})
-        groups.append({"name": region + "自动", "type": "url-test", "use": ["primary", "backup"],
-                       "filter": pattern, "tolerance": 50, "hidden": True, **health})
+                       "proxies": [region + "主机场", region + "备机场"], "hidden": True, **health})
+        groups.append({"name": region + "自动", "type": "fallback",
+                       "proxies": [region + "故障转移", "机场故障转移"], "hidden": True, **health})
         groups.append({"name": region + "均衡", "type": "load-balance", "use": ["primary", "backup"],
                        "filter": pattern, "strategy": "consistent-hashing", "hidden": True, **health})
         groups.append({"name": region + "策略", "type": "select", "use": ["primary", "backup"],
-                       "filter": pattern, "proxies": [region + "故障转移", region + "自动", region + "均衡"]})
+                       "filter": pattern, "proxies": [region + "自动", region + "均衡"]})
     region_choices = [region + "策略" for region in REGIONS]
-    general = ["机场故障转移", "全球手动", *region_choices, "主机场", "备机场", "DIRECT"]
+    general = ["故障转移", "全球手动", *region_choices, "DIRECT"]
     preferred = {"im": "狮城", "social": "美国", "ai": "美国", "development": "美国",
                  "emby": "美国", "streaming": "美国", "games": "美国", "crypto": "日本",
                  "google": "美国", "facebook": "美国", "microsoft": "美国"}
@@ -205,16 +208,14 @@ def make_config(index, priority, fmt, local=False):
         elif category in ("apple", "domesticmedia", "domestic"):
             choices = ["DIRECT", *general[:-1]]
         elif category in preferred:
-            # A region preference falls back to other healthy airport nodes when absent.
-            route = name + "优先路由"
-            groups.append({"name": route, "type": "fallback", "hidden": True,
-                           "proxies": [preferred[category] + "故障转移", "机场故障转移"], **health})
-            choices = [route, preferred[category] + "策略", *general]
+            choices = [preferred[category] + "策略", *general]
         else:
             choices = general
         groups.append({"name": name, "type": "select", "proxies": list(dict.fromkeys(choices))})
     groups.append({"name": "漏网之鱼", "type": "select", "proxies": general})
-    cfg["proxy-groups"] = groups
+    display_order = [*POLICIES.values(), "漏网之鱼", "故障转移", "全球手动", *region_choices]
+    cfg["proxy-groups"] = sorted(groups, key=lambda g: display_order.index(g["name"])
+                                  if g["name"] in display_order else len(display_order))
     cfg["rule-providers"] = {}
     rules = ["IP-CIDR,127.0.0.0/8,DIRECT,no-resolve", "IP-CIDR,10.0.0.0/8,DIRECT,no-resolve",
              "IP-CIDR,172.16.0.0/12,DIRECT,no-resolve", "IP-CIDR,192.168.0.0/16,DIRECT,no-resolve",

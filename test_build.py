@@ -61,7 +61,7 @@ class BuildTests(unittest.TestCase):
         for name in ("国内媒体", "国内流量", "苹果服务"):
             self.assertEqual(groups[name]["type"], "select")
             self.assertEqual(groups[name]["proxies"][0], "DIRECT")
-            self.assertIn("机场故障转移", groups[name]["proxies"])
+            self.assertIn("故障转移", groups[name]["proxies"])
         media = cfg['rules'].index('RULE-SET,domesticmedia-classical,国内媒体')
         domestic = cfg['rules'].index('RULE-SET,domestic-classical,国内流量')
         self.assertLess(media, domestic)
@@ -70,13 +70,23 @@ class BuildTests(unittest.TestCase):
         cfg = make_config({}, ["ai"], "yaml")
         groups = {g["name"]: g for g in cfg["proxy-groups"]}
         for region in REGIONS:
-            self.assertEqual(groups[region + "策略"]["proxies"][0], region + "故障转移")
+            self.assertEqual(groups[region + "策略"]["proxies"][0], region + "自动")
+            self.assertEqual(groups[region + "自动"]["proxies"], [region + "故障转移", "机场故障转移"])
             self.assertEqual(groups[region + "故障转移"]["proxies"], [region + "主机场", region + "备机场"])
             self.assertEqual(groups[region + "主机场"]["use"], ["primary"])
             self.assertEqual(groups[region + "备机场"]["use"], ["backup"])
             self.assertEqual(groups[region + "主机场"]["empty-fallback"], "REJECT")
-        self.assertEqual(groups["人工智能优先路由"]["proxies"], ["美国故障转移", "机场故障转移"])
-        self.assertEqual(groups["即时通讯优先路由"]["proxies"], ["狮城故障转移", "机场故障转移"])
+        self.assertEqual(groups["人工智能"]["proxies"][0], "美国策略")
+        self.assertEqual(groups["即时通讯"]["proxies"][0], "狮城策略")
+
+    def test_panel_exposes_only_categories_regions_and_global_controls(self):
+        groups = make_config({}, ["ai"], "yaml")["proxy-groups"]
+        visible = {g["name"] for g in groups if not g.get("hidden")}
+        self.assertEqual(len(visible), 26)
+        self.assertTrue({"故障转移", "全球手动", "人工智能", "香港策略"} <= visible)
+        for group in groups:
+            if group["name"] in visible and group["name"] not in {"故障转移", "全球手动"} and not group["name"].endswith("策略"):
+                self.assertFalse(any("机场" in p or "优先路由" in p for p in group["proxies"]))
 
 
 if __name__ == "__main__":
