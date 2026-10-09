@@ -1,0 +1,23 @@
+{
+  "upstream": "blackmatrix7/ios_rule_script",
+  "ref": "master",
+  "priority": ["ads", "ai", "emby", "streaming", "apple", "social", "development", "domestic"],
+  "categories": {
+    "ads": ["AdvertisingLite"],
+    "ai": ["OpenAI", "Claude", "Gemini", "Copilot"],
+    "emby": ["Emby"],
+    "streaming": ["GlobalMedia"],
+    "apple": ["Apple"],
+    "social": ["Telegram", "Twitter", "Facebook", "Instagram", "Discord", "Reddit"],
+    "development": ["Developer", "GitHub"],
+    "domestic": ["China", "ChinaIPs", "ChinaMedia"]
+  },
+  "files": {
+    "AdvertisingLite": "rule/Clash/AdvertisingLite/AdvertisingLite_Classical.yaml",
+    "Apple": "rule/Clash/Apple/Apple_Classical.yaml",
+    "China": "rule/Clash/China/China_Classical.yaml",
+    "GlobalMedia": "rule/Clash/GlobalMedia/GlobalMedia_Classical.yaml",
+    "ChinaIPs": "rule/Clash/ChinaIPs/ChinaIPs_Classical_No_Resolve.yaml"
+  },
+  "max_drop_fraction": 0.5
+}

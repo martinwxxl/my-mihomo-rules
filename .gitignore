@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+dist/
+dist-*/
+previous/
+runtime/
+local/
+proxy_provider/
+*private*.yaml
+*private*.yml
+*.log
