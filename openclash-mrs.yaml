@@ -57,6 +57,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   expected-status: 204
+  empty-fallback: REJECT
 - name: 备机场
   type: url-test
   use:
@@ -67,6 +68,7 @@ proxy-groups:
   tolerance: 50
   lazy: false
   expected-status: 204
+  empty-fallback: REJECT
 - name: 机场故障转移
   type: fallback
   proxies:
@@ -77,73 +79,851 @@ proxy-groups:
   timeout: 5000
   lazy: false
   expected-status: 204
-- name: 默认代理
+  empty-fallback: REJECT
+- name: 全球手动
   type: select
   proxies:
   - 机场故障转移
-  - 主机场
-  - 备机场
+  use:
+  - primary
+  - backup
+- name: 香港主机场
+  type: url-test
+  use:
+  - primary
+  filter: (?i)(香港|港|Hong[ _-]?Kong|\bHK\b|\bHKG\b|🇭🇰)
+  tolerance: 50
+  hidden: true
+  url: https://www.gstatic.com/generate_204
+  interval: 60
+  timeout: 5000
+  lazy: false
+  expected-status: 204
+  empty-fallback: REJECT
+- name: 香港备机场
+  type: url-test
+  use:
+  - backup
+  filter: (?i)(香港|港|Hong[ _-]?Kong|\bHK\b|\bHKG\b|🇭🇰)
+  tolerance: 50
+  hidden: true
+  url: https://www.gstatic.com/generate_204
+  interval: 60
+  timeout: 5000
+  lazy: false
+  expected-status: 204
+  empty-fallback: REJECT
+- name: 香港故障转移
+  type: fallback
+  proxies:
+  - 香港主机场
+  - 香港备机场
+  url: https://www.gstatic.com/generate_204
+  interval: 60
+  timeout: 5000
+  lazy: false
+  expected-status: 204
+  empty-fallback: REJECT
+- name: 香港自动
+  type: url-test
+  use:
+  - primary
+  - backup
+  filter: (?i)(香港|港|Hong[ _-]?Kong|\bHK\b|\bHKG\b|🇭🇰)
+  tolerance: 50
+  hidden: true
+  url: https://www.gstatic.com/generate_204
+  interval: 60
+  timeout: 5000
+  lazy: false
+  expected-status: 204
+  empty-fallback: REJECT
+- name: 香港均衡
+  type: load-balance
+  use:
+  - primary
+  - backup
+  filter: (?i)(香港|港|Hong[ _-]?Kong|\bHK\b|\bHKG\b|🇭🇰)
+  strategy: consistent-hashing
+  hidden: true
+  url: https://www.gstatic.com/generate_204
+  interval: 60
+  timeout: 5000
+  lazy: false
+  expected-status: 204
+  empty-fallback: REJECT
+- name: 香港策略
+  type: select
+  use:
+  - primary
+  - backup
+  filter: (?i)(香港|港|Hong[ _-]?Kong|\bHK\b|\bHKG\b|🇭🇰)
+  proxies:
+  - 香港故障转移
+  - 香港自动
+  - 香港均衡
+- name: 台湾主机场
+  type: url-test
+  use:
+  - primary
+  filter: (?i)(台湾|台灣|台北|Taiwan|Taipei|\bTW\b|\bTPE\b|🇹🇼)
+  tolerance: 50
+  hidden: true
+  url: https://www.gstatic.com/generate_204
+  interval: 60
+  timeout: 5000
+  lazy: false
+  expected-status: 204
+  empty-fallback: REJECT
+- name: 台湾备机场
+  type: url-test
+  use:
+  - backup
+  filter: (?i)(台湾|台灣|台北|Taiwan|Taipei|\bTW\b|\bTPE\b|🇹🇼)
+  tolerance: 50
+  hidden: true
+  url: https://www.gstatic.com/generate_204
+  interval: 60
+  timeout: 5000
+  lazy: false
+  expected-status: 204
+  empty-fallback: REJECT
+- name: 台湾故障转移
+  type: fallback
+  proxies:
+  - 台湾主机场
+  - 台湾备机场
+  url: https://www.gstatic.com/generate_204
+  interval: 60
+  timeout: 5000
+  lazy: false
+  expected-status: 204
+  empty-fallback: REJECT
+- name: 台湾自动
+  type: url-test
+  use:
+  - primary
+  - backup
+  filter: (?i)(台湾|台灣|台北|Taiwan|Taipei|\bTW\b|\bTPE\b|🇹🇼)
+  tolerance: 50
+  hidden: true
+  url: https://www.gstatic.com/generate_204
+  interval: 60
+  timeout: 5000
+  lazy: false
+  expected-status: 204
+  empty-fallback: REJECT
+- name: 台湾均衡
+  type: load-balance
+  use:
+  - primary
+  - backup
+  filter: (?i)(台湾|台灣|台北|Taiwan|Taipei|\bTW\b|\bTPE\b|🇹🇼)
+  strategy: consistent-hashing
+  hidden: true
+  url: https://www.gstatic.com/generate_204
+  interval: 60
+  timeout: 5000
+  lazy: false
+  expected-status: 204
+  empty-fallback: REJECT
+- name: 台湾策略
+  type: select
+  use:
+  - primary
+  - backup
+  filter: (?i)(台湾|台灣|台北|Taiwan|Taipei|\bTW\b|\bTPE\b|🇹🇼)
+  proxies:
+  - 台湾故障转移
+  - 台湾自动
+  - 台湾均衡
+- name: 日本主机场
+  type: url-test
+  use:
+  - primary
+  filter: (?i)(日本|东京|大阪|Japan|Tokyo|Osaka|\bJP\b|\bNRT\b|🇯🇵)
+  tolerance: 50
+  hidden: true
+  url: https://www.gstatic.com/generate_204
+  interval: 60
+  timeout: 5000
+  lazy: false
+  expected-status: 204
+  empty-fallback: REJECT
+- name: 日本备机场
+  type: url-test
+  use:
+  - backup
+  filter: (?i)(日本|东京|大阪|Japan|Tokyo|Osaka|\bJP\b|\bNRT\b|🇯🇵)
+  tolerance: 50
+  hidden: true
+  url: https://www.gstatic.com/generate_204
+  interval: 60
+  timeout: 5000
+  lazy: false
+  expected-status: 204
+  empty-fallback: REJECT
+- name: 日本故障转移
+  type: fallback
+  proxies:
+  - 日本主机场
+  - 日本备机场
+  url: https://www.gstatic.com/generate_204
+  interval: 60
+  timeout: 5000
+  lazy: false
+  expected-status: 204
+  empty-fallback: REJECT
+- name: 日本自动
+  type: url-test
+  use:
+  - primary
+  - backup
+  filter: (?i)(日本|东京|大阪|Japan|Tokyo|Osaka|\bJP\b|\bNRT\b|🇯🇵)
+  tolerance: 50
+  hidden: true
+  url: https://www.gstatic.com/generate_204
+  interval: 60
+  timeout: 5000
+  lazy: false
+  expected-status: 204
+  empty-fallback: REJECT
+- name: 日本均衡
+  type: load-balance
+  use:
+  - primary
+  - backup
+  filter: (?i)(日本|东京|大阪|Japan|Tokyo|Osaka|\bJP\b|\bNRT\b|🇯🇵)
+  strategy: consistent-hashing
+  hidden: true
+  url: https://www.gstatic.com/generate_204
+  interval: 60
+  timeout: 5000
+  lazy: false
+  expected-status: 204
+  empty-fallback: REJECT
+- name: 日本策略
+  type: select
+  use:
+  - primary
+  - backup
+  filter: (?i)(日本|东京|大阪|Japan|Tokyo|Osaka|\bJP\b|\bNRT\b|🇯🇵)
+  proxies:
+  - 日本故障转移
+  - 日本自动
+  - 日本均衡
+- name: 狮城主机场
+  type: url-test
+  use:
+  - primary
+  filter: (?i)(新加坡|狮城|Singapore|\bSG\b|\bSIN\b|🇸🇬)
+  tolerance: 50
+  hidden: true
+  url: https://www.gstatic.com/generate_204
+  interval: 60
+  timeout: 5000
+  lazy: false
+  expected-status: 204
+  empty-fallback: REJECT
+- name: 狮城备机场
+  type: url-test
+  use:
+  - backup
+  filter: (?i)(新加坡|狮城|Singapore|\bSG\b|\bSIN\b|🇸🇬)
+  tolerance: 50
+  hidden: true
+  url: https://www.gstatic.com/generate_204
+  interval: 60
+  timeout: 5000
+  lazy: false
+  expected-status: 204
+  empty-fallback: REJECT
+- name: 狮城故障转移
+  type: fallback
+  proxies:
+  - 狮城主机场
+  - 狮城备机场
+  url: https://www.gstatic.com/generate_204
+  interval: 60
+  timeout: 5000
+  lazy: false
+  expected-status: 204
+  empty-fallback: REJECT
+- name: 狮城自动
+  type: url-test
+  use:
+  - primary
+  - backup
+  filter: (?i)(新加坡|狮城|Singapore|\bSG\b|\bSIN\b|🇸🇬)
+  tolerance: 50
+  hidden: true
+  url: https://www.gstatic.com/generate_204
+  interval: 60
+  timeout: 5000
+  lazy: false
+  expected-status: 204
+  empty-fallback: REJECT
+- name: 狮城均衡
+  type: load-balance
+  use:
+  - primary
+  - backup
+  filter: (?i)(新加坡|狮城|Singapore|\bSG\b|\bSIN\b|🇸🇬)
+  strategy: consistent-hashing
+  hidden: true
+  url: https://www.gstatic.com/generate_204
+  interval: 60
+  timeout: 5000
+  lazy: false
+  expected-status: 204
+  empty-fallback: REJECT
+- name: 狮城策略
+  type: select
+  use:
+  - primary
+  - backup
+  filter: (?i)(新加坡|狮城|Singapore|\bSG\b|\bSIN\b|🇸🇬)
+  proxies:
+  - 狮城故障转移
+  - 狮城自动
+  - 狮城均衡
+- name: 韩国主机场
+  type: url-test
+  use:
+  - primary
+  filter: (?i)(韩国|韓國|首尔|首爾|Korea|Seoul|\bKR\b|\bICN\b|🇰🇷)
+  tolerance: 50
+  hidden: true
+  url: https://www.gstatic.com/generate_204
+  interval: 60
+  timeout: 5000
+  lazy: false
+  expected-status: 204
+  empty-fallback: REJECT
+- name: 韩国备机场
+  type: url-test
+  use:
+  - backup
+  filter: (?i)(韩国|韓國|首尔|首爾|Korea|Seoul|\bKR\b|\bICN\b|🇰🇷)
+  tolerance: 50
+  hidden: true
+  url: https://www.gstatic.com/generate_204
+  interval: 60
+  timeout: 5000
+  lazy: false
+  expected-status: 204
+  empty-fallback: REJECT
+- name: 韩国故障转移
+  type: fallback
+  proxies:
+  - 韩国主机场
+  - 韩国备机场
+  url: https://www.gstatic.com/generate_204
+  interval: 60
+  timeout: 5000
+  lazy: false
+  expected-status: 204
+  empty-fallback: REJECT
+- name: 韩国自动
+  type: url-test
+  use:
+  - primary
+  - backup
+  filter: (?i)(韩国|韓國|首尔|首爾|Korea|Seoul|\bKR\b|\bICN\b|🇰🇷)
+  tolerance: 50
+  hidden: true
+  url: https://www.gstatic.com/generate_204
+  interval: 60
+  timeout: 5000
+  lazy: false
+  expected-status: 204
+  empty-fallback: REJECT
+- name: 韩国均衡
+  type: load-balance
+  use:
+  - primary
+  - backup
+  filter: (?i)(韩国|韓國|首尔|首爾|Korea|Seoul|\bKR\b|\bICN\b|🇰🇷)
+  strategy: consistent-hashing
+  hidden: true
+  url: https://www.gstatic.com/generate_204
+  interval: 60
+  timeout: 5000
+  lazy: false
+  expected-status: 204
+  empty-fallback: REJECT
+- name: 韩国策略
+  type: select
+  use:
+  - primary
+  - backup
+  filter: (?i)(韩国|韓國|首尔|首爾|Korea|Seoul|\bKR\b|\bICN\b|🇰🇷)
+  proxies:
+  - 韩国故障转移
+  - 韩国自动
+  - 韩国均衡
+- name: 美国主机场
+  type: url-test
+  use:
+  - primary
+  filter: (?i)(美国|美國|美东|美西|United[ _-]?States|America|\bUSA?\b|🇺🇸)
+  tolerance: 50
+  hidden: true
+  url: https://www.gstatic.com/generate_204
+  interval: 60
+  timeout: 5000
+  lazy: false
+  expected-status: 204
+  empty-fallback: REJECT
+- name: 美国备机场
+  type: url-test
+  use:
+  - backup
+  filter: (?i)(美国|美國|美东|美西|United[ _-]?States|America|\bUSA?\b|🇺🇸)
+  tolerance: 50
+  hidden: true
+  url: https://www.gstatic.com/generate_204
+  interval: 60
+  timeout: 5000
+  lazy: false
+  expected-status: 204
+  empty-fallback: REJECT
+- name: 美国故障转移
+  type: fallback
+  proxies:
+  - 美国主机场
+  - 美国备机场
+  url: https://www.gstatic.com/generate_204
+  interval: 60
+  timeout: 5000
+  lazy: false
+  expected-status: 204
+  empty-fallback: REJECT
+- name: 美国自动
+  type: url-test
+  use:
+  - primary
+  - backup
+  filter: (?i)(美国|美國|美东|美西|United[ _-]?States|America|\bUSA?\b|🇺🇸)
+  tolerance: 50
+  hidden: true
+  url: https://www.gstatic.com/generate_204
+  interval: 60
+  timeout: 5000
+  lazy: false
+  expected-status: 204
+  empty-fallback: REJECT
+- name: 美国均衡
+  type: load-balance
+  use:
+  - primary
+  - backup
+  filter: (?i)(美国|美國|美东|美西|United[ _-]?States|America|\bUSA?\b|🇺🇸)
+  strategy: consistent-hashing
+  hidden: true
+  url: https://www.gstatic.com/generate_204
+  interval: 60
+  timeout: 5000
+  lazy: false
+  expected-status: 204
+  empty-fallback: REJECT
+- name: 美国策略
+  type: select
+  use:
+  - primary
+  - backup
+  filter: (?i)(美国|美國|美东|美西|United[ _-]?States|America|\bUSA?\b|🇺🇸)
+  proxies:
+  - 美国故障转移
+  - 美国自动
+  - 美国均衡
 - name: 广告拦截
   type: select
   proxies:
+  - REJECT-DROP
   - REJECT
   - DIRECT
-- name: AI
+- name: 网络测试
   type: select
   proxies:
   - 机场故障转移
+  - 全球手动
+  - 香港策略
+  - 台湾策略
+  - 日本策略
+  - 狮城策略
+  - 韩国策略
+  - 美国策略
   - 主机场
   - 备机场
   - DIRECT
-- name: Emby
+- name: 即时通讯优先路由
+  type: fallback
+  hidden: true
+  proxies:
+  - 狮城故障转移
+  - 机场故障转移
+  url: https://www.gstatic.com/generate_204
+  interval: 60
+  timeout: 5000
+  lazy: false
+  expected-status: 204
+  empty-fallback: REJECT
+- name: 即时通讯
   type: select
   proxies:
+  - 即时通讯优先路由
+  - 狮城策略
   - 机场故障转移
+  - 全球手动
+  - 香港策略
+  - 台湾策略
+  - 日本策略
+  - 韩国策略
+  - 美国策略
   - 主机场
   - 备机场
   - DIRECT
-- name: 流媒体
+- name: 社交平台优先路由
+  type: fallback
+  hidden: true
+  proxies:
+  - 美国故障转移
+  - 机场故障转移
+  url: https://www.gstatic.com/generate_204
+  interval: 60
+  timeout: 5000
+  lazy: false
+  expected-status: 204
+  empty-fallback: REJECT
+- name: 社交平台
   type: select
   proxies:
+  - 社交平台优先路由
+  - 美国策略
   - 机场故障转移
+  - 全球手动
+  - 香港策略
+  - 台湾策略
+  - 日本策略
+  - 狮城策略
+  - 韩国策略
   - 主机场
   - 备机场
   - DIRECT
-- name: Apple
+- name: 人工智能优先路由
+  type: fallback
+  hidden: true
+  proxies:
+  - 美国故障转移
+  - 机场故障转移
+  url: https://www.gstatic.com/generate_204
+  interval: 60
+  timeout: 5000
+  lazy: false
+  expected-status: 204
+  empty-fallback: REJECT
+- name: 人工智能
+  type: select
+  proxies:
+  - 人工智能优先路由
+  - 美国策略
+  - 机场故障转移
+  - 全球手动
+  - 香港策略
+  - 台湾策略
+  - 日本策略
+  - 狮城策略
+  - 韩国策略
+  - 主机场
+  - 备机场
+  - DIRECT
+- name: 开发服务优先路由
+  type: fallback
+  hidden: true
+  proxies:
+  - 美国故障转移
+  - 机场故障转移
+  url: https://www.gstatic.com/generate_204
+  interval: 60
+  timeout: 5000
+  lazy: false
+  expected-status: 204
+  empty-fallback: REJECT
+- name: 开发服务
+  type: select
+  proxies:
+  - 开发服务优先路由
+  - 美国策略
+  - 机场故障转移
+  - 全球手动
+  - 香港策略
+  - 台湾策略
+  - 日本策略
+  - 狮城策略
+  - 韩国策略
+  - 主机场
+  - 备机场
+  - DIRECT
+- name: EMBY优先路由
+  type: fallback
+  hidden: true
+  proxies:
+  - 美国故障转移
+  - 机场故障转移
+  url: https://www.gstatic.com/generate_204
+  interval: 60
+  timeout: 5000
+  lazy: false
+  expected-status: 204
+  empty-fallback: REJECT
+- name: EMBY
+  type: select
+  proxies:
+  - EMBY优先路由
+  - 美国策略
+  - 机场故障转移
+  - 全球手动
+  - 香港策略
+  - 台湾策略
+  - 日本策略
+  - 狮城策略
+  - 韩国策略
+  - 主机场
+  - 备机场
+  - DIRECT
+- name: 国际媒体优先路由
+  type: fallback
+  hidden: true
+  proxies:
+  - 美国故障转移
+  - 机场故障转移
+  url: https://www.gstatic.com/generate_204
+  interval: 60
+  timeout: 5000
+  lazy: false
+  expected-status: 204
+  empty-fallback: REJECT
+- name: 国际媒体
+  type: select
+  proxies:
+  - 国际媒体优先路由
+  - 美国策略
+  - 机场故障转移
+  - 全球手动
+  - 香港策略
+  - 台湾策略
+  - 日本策略
+  - 狮城策略
+  - 韩国策略
+  - 主机场
+  - 备机场
+  - DIRECT
+- name: 游戏平台优先路由
+  type: fallback
+  hidden: true
+  proxies:
+  - 美国故障转移
+  - 机场故障转移
+  url: https://www.gstatic.com/generate_204
+  interval: 60
+  timeout: 5000
+  lazy: false
+  expected-status: 204
+  empty-fallback: REJECT
+- name: 游戏平台
+  type: select
+  proxies:
+  - 游戏平台优先路由
+  - 美国策略
+  - 机场故障转移
+  - 全球手动
+  - 香港策略
+  - 台湾策略
+  - 日本策略
+  - 狮城策略
+  - 韩国策略
+  - 主机场
+  - 备机场
+  - DIRECT
+- name: 货币平台优先路由
+  type: fallback
+  hidden: true
+  proxies:
+  - 日本故障转移
+  - 机场故障转移
+  url: https://www.gstatic.com/generate_204
+  interval: 60
+  timeout: 5000
+  lazy: false
+  expected-status: 204
+  empty-fallback: REJECT
+- name: 货币平台
+  type: select
+  proxies:
+  - 货币平台优先路由
+  - 日本策略
+  - 机场故障转移
+  - 全球手动
+  - 香港策略
+  - 台湾策略
+  - 狮城策略
+  - 韩国策略
+  - 美国策略
+  - 主机场
+  - 备机场
+  - DIRECT
+- name: 谷歌服务优先路由
+  type: fallback
+  hidden: true
+  proxies:
+  - 美国故障转移
+  - 机场故障转移
+  url: https://www.gstatic.com/generate_204
+  interval: 60
+  timeout: 5000
+  lazy: false
+  expected-status: 204
+  empty-fallback: REJECT
+- name: 谷歌服务
+  type: select
+  proxies:
+  - 谷歌服务优先路由
+  - 美国策略
+  - 机场故障转移
+  - 全球手动
+  - 香港策略
+  - 台湾策略
+  - 日本策略
+  - 狮城策略
+  - 韩国策略
+  - 主机场
+  - 备机场
+  - DIRECT
+- name: 脸书服务优先路由
+  type: fallback
+  hidden: true
+  proxies:
+  - 美国故障转移
+  - 机场故障转移
+  url: https://www.gstatic.com/generate_204
+  interval: 60
+  timeout: 5000
+  lazy: false
+  expected-status: 204
+  empty-fallback: REJECT
+- name: 脸书服务
+  type: select
+  proxies:
+  - 脸书服务优先路由
+  - 美国策略
+  - 机场故障转移
+  - 全球手动
+  - 香港策略
+  - 台湾策略
+  - 日本策略
+  - 狮城策略
+  - 韩国策略
+  - 主机场
+  - 备机场
+  - DIRECT
+- name: 微软服务优先路由
+  type: fallback
+  hidden: true
+  proxies:
+  - 美国故障转移
+  - 机场故障转移
+  url: https://www.gstatic.com/generate_204
+  interval: 60
+  timeout: 5000
+  lazy: false
+  expected-status: 204
+  empty-fallback: REJECT
+- name: 微软服务
+  type: select
+  proxies:
+  - 微软服务优先路由
+  - 美国策略
+  - 机场故障转移
+  - 全球手动
+  - 香港策略
+  - 台湾策略
+  - 日本策略
+  - 狮城策略
+  - 韩国策略
+  - 主机场
+  - 备机场
+  - DIRECT
+- name: 苹果服务
   type: select
   proxies:
   - DIRECT
   - 机场故障转移
+  - 全球手动
+  - 香港策略
+  - 台湾策略
+  - 日本策略
+  - 狮城策略
+  - 韩国策略
+  - 美国策略
   - 主机场
   - 备机场
-- name: 社交
-  type: select
-  proxies:
-  - 机场故障转移
-  - 主机场
-  - 备机场
-  - DIRECT
-- name: 开发
-  type: select
-  proxies:
-  - 机场故障转移
-  - 主机场
-  - 备机场
-  - DIRECT
 - name: 国内媒体
   type: select
   proxies:
   - DIRECT
   - 机场故障转移
+  - 全球手动
+  - 香港策略
+  - 台湾策略
+  - 日本策略
+  - 狮城策略
+  - 韩国策略
+  - 美国策略
   - 主机场
   - 备机场
+- name: 国外流量
+  type: select
+  proxies:
+  - 机场故障转移
+  - 全球手动
+  - 香港策略
+  - 台湾策略
+  - 日本策略
+  - 狮城策略
+  - 韩国策略
+  - 美国策略
+  - 主机场
+  - 备机场
+  - DIRECT
 - name: 国内流量
   type: select
   proxies:
   - DIRECT
   - 机场故障转移
+  - 全球手动
+  - 香港策略
+  - 台湾策略
+  - 日本策略
+  - 狮城策略
+  - 韩国策略
+  - 美国策略
   - 主机场
   - 备机场
+- name: 漏网之鱼
+  type: select
+  proxies:
+  - 机场故障转移
+  - 全球手动
+  - 香港策略
+  - 台湾策略
+  - 日本策略
+  - 狮城策略
+  - 韩国策略
+  - 美国策略
+  - 主机场
+  - 备机场
+  - DIRECT
 rule-providers:
   ads-domain:
     type: http
@@ -159,6 +939,48 @@ rule-providers:
     path: ./rules/ads-classical.yaml
     url: https://raw.githubusercontent.com/martinwxxl/my-mihomo-rules/release/rules/ads-classical.yaml
     interval: 86400
+  speedtest-domain:
+    type: http
+    behavior: domain
+    format: mrs
+    path: ./rules/speedtest-domain.mrs
+    url: https://raw.githubusercontent.com/martinwxxl/my-mihomo-rules/release/rules/speedtest-domain.mrs
+    interval: 86400
+  speedtest-classical:
+    type: http
+    behavior: classical
+    format: yaml
+    path: ./rules/speedtest-classical.yaml
+    url: https://raw.githubusercontent.com/martinwxxl/my-mihomo-rules/release/rules/speedtest-classical.yaml
+    interval: 86400
+  im-domain:
+    type: http
+    behavior: domain
+    format: mrs
+    path: ./rules/im-domain.mrs
+    url: https://raw.githubusercontent.com/martinwxxl/my-mihomo-rules/release/rules/im-domain.mrs
+    interval: 86400
+  im-classical:
+    type: http
+    behavior: classical
+    format: yaml
+    path: ./rules/im-classical.yaml
+    url: https://raw.githubusercontent.com/martinwxxl/my-mihomo-rules/release/rules/im-classical.yaml
+    interval: 86400
+  social-domain:
+    type: http
+    behavior: domain
+    format: mrs
+    path: ./rules/social-domain.mrs
+    url: https://raw.githubusercontent.com/martinwxxl/my-mihomo-rules/release/rules/social-domain.mrs
+    interval: 86400
+  social-classical:
+    type: http
+    behavior: classical
+    format: yaml
+    path: ./rules/social-classical.yaml
+    url: https://raw.githubusercontent.com/martinwxxl/my-mihomo-rules/release/rules/social-classical.yaml
+    interval: 86400
   ai-domain:
     type: http
     behavior: domain
@@ -172,6 +994,20 @@ rule-providers:
     format: yaml
     path: ./rules/ai-classical.yaml
     url: https://raw.githubusercontent.com/martinwxxl/my-mihomo-rules/release/rules/ai-classical.yaml
+    interval: 86400
+  development-domain:
+    type: http
+    behavior: domain
+    format: mrs
+    path: ./rules/development-domain.mrs
+    url: https://raw.githubusercontent.com/martinwxxl/my-mihomo-rules/release/rules/development-domain.mrs
+    interval: 86400
+  development-classical:
+    type: http
+    behavior: classical
+    format: yaml
+    path: ./rules/development-classical.yaml
+    url: https://raw.githubusercontent.com/martinwxxl/my-mihomo-rules/release/rules/development-classical.yaml
     interval: 86400
   emby-domain:
     type: http
@@ -201,6 +1037,69 @@ rule-providers:
     path: ./rules/streaming-classical.yaml
     url: https://raw.githubusercontent.com/martinwxxl/my-mihomo-rules/release/rules/streaming-classical.yaml
     interval: 86400
+  games-domain:
+    type: http
+    behavior: domain
+    format: mrs
+    path: ./rules/games-domain.mrs
+    url: https://raw.githubusercontent.com/martinwxxl/my-mihomo-rules/release/rules/games-domain.mrs
+    interval: 86400
+  games-classical:
+    type: http
+    behavior: classical
+    format: yaml
+    path: ./rules/games-classical.yaml
+    url: https://raw.githubusercontent.com/martinwxxl/my-mihomo-rules/release/rules/games-classical.yaml
+    interval: 86400
+  crypto-domain:
+    type: http
+    behavior: domain
+    format: mrs
+    path: ./rules/crypto-domain.mrs
+    url: https://raw.githubusercontent.com/martinwxxl/my-mihomo-rules/release/rules/crypto-domain.mrs
+    interval: 86400
+  google-domain:
+    type: http
+    behavior: domain
+    format: mrs
+    path: ./rules/google-domain.mrs
+    url: https://raw.githubusercontent.com/martinwxxl/my-mihomo-rules/release/rules/google-domain.mrs
+    interval: 86400
+  google-classical:
+    type: http
+    behavior: classical
+    format: yaml
+    path: ./rules/google-classical.yaml
+    url: https://raw.githubusercontent.com/martinwxxl/my-mihomo-rules/release/rules/google-classical.yaml
+    interval: 86400
+  facebook-domain:
+    type: http
+    behavior: domain
+    format: mrs
+    path: ./rules/facebook-domain.mrs
+    url: https://raw.githubusercontent.com/martinwxxl/my-mihomo-rules/release/rules/facebook-domain.mrs
+    interval: 86400
+  facebook-classical:
+    type: http
+    behavior: classical
+    format: yaml
+    path: ./rules/facebook-classical.yaml
+    url: https://raw.githubusercontent.com/martinwxxl/my-mihomo-rules/release/rules/facebook-classical.yaml
+    interval: 86400
+  microsoft-domain:
+    type: http
+    behavior: domain
+    format: mrs
+    path: ./rules/microsoft-domain.mrs
+    url: https://raw.githubusercontent.com/martinwxxl/my-mihomo-rules/release/rules/microsoft-domain.mrs
+    interval: 86400
+  microsoft-classical:
+    type: http
+    behavior: classical
+    format: yaml
+    path: ./rules/microsoft-classical.yaml
+    url: https://raw.githubusercontent.com/martinwxxl/my-mihomo-rules/release/rules/microsoft-classical.yaml
+    interval: 86400
   apple-domain:
     type: http
     behavior: domain
@@ -215,34 +1114,6 @@ rule-providers:
     path: ./rules/apple-classical.yaml
     url: https://raw.githubusercontent.com/martinwxxl/my-mihomo-rules/release/rules/apple-classical.yaml
     interval: 86400
-  social-domain:
-    type: http
-    behavior: domain
-    format: mrs
-    path: ./rules/social-domain.mrs
-    url: https://raw.githubusercontent.com/martinwxxl/my-mihomo-rules/release/rules/social-domain.mrs
-    interval: 86400
-  social-classical:
-    type: http
-    behavior: classical
-    format: yaml
-    path: ./rules/social-classical.yaml
-    url: https://raw.githubusercontent.com/martinwxxl/my-mihomo-rules/release/rules/social-classical.yaml
-    interval: 86400
-  development-domain:
-    type: http
-    behavior: domain
-    format: mrs
-    path: ./rules/development-domain.mrs
-    url: https://raw.githubusercontent.com/martinwxxl/my-mihomo-rules/release/rules/development-domain.mrs
-    interval: 86400
-  development-classical:
-    type: http
-    behavior: classical
-    format: yaml
-    path: ./rules/development-classical.yaml
-    url: https://raw.githubusercontent.com/martinwxxl/my-mihomo-rules/release/rules/development-classical.yaml
-    interval: 86400
   domesticmedia-domain:
     type: http
     behavior: domain
@@ -256,6 +1127,20 @@ rule-providers:
     format: yaml
     path: ./rules/domesticmedia-classical.yaml
     url: https://raw.githubusercontent.com/martinwxxl/my-mihomo-rules/release/rules/domesticmedia-classical.yaml
+    interval: 86400
+  global-domain:
+    type: http
+    behavior: domain
+    format: mrs
+    path: ./rules/global-domain.mrs
+    url: https://raw.githubusercontent.com/martinwxxl/my-mihomo-rules/release/rules/global-domain.mrs
+    interval: 86400
+  global-classical:
+    type: http
+    behavior: classical
+    format: yaml
+    path: ./rules/global-classical.yaml
+    url: https://raw.githubusercontent.com/martinwxxl/my-mihomo-rules/release/rules/global-classical.yaml
     interval: 86400
   domestic-domain:
     type: http
@@ -287,21 +1172,36 @@ rules:
 - DOMAIN-SUFFIX,local,DIRECT
 - RULE-SET,ads-domain,广告拦截
 - RULE-SET,ads-classical,广告拦截
-- RULE-SET,ai-domain,AI
-- RULE-SET,ai-classical,AI
-- RULE-SET,emby-domain,Emby
-- RULE-SET,emby-classical,Emby
-- RULE-SET,streaming-domain,流媒体
-- RULE-SET,streaming-classical,流媒体
-- RULE-SET,apple-domain,Apple
-- RULE-SET,apple-classical,Apple
-- RULE-SET,social-domain,社交
-- RULE-SET,social-classical,社交
-- RULE-SET,development-domain,开发
-- RULE-SET,development-classical,开发
+- RULE-SET,speedtest-domain,网络测试
+- RULE-SET,speedtest-classical,网络测试
+- RULE-SET,im-domain,即时通讯
+- RULE-SET,im-classical,即时通讯
+- RULE-SET,social-domain,社交平台
+- RULE-SET,social-classical,社交平台
+- RULE-SET,ai-domain,人工智能
+- RULE-SET,ai-classical,人工智能
+- RULE-SET,development-domain,开发服务
+- RULE-SET,development-classical,开发服务
+- RULE-SET,emby-domain,EMBY
+- RULE-SET,emby-classical,EMBY
+- RULE-SET,streaming-domain,国际媒体
+- RULE-SET,streaming-classical,国际媒体
+- RULE-SET,games-domain,游戏平台
+- RULE-SET,games-classical,游戏平台
+- RULE-SET,crypto-domain,货币平台
+- RULE-SET,google-domain,谷歌服务
+- RULE-SET,google-classical,谷歌服务
+- RULE-SET,facebook-domain,脸书服务
+- RULE-SET,facebook-classical,脸书服务
+- RULE-SET,microsoft-domain,微软服务
+- RULE-SET,microsoft-classical,微软服务
+- RULE-SET,apple-domain,苹果服务
+- RULE-SET,apple-classical,苹果服务
 - RULE-SET,domesticmedia-domain,国内媒体
 - RULE-SET,domesticmedia-classical,国内媒体
+- RULE-SET,global-domain,国外流量
+- RULE-SET,global-classical,国外流量
 - RULE-SET,domestic-domain,国内流量
 - RULE-SET,domestic-ipcidr,国内流量,no-resolve
 - RULE-SET,domestic-classical,国内流量
-- MATCH,默认代理
+- MATCH,漏网之鱼

@@ -1,0 +1,14 @@
+payload:
+- DOMAIN-KEYWORD,appspot
+- DOMAIN-KEYWORD,blogspot
+- DOMAIN-KEYWORD,gmail
+- DOMAIN-KEYWORD,google
+- DOMAIN-KEYWORD,recaptcha
+- IP-CIDR,173.194.0.0/16
+- IP-CIDR,74.125.0.0/16
+- PROCESS-NAME,BackupandSync
+- PROCESS-NAME,GoogleDriveFS.exe
+- PROCESS-NAME,com.android.vending
+- PROCESS-NAME,com.google.android.gms
+- PROCESS-NAME,com.google.android.gsf
+- PROCESS-NAME,com.google.android.play.games

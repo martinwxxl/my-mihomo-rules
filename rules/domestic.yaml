@@ -22,7 +22,6 @@ payload:
 - DOMAIN-KEYWORD,aliyun
 - DOMAIN-KEYWORD,baidu
 - DOMAIN-KEYWORD,beplay
-- DOMAIN-KEYWORD,microsoft
 - DOMAIN-KEYWORD,officecdn
 - DOMAIN-KEYWORD,taobao
 - DOMAIN-SUFFIX,00cdn.com
@@ -907,7 +906,6 @@ payload:
 - DOMAIN-SUFFIX,cmf.ltd
 - DOMAIN-SUFFIX,cmfchina.com
 - DOMAIN-SUFFIX,cmfu.com
-- DOMAIN-SUFFIX,cmpassport.com
 - DOMAIN-SUFFIX,cn
 - DOMAIN-SUFFIX,cn-east-2.myhuaweicloud.com
 - DOMAIN-SUFFIX,cn-east-3.myhuaweicloud.com
@@ -1372,7 +1370,6 @@ payload:
 - DOMAIN-SUFFIX,gfan.com
 - DOMAIN-SUFFIX,gfund.com
 - DOMAIN-SUFFIX,gifshow.com
-- DOMAIN-SUFFIX,giocdn.com
 - DOMAIN-SUFFIX,gitcode.com
 - DOMAIN-SUFFIX,gitcode.net
 - DOMAIN-SUFFIX,gitee.com
@@ -1408,7 +1405,6 @@ payload:
 - DOMAIN-SUFFIX,gracg.com
 - DOMAIN-SUFFIX,gree.com
 - DOMAIN-SUFFIX,greenxiazai.com
-- DOMAIN-SUFFIX,growingio.com
 - DOMAIN-SUFFIX,grzq.com
 - DOMAIN-SUFFIX,gsadds.com
 - DOMAIN-SUFFIX,gszq.com
@@ -1531,7 +1527,6 @@ payload:
 - DOMAIN-SUFFIX,hongyuanqh.com
 - DOMAIN-SUFFIX,hori-gz.com
 - DOMAIN-SUFFIX,hostbuf.com
-- DOMAIN-SUFFIX,hotmail.com
 - DOMAIN-SUFFIX,houdao.com
 - DOMAIN-SUFFIX,houyicaiji.com
 - DOMAIN-SUFFIX,houyuantuan.com
@@ -1716,7 +1711,6 @@ payload:
 - DOMAIN-SUFFIX,iprdp.net
 - DOMAIN-SUFFIX,ipssh.net
 - DOMAIN-SUFFIX,iranshao.com
-- DOMAIN-SUFFIX,irs01.com
 - DOMAIN-SUFFIX,isd.com
 - DOMAIN-SUFFIX,ishumei.com
 - DOMAIN-SUFFIX,ispqcloud.com
@@ -2212,7 +2206,6 @@ payload:
 - DOMAIN-SUFFIX,miaomiaozhe.com
 - DOMAIN-SUFFIX,miaopai.com
 - DOMAIN-SUFFIX,miaostreet.com
-- DOMAIN-SUFFIX,microsoftonline.com
 - DOMAIN-SUFFIX,midasbuy.com
 - DOMAIN-SUFFIX,miercn.com
 - DOMAIN-SUFFIX,migucloud.com
@@ -2264,11 +2257,8 @@ payload:
 - DOMAIN-SUFFIX,mpg.de
 - DOMAIN-SUFFIX,ms
 - DOMAIN-SUFFIX,msanjia.com
-- DOMAIN-SUFFIX,msauth.net
 - DOMAIN-SUFFIX,mscbsc.com
-- DOMAIN-SUFFIX,msecnd.net
 - DOMAIN-SUFFIX,mshare.cc
-- DOMAIN-SUFFIX,msocdn.com
 - DOMAIN-SUFFIX,msstatic.com
 - DOMAIN-SUFFIX,mszdld.com
 - DOMAIN-SUFFIX,mszdld.net
@@ -2355,9 +2345,6 @@ payload:
 - DOMAIN-SUFFIX,oecd-ilibrary.org
 - DOMAIN-SUFFIX,oeeee.com
 - DOMAIN-SUFFIX,offcn.com
-- DOMAIN-SUFFIX,office.com
-- DOMAIN-SUFFIX,office.net
-- DOMAIN-SUFFIX,office365.com
 - DOMAIN-SUFFIX,officese.com
 - DOMAIN-SUFFIX,oi-wiki.com
 - DOMAIN-SUFFIX,oicq88.com
@@ -2367,7 +2354,6 @@ payload:
 - DOMAIN-SUFFIX,oldboyedu.com
 - DOMAIN-SUFFIX,oncdp.com
 - DOMAIN-SUFFIX,onegreen.net
-- DOMAIN-SUFFIX,onenote.net
 - DOMAIN-SUFFIX,oneplus.com
 - DOMAIN-SUFFIX,oneplus.net
 - DOMAIN-SUFFIX,oneplusbbs.com
@@ -2402,7 +2388,6 @@ payload:
 - DOMAIN-SUFFIX,ourbits.club
 - DOMAIN-SUFFIX,ourdvs.com
 - DOMAIN-SUFFIX,ourdvsss.com
-- DOMAIN-SUFFIX,outlook.com
 - DOMAIN-SUFFIX,ovid.com
 - DOMAIN-SUFFIX,ovscdns.com
 - DOMAIN-SUFFIX,ovscdns.net
@@ -2607,7 +2592,6 @@ payload:
 - DOMAIN-SUFFIX,routewize.com
 - DOMAIN-SUFFIX,rrmj.tv
 - DOMAIN-SUFFIX,rsc.org
-- DOMAIN-SUFFIX,rtbasia.com
 - DOMAIN-SUFFIX,ru-northwest-2.myhuaweicloud.com
 - DOMAIN-SUFFIX,ruan8.com
 - DOMAIN-SUFFIX,ruanmei.com
@@ -2617,7 +2601,6 @@ payload:
 - DOMAIN-SUFFIX,runoob.com
 - DOMAIN-SUFFIX,runsheng.com
 - DOMAIN-SUFFIX,rzrc114.com
-- DOMAIN-SUFFIX,s-microsoft.com
 - DOMAIN-SUFFIX,s-reader.com
 - DOMAIN-SUFFIX,sa-brazil-1.myhuaweicloud.com
 - DOMAIN-SUFFIX,saasops.tech
@@ -2667,7 +2650,6 @@ payload:
 - DOMAIN-SUFFIX,shanhaitujian.com
 - DOMAIN-SUFFIX,shanshuihotel.com
 - DOMAIN-SUFFIX,sharejs.com
-- DOMAIN-SUFFIX,sharepoint.com
 - DOMAIN-SUFFIX,shebiaotm.com
 - DOMAIN-SUFFIX,shelter-china.com
 - DOMAIN-SUFFIX,shelterdome.net
@@ -2739,8 +2721,6 @@ payload:
 - DOMAIN-SUFFIX,sojump.com
 - DOMAIN-SUFFIX,solidot.org
 - DOMAIN-SUFFIX,somode.com
-- DOMAIN-SUFFIX,sony.com
-- DOMAIN-SUFFIX,sonyentertainmentnetwork.com
 - DOMAIN-SUFFIX,soso.com
 - DOMAIN-SUFFIX,sou.com
 - DOMAIN-SUFFIX,soufunimg.com
@@ -3115,7 +3095,6 @@ payload:
 - DOMAIN-SUFFIX,vipexam.org
 - DOMAIN-SUFFIX,vipmro.com
 - DOMAIN-SUFFIX,vipmro.net
-- DOMAIN-SUFFIX,visualstudio.com
 - DOMAIN-SUFFIX,vmall.com
 - DOMAIN-SUFFIX,vmallres.com
 - DOMAIN-SUFFIX,vobao.com
@@ -3189,11 +3168,8 @@ payload:
 - DOMAIN-SUFFIX,win7china.com
 - DOMAIN-SUFFIX,win8.net
 - DOMAIN-SUFFIX,win8china.com
-- DOMAIN-SUFFIX,windows.com
-- DOMAIN-SUFFIX,windows.net
 - DOMAIN-SUFFIX,windows10zj.com
 - DOMAIN-SUFFIX,windows7en.com
-- DOMAIN-SUFFIX,windowsupdate.com
 - DOMAIN-SUFFIX,windowsupdate.microsoft.com
 - DOMAIN-SUFFIX,windowszj.com
 - DOMAIN-SUFFIX,winegame.net
@@ -3240,8 +3216,6 @@ payload:
 - DOMAIN-SUFFIX,xa-bank.com
 - DOMAIN-SUFFIX,xafc.com
 - DOMAIN-SUFFIX,xbiao.com
-- DOMAIN-SUFFIX,xbox.com
-- DOMAIN-SUFFIX,xboxlive.com
 - DOMAIN-SUFFIX,xcsc.com
 - DOMAIN-SUFFIX,xdwan.com
 - DOMAIN-SUFFIX,xesimg.com

@@ -47,7 +47,6 @@ payload:
 - DOMAIN-SUFFIX,deepmind.google
 - DOMAIN-SUFFIX,edgeservices.bing.com
 - DOMAIN-SUFFIX,events.statsigapi.net
-- DOMAIN-SUFFIX,featuregates.org
 - DOMAIN-SUFFIX,gemini.google.com
 - DOMAIN-SUFFIX,generativeai.google
 - DOMAIN-SUFFIX,host.livekit.cloud
@@ -62,7 +61,6 @@ payload:
 - DOMAIN-SUFFIX,openaiapi-site.azureedge.net
 - DOMAIN-SUFFIX,openaicom.imgix.net
 - DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com
-- DOMAIN-SUFFIX,segment.io
 - DOMAIN-SUFFIX,stripe.com
 - DOMAIN-SUFFIX,turn.livekit.cloud
 - IP-ASN,14061

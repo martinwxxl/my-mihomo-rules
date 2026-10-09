@@ -51,7 +51,6 @@ payload:
 - +.airtunes.info
 - +.airtunes.net
 - +.ajtalk.com
-- +.akadns.net
 - +.albeats.com
 - +.alchemysynth.com
 - +.annstores.net
@@ -70,7 +69,6 @@ payload:
 - +.appla.com
 - +.appldnld.apple.com.edgesuite.net
 - +.apple-appstore.cn
-- +.apple-cloudkit.com
 - +.apple-darwin.com
 - +.apple-darwin.net
 - +.apple-darwin.org
@@ -88,7 +86,6 @@ payload:
 - +.apple-inc.net
 - +.apple-itunes.cn
 - +.apple-livephotoskit.com
-- +.apple-mapkit.com
 - +.apple-maps.cn
 - +.apple-online.com
 - +.apple-pay.com
@@ -373,7 +370,6 @@ payload:
 - +.applestoreonline.com
 - +.applestorepro.eu
 - +.applesurveys.com
-- +.appleswift.com
 - +.appletaiwan.com
 - +.appletips.net
 - +.appletv.com
@@ -724,12 +720,10 @@ payload:
 - +.buzzardflapper.com
 - +.bybeatsdre.com
 - +.bydrebeats.com
-- +.calendarserver.org
 - +.camelphat.com
 - +.camelspaceeffect.com
 - +.canada-beatsbydre.com
 - +.carbon.com
-- +.carekit.org
 - +.casque-fr.com
 - +.casquebeatsbydrdresolohd.com
 - +.casquebeatsdocteurdre.com
@@ -812,7 +806,6 @@ payload:
 - +.cozydrdrebeats.com
 - +.cqcorea.com
 - +.cuffiesaldi.com
-- +.cups.org
 - +.custom-iphonecase.com
 - +.custombeatsbydrebuy.com
 - +.custombeatsdeals.com
@@ -936,7 +929,6 @@ payload:
 - +.findmyipad.com
 - +.firewire.cl
 - +.firewire.eu
-- +.foundationdb.org
 - +.fr-beatsbydrestore.com
 - +.francecasquebeatssolde.com
 - +.frcasquesbeats.com
@@ -1277,16 +1269,12 @@ payload:
 - +.macintoshsoftware.com
 - +.macmini.com
 - +.macos.com.au
-- +.macosforge.org
 - +.macossierra.com
 - +.macosx.info
 - +.macosxlion.com
 - +.macpazar.com
 - +.macreach.com
 - +.macreach.net
-- +.macruby.com
-- +.macruby.net
-- +.macruby.org
 - +.mairbeats.com
 - +.makeeu.com
 - +.mallheadphone.com
@@ -1430,13 +1418,6 @@ payload:
 - +.reform-apple.com
 - +.repsneakermall.com
 - +.repswing.com
-- +.researchandcare.org
-- +.researchkit.cn
-- +.researchkit.com.cn
-- +.researchkit.hk
-- +.researchkit.net
-- +.researchkit.org
-- +.researchkit.tv
 - +.safebrowsing.apple
 - +.salebeatslasteststyle4you.com
 - +.saleblackfridaydrebeats.com
@@ -1445,7 +1426,6 @@ payload:
 - +.sanvaras.com
 - +.scnshop.cc
 - +.services-apple.net
-- +.servicetalk.io
 - +.shazam.com
 - +.shoers.com
 - +.shoestop2.com
@@ -1476,9 +1456,6 @@ payload:
 - +.supplybestjerseys.com
 - +.sustainthesound.com
 - +.sverigebeatsbydrdre.com
-- +.swift.org
-- +.swiftui.cn
-- +.swiftui.com.cn
 - +.szcheapmonsterheadphones.com
 - +.szwinnertechnology.com
 - +.takegoto.com
@@ -1511,10 +1488,7 @@ payload:
 - +.vipheadphones.com
 - +.vipshoes2.com
 - +.wasdj.com
-- +.webkit.org
-- +.webkitgtk.org
 - +.webobjects.co.uk
-- +.webobjects.com
 - +.webobjects.de
 - +.webobjects.eu
 - +.webobjects.net
@@ -1523,7 +1497,6 @@ payload:
 - +.wholesalefine.com
 - +.wholesaleonlinemart.com
 - +.worldcoinpay.com
-- +.wpewebkit.org
 - +.wuxiapple.com
 - +.wwapple.net
 - +.www-sms-apple.com
