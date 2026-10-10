@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "upstream": "blackmatrix7/ios_rule_script",
-  "upstream_commit": "036c097eb26c6a52c4f04ebcb6633043cb942669",
+  "upstream_commit": "83f37120c155f67c8eef43221dabe15cc3c95fec",
   "builder_commit": "45dfbc655f829b7679f02832125a3fc4933889a5",
   "mihomo": "Mihomo Meta v1.19.32 linux amd64 with go1.26.8 Wed Sep 30 16:55:19 UTC 2026\nUse tags: with_gvisor",
   "priority": [
@@ -27,7 +27,7 @@
     "AdvertisingLite": 38066,
     "Apple": 1593,
     "China": 3721,
-    "ChinaIPs": 19257,
+    "ChinaIPs": 19225,
     "ChinaMedia": 411,
     "Claude": 3,
     "Copilot": 51,
@@ -70,146 +70,146 @@
     "apple": 1563,
     "domesticmedia": 380,
     "global": 6501,
-    "domestic": 22782
+    "domestic": 22750
   },
   "sources": {
     "AdvertisingLite": {
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/036c097eb26c6a52c4f04ebcb6633043cb942669/rule/Clash/AdvertisingLite/AdvertisingLite_Classical.yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/83f37120c155f67c8eef43221dabe15cc3c95fec/rule/Clash/AdvertisingLite/AdvertisingLite_Classical.yaml",
       "sha256": "f1273a862ad8ca3f930ba5286a935cb78e710ff4184055431b49c957b4379c02",
       "header": "# NAME: AdvertisingLite\n# AUTHOR: blackmatrix7\n# REPO: https://github.com/blackmatrix7/ios_rule_script\n# UPDATED: 2025-12-08 02:03:38\n# DOMAIN: 23753\n# DOMAIN-KEYWORD: 187\n# DOMAIN-SUFFIX: 13939\n# IP-CIDR: 186\n# IP-CIDR6: 1\n# TOTAL: 38066"
     },
     "Apple": {
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/036c097eb26c6a52c4f04ebcb6633043cb942669/rule/Clash/Apple/Apple_Classical.yaml",
-      "sha256": "629a8b2dd57c2b380c57ca71f65c25696369616c3820587ee7bb4151a1d42896",
-      "header": "# NAME: Apple\n# AUTHOR: blackmatrix7\n# REPO: https://github.com/blackmatrix7/ios_rule_script\n# UPDATED: 2026-10-08 06:30:44\n# DOMAIN: 9\n# DOMAIN-KEYWORD: 7\n# DOMAIN-SUFFIX: 1551\n# IP-CIDR: 10\n# IP-CIDR6: 3\n# PROCESS-NAME: 13\n# TOTAL: 1593"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/83f37120c155f67c8eef43221dabe15cc3c95fec/rule/Clash/Apple/Apple_Classical.yaml",
+      "sha256": "a378a0f2ce984e4fcaf6108f2f7eb56f6f7eee84ef6b5bab3acabe892d8edf28",
+      "header": "# NAME: Apple\n# AUTHOR: blackmatrix7\n# REPO: https://github.com/blackmatrix7/ios_rule_script\n# UPDATED: 2026-10-10 06:05:37\n# DOMAIN: 9\n# DOMAIN-KEYWORD: 7\n# DOMAIN-SUFFIX: 1551\n# IP-CIDR: 10\n# IP-CIDR6: 3\n# PROCESS-NAME: 13\n# TOTAL: 1593"
     },
     "China": {
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/036c097eb26c6a52c4f04ebcb6633043cb942669/rule/Clash/China/China_Classical.yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/83f37120c155f67c8eef43221dabe15cc3c95fec/rule/Clash/China/China_Classical.yaml",
       "sha256": "cb64153decc75931336fa836a5f898295c13ca51992c745e292a2c7b8d36c0fd",
       "header": "# NAME: China\n# AUTHOR: blackmatrix7\n# REPO: https://github.com/blackmatrix7/ios_rule_script\n# UPDATED: 2026-06-22 02:36:19\n# DOMAIN: 17\n# DOMAIN-KEYWORD: 9\n# DOMAIN-SUFFIX: 3674\n# IP-CIDR: 17\n# IP-CIDR6: 4\n# TOTAL: 3721"
     },
     "ChinaIPs": {
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/036c097eb26c6a52c4f04ebcb6633043cb942669/rule/Clash/ChinaIPs/ChinaIPs_Classical_No_Resolve.yaml",
-      "sha256": "eb47eca2cf5b7a1b9156a3790820f76ec03a846de69dcfb4d52e2953c2a52c5c",
-      "header": "# NAME: ChinaIPs\n# AUTHOR: blackmatrix7\n# REPO: https://github.com/blackmatrix7/ios_rule_script\n# UPDATED: 2026-10-08 06:32:21\n# IP-CIDR: 13630\n# IP-CIDR6: 5627\n# TOTAL: 19257"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/83f37120c155f67c8eef43221dabe15cc3c95fec/rule/Clash/ChinaIPs/ChinaIPs_Classical_No_Resolve.yaml",
+      "sha256": "9fead83ec351214a465dfeb4423e26dbba82f01e67214e47a20cbb69328d1913",
+      "header": "# NAME: ChinaIPs\n# AUTHOR: blackmatrix7\n# REPO: https://github.com/blackmatrix7/ios_rule_script\n# UPDATED: 2026-10-10 06:07:13\n# IP-CIDR: 13594\n# IP-CIDR6: 5631\n# TOTAL: 19225"
     },
     "ChinaMedia": {
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/036c097eb26c6a52c4f04ebcb6633043cb942669/rule/Clash/ChinaMedia/ChinaMedia.yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/83f37120c155f67c8eef43221dabe15cc3c95fec/rule/Clash/ChinaMedia/ChinaMedia.yaml",
       "sha256": "a3d033573555bda41b0657dc6361e52cbedaa814cdbbbee4f93465dd142e1f19",
       "header": "# NAME: ChinaMedia\n# AUTHOR: blackmatrix7\n# REPO: https://github.com/blackmatrix7/ios_rule_script\n# UPDATED: 2025-06-06 09:17:29\n# DOMAIN: 67\n# DOMAIN-KEYWORD: 2\n# DOMAIN-SUFFIX: 252\n# IP-CIDR: 55\n# IP-CIDR6: 29\n# PROCESS-NAME: 6\n# TOTAL: 411"
     },
     "Claude": {
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/036c097eb26c6a52c4f04ebcb6633043cb942669/rule/Clash/Claude/Claude.yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/83f37120c155f67c8eef43221dabe15cc3c95fec/rule/Clash/Claude/Claude.yaml",
       "sha256": "ef21df39005b17dbd84aa65a47162b36fb5e72754cd32384146474ed488df482",
       "header": "# NAME: Claude\n# AUTHOR: blackmatrix7\n# REPO: https://github.com/blackmatrix7/ios_rule_script\n# UPDATED: 2025-06-06 09:20:01\n# DOMAIN: 1\n# DOMAIN-SUFFIX: 2\n# TOTAL: 3"
     },
     "Copilot": {
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/036c097eb26c6a52c4f04ebcb6633043cb942669/rule/Clash/Copilot/Copilot.yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/83f37120c155f67c8eef43221dabe15cc3c95fec/rule/Clash/Copilot/Copilot.yaml",
       "sha256": "6be526fd6a4a2c4d374fd8cadcdae87309865fb79b8f57634823dbcb7d780a5e",
       "header": "# NAME: Copilot\n# AUTHOR: blackmatrix7\n# REPO: https://github.com/blackmatrix7/ios_rule_script\n# UPDATED: 2025-06-06 09:20:02\n# DOMAIN: 20\n# DOMAIN-KEYWORD: 1\n# DOMAIN-SUFFIX: 26\n# IP-ASN: 2\n# IP-CIDR: 2\n# TOTAL: 51"
     },
     "Cryptocurrency": {
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/036c097eb26c6a52c4f04ebcb6633043cb942669/rule/Clash/Cryptocurrency/Cryptocurrency.yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/83f37120c155f67c8eef43221dabe15cc3c95fec/rule/Clash/Cryptocurrency/Cryptocurrency.yaml",
       "sha256": "baeb00033c860298231e99f835f1de9f5ffb60163e1fa9f956d1ab0761b9431b",
       "header": "# NAME: Cryptocurrency\n# AUTHOR: blackmatrix7\n# REPO: https://github.com/blackmatrix7/ios_rule_script\n# UPDATED: 2025-06-06 09:17:51\n# DOMAIN-SUFFIX: 43\n# TOTAL: 43"
     },
     "Developer": {
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/036c097eb26c6a52c4f04ebcb6633043cb942669/rule/Clash/Developer/Developer.yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/83f37120c155f67c8eef43221dabe15cc3c95fec/rule/Clash/Developer/Developer.yaml",
       "sha256": "3763d2387fcc1babf5641603de18f9faec1b823724cf9af5c090fc6977cd153d",
       "header": "# NAME: Developer\n# AUTHOR: blackmatrix7\n# REPO: https://github.com/blackmatrix7/ios_rule_script\n# UPDATED: 2025-06-06 09:16:56\n# DOMAIN-SUFFIX: 70\n# TOTAL: 70"
     },
     "Discord": {
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/036c097eb26c6a52c4f04ebcb6633043cb942669/rule/Clash/Discord/Discord.yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/83f37120c155f67c8eef43221dabe15cc3c95fec/rule/Clash/Discord/Discord.yaml",
       "sha256": "ce5e3cf18e7353fea35edce91f66e1dfa2a38331203b7fb245c535620d02bf8b",
       "header": "# NAME: Discord\n# AUTHOR: blackmatrix7\n# REPO: https://github.com/blackmatrix7/ios_rule_script\n# UPDATED: 2025-06-06 09:16:55\n# DOMAIN-SUFFIX: 29\n# TOTAL: 29"
     },
     "Emby": {
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/036c097eb26c6a52c4f04ebcb6633043cb942669/rule/Clash/Emby/Emby.yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/83f37120c155f67c8eef43221dabe15cc3c95fec/rule/Clash/Emby/Emby.yaml",
       "sha256": "bd2b9c2a96c12aba29a522246f7a51ae98a78731a0df805f01d8d4f0c98df519",
       "header": "# NAME: Emby\n# AUTHOR: justdoiting\n# REPO: https://github.com/justdoiting/emby-rules\n# UPDATED: 2025-06-06 09:18:50\n# DOMAIN: 3\n# DOMAIN-KEYWORD: 3\n# DOMAIN-SUFFIX: 45\n# PROCESS-NAME: 1\n# TOTAL: 52"
     },
     "Facebook": {
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/036c097eb26c6a52c4f04ebcb6633043cb942669/rule/Clash/Facebook/Facebook.yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/83f37120c155f67c8eef43221dabe15cc3c95fec/rule/Clash/Facebook/Facebook.yaml",
       "sha256": "c82828bf136de47a26458f2303d3acf2a06aaca2a18c19e67f315387ef977ed0",
       "header": "# NAME: Facebook\n# AUTHOR: blackmatrix7\n# REPO: https://github.com/blackmatrix7/ios_rule_script\n# UPDATED: 2025-06-06 09:16:55\n# DOMAIN-KEYWORD: 2\n# DOMAIN-SUFFIX: 544\n# IP-ASN: 1\n# IP-CIDR: 23\n# TOTAL: 570"
     },
     "Game": {
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/036c097eb26c6a52c4f04ebcb6633043cb942669/rule/Clash/Game/Game.yaml",
-      "sha256": "bbea263d82e473ce85b3ecc91f3995811722bc1395da89426f6acc1b51b53b80",
-      "header": "# NAME: Game\n# AUTHOR: blackmatrix7\n# REPO: https://github.com/blackmatrix7/ios_rule_script\n# UPDATED: 2026-10-08 06:30:42\n# DOMAIN: 8\n# DOMAIN-KEYWORD: 4\n# DOMAIN-SUFFIX: 539\n# IP-CIDR: 46\n# TOTAL: 597"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/83f37120c155f67c8eef43221dabe15cc3c95fec/rule/Clash/Game/Game.yaml",
+      "sha256": "e62e0848c4c2319a75d78e11895ef08041597cb07c03343060e6a85ce3028e59",
+      "header": "# NAME: Game\n# AUTHOR: blackmatrix7\n# REPO: https://github.com/blackmatrix7/ios_rule_script\n# UPDATED: 2026-10-10 06:05:35\n# DOMAIN: 8\n# DOMAIN-KEYWORD: 4\n# DOMAIN-SUFFIX: 539\n# IP-CIDR: 46\n# TOTAL: 597"
     },
     "Gemini": {
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/036c097eb26c6a52c4f04ebcb6633043cb942669/rule/Clash/Gemini/Gemini.yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/83f37120c155f67c8eef43221dabe15cc3c95fec/rule/Clash/Gemini/Gemini.yaml",
       "sha256": "d76e9822f72a69860b7d3086db61bbbef53014c57e3dc12472150c62a4f6434b",
       "header": "# NAME: Gemini\n# AUTHOR: blackmatrix7\n# REPO: https://github.com/blackmatrix7/ios_rule_script\n# UPDATED: 2025-06-06 09:20:02\n# DOMAIN: 3\n# DOMAIN-KEYWORD: 3\n# DOMAIN-SUFFIX: 7\n# TOTAL: 13"
     },
     "GitHub": {
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/036c097eb26c6a52c4f04ebcb6633043cb942669/rule/Clash/GitHub/GitHub.yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/83f37120c155f67c8eef43221dabe15cc3c95fec/rule/Clash/GitHub/GitHub.yaml",
       "sha256": "a2641ce2f10857831b600623f97d354e6f8db7b20dff175c5313c2c46e0b6867",
       "header": "# NAME: GitHub\n# AUTHOR: blackmatrix7\n# REPO: https://github.com/blackmatrix7/ios_rule_script\n# UPDATED: 2025-06-12 02:06:19\n# DOMAIN-KEYWORD: 1\n# DOMAIN-SUFFIX: 30\n# TOTAL: 31"
     },
     "GlobalMedia": {
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/036c097eb26c6a52c4f04ebcb6633043cb942669/rule/Clash/GlobalMedia/GlobalMedia_Classical.yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/83f37120c155f67c8eef43221dabe15cc3c95fec/rule/Clash/GlobalMedia/GlobalMedia_Classical.yaml",
       "sha256": "d90bb4ce6aa3b114e09f828375453bfe3ee038529af9e56307b61bd302a2cacd",
       "header": "# NAME: GlobalMedia\n# AUTHOR: blackmatrix7\n# REPO: https://github.com/blackmatrix7/ios_rule_script\n# UPDATED: 2025-12-08 02:08:06\n# DOMAIN: 37\n# DOMAIN-KEYWORD: 26\n# DOMAIN-SUFFIX: 1275\n# IP-CIDR: 918\n# IP-CIDR6: 6\n# PROCESS-NAME: 3\n# TOTAL: 2265"
     },
     "Google": {
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/036c097eb26c6a52c4f04ebcb6633043cb942669/rule/Clash/Google/Google.yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/83f37120c155f67c8eef43221dabe15cc3c95fec/rule/Clash/Google/Google.yaml",
       "sha256": "dfb4bf0a0095e48f024fbb7c31564a928e6c7d450b662aca9803119489a9237c",
       "header": "# NAME: Google\n# AUTHOR: blackmatrix7\n# REPO: https://github.com/blackmatrix7/ios_rule_script\n# UPDATED: 2026-05-12 02:38:11\n# DOMAIN: 1\n# DOMAIN-KEYWORD: 5\n# DOMAIN-SUFFIX: 684\n# IP-CIDR: 4\n# IP-CIDR6: 1\n# PROCESS-NAME: 6\n# TOTAL: 701"
     },
     "Instagram": {
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/036c097eb26c6a52c4f04ebcb6633043cb942669/rule/Clash/Instagram/Instagram.yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/83f37120c155f67c8eef43221dabe15cc3c95fec/rule/Clash/Instagram/Instagram.yaml",
       "sha256": "3ea6152876ff1c998b9434761898af1242bcc6bcaeaed74023910d9d08c64e39",
       "header": "# NAME: Instagram\n# AUTHOR: blackmatrix7\n# REPO: https://github.com/blackmatrix7/ios_rule_script\n# UPDATED: 2025-06-06 09:16:56\n# DOMAIN-KEYWORD: 1\n# DOMAIN-SUFFIX: 3\n# TOTAL: 4"
     },
     "Line": {
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/036c097eb26c6a52c4f04ebcb6633043cb942669/rule/Clash/Line/Line.yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/83f37120c155f67c8eef43221dabe15cc3c95fec/rule/Clash/Line/Line.yaml",
       "sha256": "23af95c3f877d0754cd663ba3d4179aae821dc693be3b37cf7e98a02d0cb46b4",
       "header": "# NAME: Line\n# AUTHOR: blackmatrix7\n# REPO: https://github.com/blackmatrix7/ios_rule_script\n# UPDATED: 2025-06-06 09:16:54\n# DOMAIN-SUFFIX: 8\n# IP-CIDR: 16\n# TOTAL: 24"
     },
     "Microsoft": {
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/036c097eb26c6a52c4f04ebcb6633043cb942669/rule/Clash/Microsoft/Microsoft.yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/83f37120c155f67c8eef43221dabe15cc3c95fec/rule/Clash/Microsoft/Microsoft.yaml",
       "sha256": "a289a1d52394e92ceee26a5c83953cd292609717d39fb2970d189dc7877b2a4d",
       "header": "# NAME: Microsoft\n# AUTHOR: blackmatrix7\n# REPO: https://github.com/blackmatrix7/ios_rule_script\n# UPDATED: 2025-12-08 02:06:20\n# DOMAIN: 1\n# DOMAIN-KEYWORD: 4\n# DOMAIN-SUFFIX: 663\n# PROCESS-NAME: 2\n# TOTAL: 670"
     },
     "OpenAI": {
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/036c097eb26c6a52c4f04ebcb6633043cb942669/rule/Clash/OpenAI/OpenAI.yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/83f37120c155f67c8eef43221dabe15cc3c95fec/rule/Clash/OpenAI/OpenAI.yaml",
       "sha256": "cf66c50e7cfbe0aa0e9e249bfa8897d152ae35b38ab6db2936ef62860b7b61b4",
       "header": "# NAME: OpenAI\n# AUTHOR: blackmatrix7\n# REPO: https://github.com/blackmatrix7/ios_rule_script\n# UPDATED: 2025-06-06 09:20:00\n# DOMAIN: 7\n# DOMAIN-KEYWORD: 1\n# DOMAIN-SUFFIX: 24\n# IP-ASN: 1\n# IP-CIDR: 2\n# TOTAL: 35"
     },
     "Privacy": {
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/036c097eb26c6a52c4f04ebcb6633043cb942669/rule/Clash/Privacy/Privacy_Classical.yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/83f37120c155f67c8eef43221dabe15cc3c95fec/rule/Clash/Privacy/Privacy_Classical.yaml",
       "sha256": "ce57bd0498deb45f34c71f35cebca16bb26348c97214829d771a28ee752348c2",
       "header": "# NAME: Privacy\n# AUTHOR: blackmatrix7\n# REPO: https://github.com/blackmatrix7/ios_rule_script\n# UPDATED: 2025-12-08 02:06:17\n# DOMAIN: 19\n# DOMAIN-KEYWORD: 9\n# DOMAIN-SUFFIX: 39897\n# IP-CIDR: 11\n# TOTAL: 39936"
     },
     "Proxy": {
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/036c097eb26c6a52c4f04ebcb6633043cb942669/rule/Clash/Proxy/Proxy_Classical.yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/83f37120c155f67c8eef43221dabe15cc3c95fec/rule/Clash/Proxy/Proxy_Classical.yaml",
       "sha256": "7f8b4a0424357356c5f5b07f58f7ba5f4b263d90b05dc144d06ebed829897acd",
       "header": "# NAME: Proxy\n# AUTHOR: blackmatrix7\n# REPO: https://github.com/blackmatrix7/ios_rule_script\n# UPDATED: 2026-10-08 06:31:59\n# DOMAIN: 9\n# DOMAIN-KEYWORD: 26\n# DOMAIN-SUFFIX: 6827\n# IP-CIDR: 96\n# IP-CIDR6: 4\n# TOTAL: 6962"
     },
     "Reddit": {
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/036c097eb26c6a52c4f04ebcb6633043cb942669/rule/Clash/Reddit/Reddit.yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/83f37120c155f67c8eef43221dabe15cc3c95fec/rule/Clash/Reddit/Reddit.yaml",
       "sha256": "bf20bcd7b2f841eb9cb2170f7e52ba4437f897eb697ac9e3f4041e674eb4cf2e",
       "header": "# NAME: Reddit\n# AUTHOR: blackmatrix7\n# REPO: https://github.com/blackmatrix7/ios_rule_script\n# UPDATED: 2025-06-06 09:17:47\n# DOMAIN-SUFFIX: 8\n# TOTAL: 8"
     },
     "Speedtest": {
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/036c097eb26c6a52c4f04ebcb6633043cb942669/rule/Clash/Speedtest/Speedtest.yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/83f37120c155f67c8eef43221dabe15cc3c95fec/rule/Clash/Speedtest/Speedtest.yaml",
       "sha256": "d2588e2cac0ca2f22db046e486eda38b71e0223e046fd8ff3219e74e8d69b3ce",
       "header": "# NAME: Speedtest\n# AUTHOR: blackmatrix7\n# REPO: https://github.com/blackmatrix7/ios_rule_script\n# UPDATED: 2026-09-28 04:43:02\n# DOMAIN-KEYWORD: 1\n# DOMAIN-SUFFIX: 7\n# TOTAL: 8"
     },
     "Telegram": {
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/036c097eb26c6a52c4f04ebcb6633043cb942669/rule/Clash/Telegram/Telegram.yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/83f37120c155f67c8eef43221dabe15cc3c95fec/rule/Clash/Telegram/Telegram.yaml",
       "sha256": "e78efc3f18069f1f1e3f88c15cd55f85424367b58ce8474af08c2fdf054704e0",
       "header": "# NAME: Telegram\n# AUTHOR: blackmatrix7\n# REPO: https://github.com/blackmatrix7/ios_rule_script\n# UPDATED: 2025-09-10 02:08:26\n# DOMAIN: 2\n# DOMAIN-KEYWORD: 1\n# DOMAIN-SUFFIX: 22\n# IP-ASN: 5\n# IP-CIDR: 6\n# IP-CIDR6: 4\n# PROCESS-NAME: 6\n# TOTAL: 46"
     },
     "Twitter": {
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/036c097eb26c6a52c4f04ebcb6633043cb942669/rule/Clash/Twitter/Twitter.yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/83f37120c155f67c8eef43221dabe15cc3c95fec/rule/Clash/Twitter/Twitter.yaml",
       "sha256": "67c46c3988da5cdc387eacee945c2950464691af0e2746929455cd9295c3ff2b",
       "header": "# NAME: Twitter\n# AUTHOR: blackmatrix7\n# REPO: https://github.com/blackmatrix7/ios_rule_script\n# UPDATED: 2025-09-28 02:08:26\n# DOMAIN-KEYWORD: 1\n# DOMAIN-SUFFIX: 26\n# IP-CIDR: 6\n# TOTAL: 33"
     },
     "Whatsapp": {
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/036c097eb26c6a52c4f04ebcb6633043cb942669/rule/Clash/Whatsapp/Whatsapp.yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/83f37120c155f67c8eef43221dabe15cc3c95fec/rule/Clash/Whatsapp/Whatsapp.yaml",
       "sha256": "fce89bfff5101fee701336bb28934c7af7c570d1594fd5244e6db1743f0bb254",
       "header": "# NAME: Whatsapp\n# AUTHOR: blackmatrix7\n# REPO: https://github.com/blackmatrix7/ios_rule_script\n# UPDATED: 2025-06-06 09:16:56\n# DOMAIN: 1\n# DOMAIN-KEYWORD: 1\n# DOMAIN-SUFFIX: 4\n# IP-CIDR: 11\n# TOTAL: 17"
     }
