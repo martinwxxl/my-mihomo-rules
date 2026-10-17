@@ -1972,6 +1972,11 @@
       "removed_from": "global"
     },
     {
+      "rule": "DOMAIN-SUFFIX,meta.ai",
+      "winner": "streaming",
+      "removed_from": "global"
+    },
+    {
       "rule": "DOMAIN-SUFFIX,meta.com",
       "winner": "facebook",
       "removed_from": "global"
@@ -66595,6 +66600,27 @@
       "reason": "CIDR coverage"
     },
     {
+      "rule": "IP-CIDR,47.56.131.76/32",
+      "category": "ads",
+      "overlap_with": "domestic",
+      "winner": "ads",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,47.89.59.182/32",
+      "category": "ads",
+      "overlap_with": "domestic",
+      "winner": "ads",
+      "reason": "CIDR coverage"
+    },
+    {
+      "rule": "IP-CIDR,47.90.50.177/32",
+      "category": "ads",
+      "overlap_with": "domestic",
+      "winner": "ads",
+      "reason": "CIDR coverage"
+    },
+    {
       "rule": "IP-CIDR,47.93.103.196/32",
       "category": "ads",
       "overlap_with": "domestic",
@@ -72357,13 +72383,6 @@
     },
     {
       "rule": "IP-CIDR,193.112.159.225/32",
-      "category": "domesticmedia",
-      "overlap_with": "domestic",
-      "winner": "domesticmedia",
-      "reason": "CIDR coverage"
-    },
-    {
-      "rule": "IP-CIDR,203.107.1.0/24",
       "category": "domesticmedia",
       "overlap_with": "domestic",
       "winner": "domesticmedia",
