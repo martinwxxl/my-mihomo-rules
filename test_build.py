@@ -15,6 +15,7 @@ dns:
   ipv6: false
   nameserver: [https://dns.example/dns-query]
 proxy-groups:
+  - { name: 故障转移, type: fallback, proxies: [美国策略, 日本策略, 狮城策略, 韩国策略, 香港策略, 台湾策略], interval: 300 }
   - {name: 国内流量, type: select, proxies: [DIRECT]}
   - {name: 漏网之鱼, type: select, proxies: [DIRECT]}
 profile: {store-selected: true}
@@ -27,7 +28,13 @@ rule-providers: {}
         self.assertTrue(rendered['ipv6'])
         self.assertTrue(rendered['dns']['ipv6'])
         self.assertEqual(rendered['dns']['nameserver'], ['https://dns.example/dns-query'])
-        self.assertEqual(rendered['proxy-groups'], yaml.safe_load(template)['proxy-groups'])
+        expected_groups = yaml.safe_load(template)['proxy-groups']
+        expected_groups[0]['proxies'] = ['香港策略', '台湾策略', '日本策略', '狮城策略', '韩国策略', '美国策略']
+        self.assertEqual(rendered['proxy-groups'], expected_groups)
+        with self.assertRaises(ValueError):
+            render_template(template.replace('name: 故障转移', 'name: missing'), generated)
+        with self.assertRaises(ValueError):
+            render_template(template.replace('type: fallback', 'type: select'), generated)
         self.assertIn('RULE-SET,domesticmedia-classical,国内流量', rendered['rules'])
         self.assertEqual(rendered['profile'], {'store-selected': True})
 

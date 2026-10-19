@@ -1,4 +1,4 @@
-"""Keep upstream Pro_cn verbatim except rules/providers and requested IPv6."""
+"""Keep upstream Pro_cn verbatim except rules/providers and requested IPv6/fallback order."""
 import copy
 import hashlib
 import re
@@ -17,7 +17,7 @@ def fetch_template(download):
     return text, license_text, {'repository': '666OS/YYDS', 'commit': commit,
         'url': base + 'mihomo/config/cn/Pro_cn.yaml',
         'sha256': hashlib.sha256(text.encode()).hexdigest(),
-        'changes': ['rules', 'rule-providers', 'ipv6=true', 'dns.ipv6=true']}
+        'changes': ['rules', 'rule-providers', 'ipv6=true', 'dns.ipv6=true', '故障转移.proxies=香港,台湾,日本,狮城,韩国,美国']}
 
 
 def render_template(text, generated):
@@ -27,6 +27,17 @@ def render_template(text, generated):
     if not separator:
         raise ValueError('Pro_cn rules boundary changed; manual review required')
     prefix = re.sub(r'(?m)^(\s*ipv6:)\s*false\s*$', r'\1 true', prefix)
+    order = ['香港策略', '台湾策略', '日本策略', '狮城策略', '韩国策略', '美国策略']
+    groups = [g for g in original['proxy-groups'] if g['name'] == '故障转移']
+    if len(groups) != 1 or groups[0].get('type') != 'fallback':
+        raise ValueError('Expected exactly one 故障转移 fallback group')
+    if sorted(groups[0].get('proxies', [])) != sorted(order):
+        raise ValueError('Unexpected 故障转移 members; manual review required')
+    prefix, count = re.subn(
+        r'(?m)^(\s*-\s*\{\s*name:\s*故障转移\s*,[^\n]*?\bproxies:\s*)\[[^\]\n]*\]',
+        lambda match: match[1] + '[' + ', '.join(order) + ']', prefix)
+    if count != 1:
+        raise ValueError('Pro_cn fallback layout changed; manual review required')
     rules = [rule.replace(',国内媒体', ',国内流量') for rule in generated['rules']]
     providers = copy.deepcopy(generated['rule-providers'])
     rendered = prefix + '# 规则路由：仅规则来源改为自建仓库；IPv6 按用户要求开启\n'
@@ -36,10 +47,11 @@ def render_template(text, generated):
     expected = copy.deepcopy(original)
     expected['ipv6'] = True
     expected['dns']['ipv6'] = True
+    next(g for g in expected['proxy-groups'] if g['name'] == '故障转移')['proxies'] = order
     expected['rules'] = rules
     expected['rule-providers'] = providers
     if parsed != expected:
-        raise ValueError('Unexpected change outside rules/providers/IPv6')
+        raise ValueError('Unexpected change outside rules/providers/IPv6/fallback order')
     groups = {g['name'] for g in parsed['proxy-groups']} | {'DIRECT', 'REJECT', 'REJECT-DROP'}
     for rule in rules:
         target = rule.split(',')[-2] if rule.endswith(',no-resolve') else rule.split(',')[-1]
