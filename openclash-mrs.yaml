@@ -128,7 +128,7 @@ proxy-groups:
   - { name: 漏网之鱼, type: select, proxies: *oversea, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Final.png }
   
   # 自动选择
-  - { name: 故障转移, <<: *fallback, proxies: [美国策略, 日本策略, 狮城策略, 韩国策略, 香港策略, 台湾策略], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/ULB.png }
+  - { name: 故障转移, <<: *fallback, proxies: [香港策略, 台湾策略, 日本策略, 狮城策略, 韩国策略, 美国策略], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/ULB.png }
 
   # 手动选择
   - { name: 全球手动, type: select, include-all: true, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Clubhouse.png }

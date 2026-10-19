@@ -2,7 +2,7 @@
   "schema": 1,
   "upstream": "blackmatrix7/ios_rule_script",
   "upstream_commit": "7dd06b44f5093dd5404e1e5f3bca5452d97146ef",
-  "builder_commit": "45dfbc655f829b7679f02832125a3fc4933889a5",
+  "builder_commit": "0a5b60f80e8089d77e6a12be0065003289b16d9d",
   "mihomo": "Mihomo Meta v1.19.32 linux amd64 with go1.26.8 Wed Sep 30 16:55:19 UTC 2026\nUse tags: with_gvisor",
   "priority": [
     "ads",
@@ -223,7 +223,8 @@
       "rules",
       "rule-providers",
       "ipv6=true",
-      "dns.ipv6=true"
+      "dns.ipv6=true",
+      "故障转移.proxies=香港,台湾,日本,狮城,韩国,美国"
     ]
   }
 }
